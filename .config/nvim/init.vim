@@ -58,7 +58,7 @@ let mapleader=" "
 
 " TERMINAL
 noremap <leader>tv :vsplit term://zsh<CR>
-noremap <leader>th :term<<CR>
+noremap <leader>th :term://zsh<<CR>
 noremap <leader>wq :q<CR>
 tnoremap <A-w> <C-\><C-N><C-w><C-w>
 
@@ -100,7 +100,10 @@ nnoremap <C-h> <C-W><C-h>
 nnoremap <C-l> <C-W><C-l>
 nnoremap <C-j> <C-W><C-j>
 nnoremap <C-k> <C-W><C-k>
-
+nnoremap <A-h> <C-W>H
+nnoremap <A-l> <C-W>L
+nnoremap <A-j> <C-W>J
+nnoremap <A-k> <C-W>K 
 
 " CUSTOM FUNCTIONS
 
