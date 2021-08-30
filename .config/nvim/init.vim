@@ -58,7 +58,7 @@ let mapleader=" "
 
 " TERMINAL
 noremap <leader>tv :vsplit term://zsh<CR>
-noremap <leader>th :term://zsh<<CR>
+noremap <leader>th :split term://zsh<CR>
 noremap <leader>wq :q<CR>
 tnoremap <A-w> <C-\><C-N><C-w><C-w>
 
