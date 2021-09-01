@@ -38,3 +38,4 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a TelegramDesktop desktop='^4' follow=on
 bspc rule -a discord desktop='^4'
+bspc rule -a Anydesk desktop='^5'
