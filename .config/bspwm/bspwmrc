@@ -5,7 +5,7 @@ picom &
 $HOME/.screenlayout/home.sh
 $HOME/.config/polybar/launch.sh
 nitrogen --restore
-dunst -conf .config/dunst/dunstrc &
+$HOME/.config/helper.sh all
 
 bspc monitor eDP-1 -d I II III IV
 bspc monitor DP-1 -d V VI VII VIII
