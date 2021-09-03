@@ -463,4 +463,10 @@
 #    appname = "some_volume_notifiers"
 #    set_stack_tag = "volume"
 #
+[rohman]
+	summary = "*rohman*"
+	urgency = critical
+[monitor]
+	summary = "*monitor*"
+	urgency = critical
 # vim: ft=cfg

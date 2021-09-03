@@ -55,4 +55,4 @@ monitor = DP-1
 monitor-strict = true
 modules-left = bspwm
 modules-center = title 
-modules-right = cpu ram temperature pulseaudio date battery
+modules-right = pulseaudio date battery
