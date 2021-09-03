@@ -13,6 +13,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'dracula/vim', {'as': 'dracula'}
 call plug#end()
 
 " FUNCTIONS
@@ -30,10 +31,12 @@ endif
 
 let g:sonokai_style = 'atlantis'
 let g:airline_theme = 'sonokai'
+"let g:airline_theme = 'dracula'
 let NERDTreeShowHidden = 1
 
 " GENERAL
 colorscheme sonokai
+"colorscheme dracula
 
 set relativenumber
 set number

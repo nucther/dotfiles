@@ -2,14 +2,19 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 picom &
-$HOME/.screenlayout/home.sh
+$HOME/.config/helper.sh all
+#$HOME/.screenlayout/home.sh
 $HOME/.config/polybar/launch.sh
 nitrogen --restore
-$HOME/.config/helper.sh all
 
-bspc monitor eDP-1 -d I II III IV
-bspc monitor DP-1 -d V VI VII VIII
-bspc monitor DP-1 -s eDP-1
+monitor=$(xrandr | grep -w -c connected)
+if [ monitor == 1 ]; then 
+	bspc monitor eDP-1 -d I II III IV V VI VII VIII
+else
+	bspc monitor eDP-1 -d I II III IV
+	bspc monitor DP-1 -d V VI VII VIII
+	bspc monitor DP-1 -s eDP-1
+fi
 
 bspc config border_width         0
 bspc config window_gap           1
