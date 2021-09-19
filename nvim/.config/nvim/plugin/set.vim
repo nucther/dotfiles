@@ -28,8 +28,16 @@ set nowrap
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-set termguicolors
 set scrolloff=8
 " set noshowmode
 set signcolumn=yes
 set isfname+=@-@
+
+
+if has('termguicolors')
+    set termguicolors
+endif
+let g:sonokai_style = 'default'
+let g:airline_theme = 'sonokai'
+let g:sonokai_transparent_background = 1
+colorscheme sonokai
