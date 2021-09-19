@@ -41,3 +41,8 @@ let g:sonokai_style = 'default'
 let g:airline_theme = 'sonokai'
 let g:sonokai_transparent_background = 1
 colorscheme sonokai
+
+"LSP
+set completeopt-=preview
+autocmd Filetype python setlocal omnifunc=v:lua.vim.lsp.omnifunc
+
