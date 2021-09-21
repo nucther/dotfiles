@@ -464,9 +464,9 @@
 #    set_stack_tag = "volume"
 #
 [rohman]
-	summary = "*rohman*"
+	body = "*rohman*"
 	urgency = critical
 [monitor]
-	summary = "*monitor*"
+	body = "*monitor*"
 	urgency = critical
 # vim: ft=cfg
