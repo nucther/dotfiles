@@ -15,6 +15,13 @@ Plug 'sainnhe/sonokai'
 
 "Tmux
 Plug 'tmux-plugins/vim-tmux'
+
+" Formater
+Plug 'sbdchd/neoformat'
+
+" Todo List 
+Plug 'nvim-lua/plenary.nvim'
+Plug 'folke/todo-comments.nvim'
 call plug#end()
 
 
@@ -29,4 +36,6 @@ noremap <silent> <leader>- :vert resize -5<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+
+noremap <silent> <leader>td :TodoTelescope<CR>
 
