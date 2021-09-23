@@ -226,7 +226,7 @@
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    startup_notification = true
+    startup_notification = false
 
     # Manage dunst's desire for talking
     # Can be one of the following values:
@@ -424,7 +424,7 @@
 #    summary = "*script*"
 #    script = dunst_test.sh
 
-#[ignore]
+[ignore]
 #    # This notification will not be displayed
 #    summary = "foobar"
 #    format = ""
@@ -464,9 +464,11 @@
 #    set_stack_tag = "volume"
 #
 [rohman]
-	body = "*rohman*"
-	urgency = critical
+	summary = "*rohman*"
+    background = "#ff5555"
+    foreground = "#ffffff"
 [monitor]
-	body = "*monitor*"
-	urgency = critical
+	summary = "*monitor*"
+	background = "#ff5555"
+    foreground = "#ffffff"
 # vim: ft=cfg

@@ -134,4 +134,13 @@ XF86MonBrightnessDown
 XF86MonBrightnessUp
 	xbacklight -inc 5
 
+# Print Screen with Flameshot 
+Print
+    flameshot screen -c
 
+super + Print 
+    flameshot gui
+
+# LockScreen with betterlockscreen
+alt + shift + x
+    betterlockscreen -l dim
