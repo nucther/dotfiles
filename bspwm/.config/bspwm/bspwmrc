@@ -25,12 +25,12 @@ bspc config pointer_action3 resize_corner
 
 
 bspc rule -a Google-chrome desktop='^2' state=tiled
-bspc rule -a Spotify desktop='^6'
-bspc rule -a Slack desktop='^4' follow=on state=tiled
-bspc rule -a Thunderbird desktop='^3' follow=on state=tiled
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
-bspc rule -a TelegramDesktop desktop='^4' follow=on
-bspc rule -a discord desktop='^4'
-bspc rule -a Anydesk desktop='^6'
+#dspc rule -a Spotify desktop='^6'
+#dspc rule -a Slack desktop='^4' follow=on state=tiled
+#dspc rule -a Thunderbird desktop='^3' follow=on state=tiled
+#dspc rule -a mplayer2 state=floating
+#dspc rule -a Kupfer.py focus=on
+#dspc rule -a Screenkey manage=off
+#dspc rule -a TelegramDesktop desktop='^4' follow=on
+#dspc rule -a discord desktop='^4'
+#dspc rule -a Anydesk desktop='^6'
