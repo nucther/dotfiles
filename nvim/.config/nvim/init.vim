@@ -20,10 +20,16 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'sbdchd/neoformat'
 
 " Todo List 
-Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/todo-comments.nvim'
 call plug#end()
 
+lua << EOF
+  require("todo-comments").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
 
 syntax enable
 
@@ -33,9 +39,15 @@ let mapleader = " "
 noremap <silent> <leader>+ :vert resize +5<CR>
 noremap <silent> <leader>- :vert resize -5<CR>
 
+
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 
 noremap <silent> <leader>td :TodoTelescope<CR>
 
+noremap <silent> <leader>vs :vsplit<CR>
+nnoremap <C-h> <C-W><C-h>
+nnoremap <C-l> <C-W><C-l>
+nnoremap <A-h> <C-W>H
+nnoremap <A-l> <C-W>L
