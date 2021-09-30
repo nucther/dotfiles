@@ -51,3 +51,7 @@ nnoremap <C-h> <C-W><C-h>
 nnoremap <C-l> <C-W><C-l>
 nnoremap <A-h> <C-W>H
 nnoremap <A-l> <C-W>L
+
+"File Manager
+"nnoremap <leader>ls :!ls<CR>:e
+nnoremap <leader>e :CocCommand explorer<CR>
