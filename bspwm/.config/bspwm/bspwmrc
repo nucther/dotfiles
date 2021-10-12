@@ -5,9 +5,11 @@ picom &
 $HOME/.screenlayout/home.sh
 $HOME/.config/helper.sh all
 $HOME/.config/polybar/launch.sh
-nitrogen --set-scaled $HOME/Pictures/wallpaper.jpg
+nitrogen --restore
+#nitrogen --set-scaled $HOME/Pictures/wallpaper.jpg
 
-bspc monitor -d I II III IV V VI
+bspc monitor eDP-1 -d I II III IV
+bspc monitor DP-1 -d V VI VII VIII
 
 bspc config border_width         0
 bspc config window_gap           1
