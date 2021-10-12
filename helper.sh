@@ -28,11 +28,11 @@ setMonitor(){
 }
 
 install(){
-	stow bspwm sxhkd nvim kitty polybar dunst tmux
+	stow bspwm sxhkd nvim kitty polybar dunst tmux zsh
 }
 
 uninstall(){
-	stow -D bspwm sxhkd nvim kitty polybar dunst tmux
+	stow -D bspwm sxhkd nvim kitty polybar dunst tmux zsh
 }
 
 ## Environment 

@@ -47,5 +47,5 @@ inherit = bar/main
 monitor-strict = false
 modules-left = bspwm
 modules-center = title
-modules-right = lan wifi cpu ram temperature pulseaudio date battery powermenu
+modules-right = lan disk cpu ram temperature pulseaudio battery date powermenu
 
