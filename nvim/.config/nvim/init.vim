@@ -21,6 +21,14 @@ Plug 'sbdchd/neoformat'
 
 " Todo List 
 Plug 'folke/todo-comments.nvim'
+
+" FZF 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" RipGrep
+
+
 call plug#end()
 
 lua << EOF
@@ -55,3 +63,8 @@ nnoremap <A-l> <C-W>L
 "File Manager
 "nnoremap <leader>ls :!ls<CR>:e
 nnoremap <leader>e :CocCommand explorer<CR>
+
+" FZF
+nnoremap <C-f> :Files<CR>
+nnoremap <C-o> :GFiles<CR>
+nnoremap <C-b> :Buffers<CR>

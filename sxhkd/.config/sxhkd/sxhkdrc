@@ -144,3 +144,7 @@ super + Print
 # LockScreen with betterlockscreen
 alt + shift + x
     betterlockscreen -l dim
+
+# Dunst
+alt + shift + c
+    dunstctl close-all

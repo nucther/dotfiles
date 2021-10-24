@@ -2,14 +2,14 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 picom &
-$HOME/.screenlayout/home.sh
+$HOME/.screenlayout/monitor.sh
 $HOME/.config/helper.sh all
 $HOME/.config/polybar/launch.sh
 nitrogen --restore
 #nitrogen --set-scaled $HOME/Pictures/wallpaper.jpg
 
-bspc monitor DP-1 -d I II III IV
-bspc monitor eDP-1 -d V VI VII VIII
+bspc monitor DP1 -d I II III IV
+bspc monitor eDP1 -d V VI VII VIII
 
 bspc config border_width         0
 bspc config window_gap           1
