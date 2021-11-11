@@ -31,13 +31,6 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-lua << EOF
-  require("todo-comments").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
-EOF
 
 syntax enable
 
@@ -62,9 +55,13 @@ nnoremap <A-l> <C-W>L
 
 "File Manager
 "nnoremap <leader>ls :!ls<CR>:e
-nnoremap <leader>e :CocCommand explorer<CR>
+"nnoremap <leader>e :CocCommand explorer<CR>
+nnoremap <leader>e :Ex<CR>
 
 " FZF
 nnoremap <C-f> :Files<CR>
 nnoremap <C-o> :GFiles<CR>
 nnoremap <C-b> :Buffers<CR>
+
+"Save File
+nnoremap <C-s> :w<CR>

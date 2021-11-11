@@ -208,14 +208,14 @@ sdns://AgMAAAAAAAAADTUxLjE1LjEyNC4yMDgAGGRuc25sLW5vYWRzLmFsZWtiZXJnLm5ldAovZG5zL
 
 Resolver in Amsterdam. Dnscrypt protocol. Non-logging, non-filtering, DNSSEC.
 
-sdns://AQcAAAAAAAAAEjUxLjE1LjEyNC4yMDg6NDM0MyC8E4j1dj497HXxyQ_JFb-2iurf6xxF9phRgGOcYOfxYh8yLmRuc2NyeXB0LWNlcnQuYW1zLWRuc2NyeXB0LW5s
+sdns://AQcAAAAAAAAADTUxLjE1LjEyNC4yMDggvBOI9XY-Pex18ckPyRW_torq3-scRfaYUYBjnGDn8WIfMi5kbnNjcnlwdC1jZXJ0LmFtcy1kbnNjcnlwdC1ubA
 
 
 ## ams-dnscrypt-nl-ipv6
 
 Resolver in Amsterdam. Dnscrypt protocol. Non-logging, non-filtering, DNSSEC.
 
-sdns://AQcAAAAAAAAAHFsyMDAxOmJjODoxODMwOjIwMTg6OjFdOjQzNDMgvBOI9XY-Pex18ckPyRW_torq3-scRfaYUYBjnGDn8WIfMi5kbnNjcnlwdC1jZXJ0LmFtcy1kbnNjcnlwdC1ubA
+sdns://AQcAAAAAAAAAF1syMDAxOmJjODoxODMwOjIwMTg6OjFdILwTiPV2Pj3sdfHJD8kVv7aK6t_rHEX2mFGAY5xg5_FiHzIuZG5zY3J5cHQtY2VydC5hbXMtZG5zY3J5cHQtbmw
 
 
 ## ams-doh-nl
@@ -511,196 +511,420 @@ sdns://AQMAAAAAAAAADTk0LjE3Ni4yMzMuOTMgFWnIA4ZtJKvnIs9g6yZT4WIyPb-rQEB27paIxM_Ok
 
 Wien, Austria DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADTk0LjE5OC40MS4yMzUgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+sdns://AQIAAAAAAAAADTk0LjE5OC40MS4yMzUgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
 
 
 ## cs-barcelona
 
 Barcelona, Spain DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADjM3LjEyMC4xNDIuMTE1IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+sdns://AQIAAAAAAAAADjM3LjEyMC4xNDIuMTE1IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
 
 
 ## cs-belgium
 
 Brussels, Belgium DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADTM3LjEyMC4yMzYuMTEgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+sdns://AQIAAAAAAAAADTM3LjEyMC4yMzYuMTEgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+
+
+## cs-berlin
+
+Berlin, Germany DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADTM3LjEyMC4yMTcuNzUgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+
+
+## cs-brazil
+
+Sao Paulo, Brazil DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADjE3Ny41NC4xNDUuMTMxIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
 
 
 ## cs-bulgaria
 
 Sofia, Bulgaria DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADjM3LjEyMC4xNTIuMjM1IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+sdns://AQIAAAAAAAAADjM3LjEyMC4xNTIuMjM1IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-ch
+
+Switzerland DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAACzgxLjE3LjMxLjM0IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
 
 
 ## cs-czech
 
 Prague, Czech Republic DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADzIxNy4xMzguMjIwLjI0MyAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
+sdns://AQIAAAAAAAAADzIxNy4xMzguMjIwLjI0MyAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
+
+
+## cs-dc
+
+US - Washington, DC DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADDE5OC43LjU4LjIyNyAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
+
+
+## cs-de
+
+Frankfurt, Germany DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAACzE0Ni43MC44Mi4zIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
 
 
 ## cs-dk
 
 Denmark DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADTM3LjEyMC4yMzIuNDMgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+sdns://AQIAAAAAAAAADTM3LjEyMC4yMzIuNDMgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
 
 
 ## cs-dus1
 
 Dusseldorf, Germany 1 DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADjIxMy4yMDIuMjE2LjEyIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+sdns://AQIAAAAAAAAADjIxMy4yMDIuMjE2LjEyIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
 
 
 ## cs-dus2
 
 Dusseldorf, Germany 2 DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADzIxMy4yMDIuMjE2LjIzNiAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
+sdns://AQIAAAAAAAAADzIxMy4yMDIuMjE2LjIzNiAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
 
 
 ## cs-dus3
 
 Dusseldorf, Germany 3 DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADjg5LjE2My4yMjEuMTgxIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+sdns://AQIAAAAAAAAADjg5LjE2My4yMjEuMTgxIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
 
 
 ## cs-dus4
 
 Dusseldorf, Germany 4 DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADjg1LjExNC4xMzguMTE5IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+sdns://AQIAAAAAAAAADjg1LjExNC4xMzguMTE5IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-finland
+
+Finland DNSCrypt server provided by https://cryptostorm.is
+
+sdns://AQIAAAAAAAAADjE4NS4xMTcuMTE4LjIwIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-fl
+
+US - Miami, FL DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADDIzLjE5LjExNy41NSAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
+
+
+## cs-fl2
+
+US - Miami, FL 2 DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADDIzLjE5LjExNy41MSAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
+
+
+## cs-fr
+
+France DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADTE2My4xNzIuMzQuNTYgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+
+
+## cs-free
+
+France DNSCrypt server, running on our free server, provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADTE5NS4xNTQuNDAuNDggMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+
+
+## cs-ga
+
+US - Atlanta, GA DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADTY0LjQyLjE4MS4yMjcgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
 
 
 ## cs-hungary
 
 Budapest, Hungary DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADTg2LjEwNi43NC4yMTkgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+sdns://AQIAAAAAAAAADTg2LjEwNi43NC4yMTkgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+
+
+## cs-il
+
+US - Chicago, IL DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADjE3My4yMzQuNTYuMTE1IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-il2
+
+US - Chicago, IL 2 DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADjE3Mi4xMDcuMTk5LjE5IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-india
+
+India DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADzE2NS4yMzEuMjUzLjE2MyAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
 
 
 ## cs-ireland
 
 Dublin, Ireland DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADjM3LjEyMC4yMzUuMTg3IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+sdns://AQIAAAAAAAAADjM3LjEyMC4yMzUuMTg3IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
 
 
 ## cs-is
 
 Iceland DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADTgyLjIyMS4xMjguNDQgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+sdns://AQIAAAAAAAAADTgyLjIyMS4xMjguNDQgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+
+
+## cs-la
+
+US - Los Angeles, CA DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADDIzLjE5LjY3LjExNiAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
 
 
 ## cs-london
 
 London, England DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADTc4LjEyOS4xNDAuNjUgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+sdns://AQIAAAAAAAAADTc4LjEyOS4xNDAuNjUgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+
+
+## cs-lv
+
+Latvia DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADzEwOS4yNDguMTQ5LjEzMyAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
 
 
 ## cs-madrid
 
 Madrid, Spain DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADjE4NS4xODMuMTA2LjgzIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+sdns://AQIAAAAAAAAADjE4NS4xODMuMTA2LjgzIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
 
 
 ## cs-manchester
 
 Manchester, England DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADTE5NS4xMi40OC4xNzEgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+sdns://AQIAAAAAAAAADTE5NS4xMi40OC4xNzEgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+
+
+## cs-md
+
+Moldova DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADjE3OC4xNzUuMTI5LjE2IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-mexico
+
+Mexico City, Mexico DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADTEwMy4xNC4yNi4xOTAgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
 
 
 ## cs-milan
 
 Milan, Italy DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADzIxNy4xMzguMjE5LjIxOSAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
+sdns://AQIAAAAAAAAADzIxNy4xMzguMjE5LjIxOSAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
+
+
+## cs-montreal
+
+Montreal, Canada DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADjE2Ny4xMTQuODQuMTMyIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-montreal2
+
+Montreal, Canada 2 DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADzE0NC4xNjguMTY1LjE2MyAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
+
+
+## cs-nc
+
+US - North Carolina DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADjE1NS4yNTQuMjEuMjUwIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
 
 
 ## cs-nl
 
 Netherlands DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADTE4NS4xMDcuODAuODQgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+sdns://AQIAAAAAAAAADTE4NS4xMDcuODAuODQgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+
+
+## cs-nl2
+
+Netherlands 2 DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADzE3Mi4xMDcuMjI2LjEwNyAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
 
 
 ## cs-norway
 
 Oslo, Norway DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADjkxLjIxOS4yMTUuMjI3IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+sdns://AQIAAAAAAAAADjkxLjIxOS4yMTUuMjI3IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-nv
+
+US - Las Vegas, NV DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADDM3LjEyMC4xNDcuMiAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
 
 
 ## cs-nyc1
 
 US - New York City, NY 1 DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADDIzLjE5LjI0NS44OCAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
+sdns://AQIAAAAAAAAADDIzLjE5LjI0NS44OCAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
 
 
 ## cs-nyc2
 
 US - New York City, NY 2 DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADDIzLjE5LjI0NS44NCAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
+sdns://AQIAAAAAAAAADDIzLjE5LjI0NS44NCAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
 
 
 ## cs-ore
 
 US - Oregon DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADTEwNC4yNTUuMTc1LjIgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+sdns://AQIAAAAAAAAADTEwNC4yNTUuMTc1LjIgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
 
 
 ## cs-poland
 
 Warsaw, Poland DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADTM3LjEyMC4yMTEuOTEgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+sdns://AQIAAAAAAAAADTM3LjEyMC4yMTEuOTEgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
 
 
 ## cs-pt
 
 Portugal DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADTEwOS43MS40Mi4yMjggMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+sdns://AQIAAAAAAAAADjkxLjIwNS4yMzAuMjI0IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-ro
+
+Romania DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADTE0Ni43MC42Ni4yMjcgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
 
 
 ## cs-rome
 
 Rome, Italy DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADjM3LjEyMC4yMDcuMTMxIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+sdns://AQIAAAAAAAAADjM3LjEyMC4yMDcuMTMxIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-sea
+
+US - Seattle, WA DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADDY0LjEyMC41LjI1MSAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
 
 
 ## cs-serbia
 
 Belgrade, Serbia DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADjM3LjEyMC4xOTMuMjE5IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+sdns://AQIAAAAAAAAADjM3LjEyMC4xOTMuMjE5IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-sk
+
+South Korea DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADzE3Mi4xMDcuMTU0LjIxMSAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
 
 
 ## cs-slovakia
 
 Bratislava, Slovakia DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADjE5My4zNy4yNTUuMjI3IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+sdns://AQIAAAAAAAAADjE5My4zNy4yNTUuMjI3IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-swe
+
+Sweden DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADzEyOC4xMjcuMTA0LjEwOCAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
+
+
+## cs-sydney
+
+Sydney, Australia DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADjM3LjEyMC4yMzQuMjUxIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-tokyo
+
+Tokyo, Japan DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADDE0Ni43MC4zMS40MyAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
 
 
 ## cs-tx
 
 US - Dallas, TX DNSCrypt server provided by https://cryptostorm.is/
 
-sdns://AQYAAAAAAAAADTIwOS41OC4xNDcuMzYgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+sdns://AQIAAAAAAAAADTIwOS41OC4xNDcuMzYgMTNyrVlWMsJBa4cvCY-FG925ZShMbL6aTxkJZDDbqVoeMi5kbnNjcnlwdC1jZXJ0LmNyeXB0b3N0b3JtLmlz
+
+
+## cs-tx2
+
+US - Dallas, TX 2 DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAACzQ1LjM1LjM1Ljk5IDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-tx3
+
+US - Dallas, TX 3 DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAACzQ1LjM1LjcyLjQzIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
+
+
+## cs-vancouver
+
+Vancouver, Canada DNSCrypt server provided by https://cryptostorm.is/
+
+sdns://AQIAAAAAAAAADDcxLjE5LjI1MS4zNCAxM3KtWVYywkFrhy8Jj4Ub3bllKExsvppPGQlkMNupWh4yLmRuc2NyeXB0LWNlcnQuY3J5cHRvc3Rvcm0uaXM
 
 
 ## cz.nic
@@ -913,20 +1137,6 @@ sdns://AQMAAAAAAAAAEzk1LjIxNi4yMTIuMTc3Ojg0NDMghROpa8Tgg0uVDWO1AujT4tVNBJZrJgKTN
 Blocks ad and Tracking, no Logging, DNSSEC, Hosted in Finland. By https://blahdns.com/
 
 sdns://AQMAAAAAAAAAHFsyYTAxOjRmOTpjMDEwOjQzY2U6OjFdOjg0NDMghROpa8Tgg0uVDWO1AujT4tVNBJZrJgKTNOkHHboj_CsbMi5kbnNjcnlwdC1jZXJ0LmJsYWhkbnMuY29t
-
-
-## dnscrypt-jp-blahdns-ipv4
-
-Blocks ad and Tracking, no Logging, DNSSEC, Hosted in Japan. By https://blahdns.com/
-
-sdns://AQMAAAAAAAAAEzEzOS4xNjIuMTEyLjQ3Ojg0NDMghROpa8Tgg0uVDWO1AujT4tVNBJZrJgKTNOkHHboj_CsbMi5kbnNjcnlwdC1jZXJ0LmJsYWhkbnMuY29t
-
-
-## dnscrypt-jp-blahdns-ipv6
-
-Blocks ad and Tracking, no Logging, DNSSEC, Hosted in Japan. By https://blahdns.com/
-
-sdns://AQMAAAAAAAAAJVsyNDAwOjg5MDI6OmYwM2M6OTJmZjpmZTI3OjM0NGJdOjg0NDMghROpa8Tgg0uVDWO1AujT4tVNBJZrJgKTNOkHHboj_CsbMi5kbnNjcnlwdC1jZXJ0LmJsYWhkbnMuY29t
 
 
 ## dnscrypt-sg-blahdns-ipv4
@@ -1144,6 +1354,258 @@ https://www.dnspod.cn/Products/Public.DNS?lang=en
 sdns://AgAAAAAAAAAAACDBlAfoWsQD52fP2oOBh_Ag-lY6yBaIr1EMIqd559RaVgdkb2gucHViCi9kbnMtcXVlcnk
 
 
+## dnswarden-asia-adblock-dcv4
+
+Hosted in Singapore. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQMAAAAAAAAAFDIwNy4xNDguMTIwLjI0NDoyMjIyIKaotzxLPX3tRvpH4lDhbTo1cHCL4X-ZhW_Ji6jU8LwyITIuZG5zY3J5cHQtY2VydC5kbnN3YXJkZW4tYWRibG9jaw
+
+
+## dnswarden-asia-adblock-dcv6
+
+Hosted in Singapore. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQMAAAAAAAAALVsyMDAxOjE5ZjA6NDQwMDo0ZGUyOjU0MDA6M2ZmOmZlYTk6ZDQxOF06MjIyMiCmqLc8Sz197Ub6R-JQ4W06NXBwi-F_mYVvyYuo1PC8MiEyLmRuc2NyeXB0LWNlcnQuZG5zd2FyZGVuLWFkYmxvY2s
+
+
+## dnswarden-asia-adblock-dohv4
+
+Hosted in Singapore. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgMAAAAAAAAADzIwNy4xNDguMTIwLjI0NCBETr1nu4P4gHs5Iek4rJF4uIK9UKrbESMfBEz18I33zhZkb2guYXNpYS5kbnN3YXJkZW4uY29tCC9hZGJsb2Nr
+
+
+## dnswarden-asia-adblock-dohv6
+
+Hosted in Singapore. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgMAAAAAAAAAKFsyMDAxOjE5ZjA6NDQwMDo0ZGUyOjU0MDA6M2ZmOmZlYTk6ZDQxOF0gRE69Z7uD-IB7OSHpOKyReLiCvVCq2xEjHwRM9fCN984WZG9oLmFzaWEuZG5zd2FyZGVuLmNvbQgvYWRibG9jaw
+
+
+## dnswarden-asia-adultfilter-dcv4
+
+Hosted in Singapore. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQMAAAAAAAAAFDIwNy4xNDguMTIwLjI0NDo1NTU1IKaotzxLPX3tRvpH4lDhbTo1cHCL4X-ZhW_Ji6jU8LwyJTIuZG5zY3J5cHQtY2VydC5kbnN3YXJkZW4tYWR1bHRmaWx0ZXI
+
+
+## dnswarden-asia-adultfilter-dcv6
+
+Hosted in Singapore. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQMAAAAAAAAALVsyMDAxOjE5ZjA6NDQwMDo0ZGUyOjU0MDA6M2ZmOmZlYTk6ZDQxOF06NTU1NSCmqLc8Sz197Ub6R-JQ4W06NXBwi-F_mYVvyYuo1PC8MiUyLmRuc2NyeXB0LWNlcnQuZG5zd2FyZGVuLWFkdWx0ZmlsdGVy
+
+
+## dnswarden-asia-adultfilter-dohv4
+
+Hosted in Singapore. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgMAAAAAAAAADzIwNy4xNDguMTIwLjI0NCBETr1nu4P4gHs5Iek4rJF4uIK9UKrbESMfBEz18I33zhZkb2guYXNpYS5kbnN3YXJkZW4uY29tDC9hZHVsdGZpbHRlcg
+
+
+## dnswarden-asia-adultfilter-dohv6
+
+Hosted in Singapore. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgMAAAAAAAAAKFsyMDAxOjE5ZjA6NDQwMDo0ZGUyOjU0MDA6M2ZmOmZlYTk6ZDQxOF0gRE69Z7uD-IB7OSHpOKyReLiCvVCq2xEjHwRM9fCN984WZG9oLmFzaWEuZG5zd2FyZGVuLmNvbQwvYWR1bHRmaWx0ZXI
+
+
+## dnswarden-asia-uncensor-dcv4
+
+Hosted in Singapore. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQcAAAAAAAAAFDIwNy4xNDguMTIwLjI0NDozMzMzIKaotzxLPX3tRvpH4lDhbTo1cHCL4X-ZhW_Ji6jU8LwyIjIuZG5zY3J5cHQtY2VydC5kbnN3YXJkZW4tdW5jZW5zb3I
+
+
+## dnswarden-asia-uncensor-dcv6
+
+Hosted in Singapore. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQcAAAAAAAAALVsyMDAxOjE5ZjA6NDQwMDo0ZGUyOjU0MDA6M2ZmOmZlYTk6ZDQxOF06MzMzMyCmqLc8Sz197Ub6R-JQ4W06NXBwi-F_mYVvyYuo1PC8MiIyLmRuc2NyeXB0LWNlcnQuZG5zd2FyZGVuLXVuY2Vuc29y
+
+
+## dnswarden-asia-uncensor-dohv4
+
+Hosted in Singapore. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgcAAAAAAAAADzIwNy4xNDguMTIwLjI0NCBETr1nu4P4gHs5Iek4rJF4uIK9UKrbESMfBEz18I33zhZkb2guYXNpYS5kbnN3YXJkZW4uY29tCy91bmNlbnNvcmVk
+
+
+## dnswarden-asia-uncensor-dohv6
+
+Hosted in Singapore. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgcAAAAAAAAAKFsyMDAxOjE5ZjA6NDQwMDo0ZGUyOjU0MDA6M2ZmOmZlYTk6ZDQxOF0gRE69Z7uD-IB7OSHpOKyReLiCvVCq2xEjHwRM9fCN984WZG9oLmFzaWEuZG5zd2FyZGVuLmNvbQsvdW5jZW5zb3JlZA
+
+
+## dnswarden-eu-adblock-dcv4
+
+Hosted in Germany. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQMAAAAAAAAAEDQ1Ljc2Ljg4LjIwOjIyMjIg1s4Ar-3awN0OmfAQzlZywvR2ZGVMg0aeNdwrLHspdpMhMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZGJsb2Nr
+
+
+## dnswarden-eu-adblock-dcv6
+
+Hosted in Germany. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQMAAAAAAAAALVsyMDAxOjE5ZjA6NmMwMToyYjE3OjU0MDA6M2ZmOmZlYTk6ZDQyZl06MjIyMiDWzgCv7drA3Q6Z8BDOVnLC9HZkZUyDRp413Csseyl2kyEyLmRuc2NyeXB0LWNlcnQuZG5zd2FyZGVuLWFkYmxvY2s
+
+
+## dnswarden-eu-adblock-dohv4
+
+Hosted in Germany. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgMAAAAAAAAACzQ1Ljc2Ljg4LjIwIEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOFGRvaC5ldS5kbnN3YXJkZW4uY29tCC9hZGJsb2Nr
+
+
+## dnswarden-eu-adblock-dohv6
+
+Hosted in Germany. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgMAAAAAAAAAKFsyMDAxOjE5ZjA6NmMwMToyYjE3OjU0MDA6M2ZmOmZlYTk6ZDQyZl0gRE69Z7uD-IB7OSHpOKyReLiCvVCq2xEjHwRM9fCN984UZG9oLmV1LmRuc3dhcmRlbi5jb20IL2FkYmxvY2s
+
+
+## dnswarden-eu-adultfilter-dcv4
+
+Hosted in Germany. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQMAAAAAAAAAEDQ1Ljc2Ljg4LjIwOjU1NTUg1s4Ar-3awN0OmfAQzlZywvR2ZGVMg0aeNdwrLHspdpMlMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZHVsdGZpbHRlcg
+
+
+## dnswarden-eu-adultfilter-dcv6
+
+Hosted in Germany. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQMAAAAAAAAALVsyMDAxOjE5ZjA6NmMwMToyYjE3OjU0MDA6M2ZmOmZlYTk6ZDQyZl06NTU1NSDWzgCv7drA3Q6Z8BDOVnLC9HZkZUyDRp413Csseyl2kyUyLmRuc2NyeXB0LWNlcnQuZG5zd2FyZGVuLWFkdWx0ZmlsdGVy
+
+
+## dnswarden-eu-adultfilter-dohv4
+
+Hosted in Germany. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgMAAAAAAAAACzQ1Ljc2Ljg4LjIwIEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOFGRvaC5ldS5kbnN3YXJkZW4uY29tDC9hZHVsdGZpbHRlcg
+
+
+## dnswarden-eu-adultfilter-dohv6
+
+Hosted in Germany. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgMAAAAAAAAAKFsyMDAxOjE5ZjA6NmMwMToyYjE3OjU0MDA6M2ZmOmZlYTk6ZDQyZl0gRE69Z7uD-IB7OSHpOKyReLiCvVCq2xEjHwRM9fCN984UZG9oLmV1LmRuc3dhcmRlbi5jb20ML2FkdWx0ZmlsdGVy
+
+
+## dnswarden-eu-uncensor-dcv4
+
+Hosted in Germany. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQcAAAAAAAAAEDQ1Ljc2Ljg4LjIwOjMzMzMg1s4Ar-3awN0OmfAQzlZywvR2ZGVMg0aeNdwrLHspdpMiMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi11bmNlbnNvcg
+
+
+## dnswarden-eu-uncensor-dcv6
+
+Hosted in Germany. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQcAAAAAAAAALVsyMDAxOjE5ZjA6NmMwMToyYjE3OjU0MDA6M2ZmOmZlYTk6ZDQyZl06MzMzMyDWzgCv7drA3Q6Z8BDOVnLC9HZkZUyDRp413Csseyl2kyIyLmRuc2NyeXB0LWNlcnQuZG5zd2FyZGVuLXVuY2Vuc29y
+
+
+## dnswarden-eu-uncensor-dohv4
+
+Hosted in Germany. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgcAAAAAAAAACzQ1Ljc2Ljg4LjIwIEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOFGRvaC5ldS5kbnN3YXJkZW4uY29tCy91bmNlbnNvcmVk
+
+
+## dnswarden-eu-uncensor-dohv6
+
+Hosted in Germany. For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgcAAAAAAAAAKFsyMDAxOjE5ZjA6NmMwMToyYjE3OjU0MDA6M2ZmOmZlYTk6ZDQyZl0gRE69Z7uD-IB7OSHpOKyReLiCvVCq2xEjHwRM9fCN984UZG9oLmV1LmRuc3dhcmRlbi5jb20LL3VuY2Vuc29yZWQ
+
+
+## dnswarden-us-adblock-dcv4
+
+Hosted in USA (Dallas) . For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQMAAAAAAAAAEzE0NC4yMDIuNjkuMTQ5OjIyMjIgc_eiadnb3wpUqznTHbI2NziLpELYc4uuDM-s3v3CsSQhMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZGJsb2Nr
+
+
+## dnswarden-us-adblock-dcv6
+
+Hosted in USA (Dallas) . For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQMAAAAAAAAALFsyMDAxOjE5ZjA6NjQwMTpkNmU6NTQwMDozZmY6ZmVhOTpkNDVlXToyMjIyIHP3omnZ298KVKs50x2yNjc4i6RC2HOLrgzPrN79wrEkITIuZG5zY3J5cHQtY2VydC5kbnN3YXJkZW4tYWRibG9jaw
+
+
+## dnswarden-us-adblock-dohv4
+
+Hosted in USA (Dallas) . For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgMAAAAAAAAADjE0NC4yMDIuNjkuMTQ5IEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOFGRvaC51cy5kbnN3YXJkZW4uY29tCC9hZGJsb2Nr
+
+
+## dnswarden-us-adblock-dohv6
+
+Hosted in USA (Dallas) . For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgMAAAAAAAAAJ1syMDAxOjE5ZjA6NjQwMTpkNmU6NTQwMDozZmY6ZmVhOTpkNDVlXSBETr1nu4P4gHs5Iek4rJF4uIK9UKrbESMfBEz18I33zhRkb2gudXMuZG5zd2FyZGVuLmNvbQgvYWRibG9jaw
+
+
+## dnswarden-us-adultfilter-dcv4
+
+Hosted in USA (Dallas) . For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQMAAAAAAAAAEzE0NC4yMDIuNjkuMTQ5OjU1NTUgc_eiadnb3wpUqznTHbI2NziLpELYc4uuDM-s3v3CsSQlMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi1hZHVsdGZpbHRlcg
+
+
+## dnswarden-us-adultfilter-dcv6
+
+Hosted in USA (Dallas) . For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQMAAAAAAAAALFsyMDAxOjE5ZjA6NjQwMTpkNmU6NTQwMDozZmY6ZmVhOTpkNDVlXTo1NTU1IHP3omnZ298KVKs50x2yNjc4i6RC2HOLrgzPrN79wrEkJTIuZG5zY3J5cHQtY2VydC5kbnN3YXJkZW4tYWR1bHRmaWx0ZXI
+
+
+## dnswarden-us-adultfilter-dohv4
+
+Hosted in USA (Dallas) . For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgMAAAAAAAAADjE0NC4yMDIuNjkuMTQ5IEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOFGRvaC51cy5kbnN3YXJkZW4uY29tDC9hZHVsdGZpbHRlcg
+
+
+## dnswarden-us-adultfilter-dohv6
+
+Hosted in USA (Dallas) . For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgMAAAAAAAAAJ1syMDAxOjE5ZjA6NjQwMTpkNmU6NTQwMDozZmY6ZmVhOTpkNDVlXSBETr1nu4P4gHs5Iek4rJF4uIK9UKrbESMfBEz18I33zhRkb2gudXMuZG5zd2FyZGVuLmNvbQwvYWR1bHRmaWx0ZXI
+
+
+## dnswarden-us-uncensor-dcv4
+
+Hosted in USA (Dallas) . For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQcAAAAAAAAAEzE0NC4yMDIuNjkuMTQ5OjMzMzMgc_eiadnb3wpUqznTHbI2NziLpELYc4uuDM-s3v3CsSQiMi5kbnNjcnlwdC1jZXJ0LmRuc3dhcmRlbi11bmNlbnNvcg
+
+
+## dnswarden-us-uncensor-dcv6
+
+Hosted in USA (Dallas) . For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AQcAAAAAAAAALFsyMDAxOjE5ZjA6NjQwMTpkNmU6NTQwMDozZmY6ZmVhOTpkNDVlXTozMzMzIHP3omnZ298KVKs50x2yNjc4i6RC2HOLrgzPrN79wrEkIjIuZG5zY3J5cHQtY2VydC5kbnN3YXJkZW4tdW5jZW5zb3I
+
+
+## dnswarden-us-uncensor-dohv4
+
+Hosted in USA (Dallas) . For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgcAAAAAAAAADjE0NC4yMDIuNjkuMTQ5IEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOFGRvaC51cy5kbnN3YXJkZW4uY29tCy91bmNlbnNvcmVk
+
+
+## dnswarden-us-uncensor-dohv6
+
+Hosted in USA (Dallas) . For more information look [here](https://github.com/bhanupratapys/dnswarden) or [here](https://dnswarden.com).
+
+sdns://AgcAAAAAAAAAJ1syMDAxOjE5ZjA6NjQwMTpkNmU6NTQwMDozZmY6ZmVhOTpkNDVlXSBETr1nu4P4gHs5Iek4rJF4uIK9UKrbESMfBEz18I33zhRkb2gudXMuZG5zd2FyZGVuLmNvbQsvdW5jZW5zb3JlZA
+
+
 ## doh-ch-blahdns
 
 Blocks ad and Tracking, no Logging, DNSSEC, Hosted in Switzerland. By https://blahdns.com/
@@ -1235,15 +1697,6 @@ sdns://AgMAAAAAAAAADjk1LjIxNi4yMTIuMTc3ABJkb2gtZmkuYmxhaGRucy5jb20KL2Rucy1xdWVye
 Blocks ad and Tracking, no Logging, DNSSEC, Hosted in Finland. By https://blahdns.com/
 
 sdns://AgMAAAAAAAAAF1syYTAxOjRmOTpjMDEwOjQzY2U6OjFdABJkb2gtZmkuYmxhaGRucy5jb20KL2Rucy1xdWVyeQ
-
-
-## doh-ibksturm
-
-DoH Server, No Logging, No Filters, DNSSEC
-
-Running privately by ibksturm in Thurgau, Switzerland
-
-sdns://AgcAAAAAAAAAAKDMEGDTnIMptitvvH0NbfkwmGm5gefmOS1c2PpAj02A5iBETr1nu4P4gHs5Iek4rJF4uIK9UKrbESMfBEz18I33zhRpYmtzdHVybS5zeW5vbG9neS5tZQovZG5zLXF1ZXJ5
 
 
 ## doh-jp-blahdns
@@ -1842,9 +2295,8 @@ sdns://AQYAAAAAAAAAEzE0OS4xMTIuMTEyLjEyOjg0NDMgZ8hHuMh1jNEgJFVDvnVnRt803x2EwAuMR
 
 ## quad9-dnscrypt-ip4-nofilter-pri
 
-Quad9 (anycast) no-dnssec/no-log/no-filter 9.9.9.10 - 149.112.112.10
+Quad9 (anycast) no-dnssec/no-log/no-filter 149.112.112.10
 
-sdns://AQYAAAAAAAAADTkuOS45LjEwOjg0NDMgZ8hHuMh1jNEgJFVDvnVnRt803x2EwAuMRwNo34Idhj4ZMi5kbnNjcnlwdC1jZXJ0LnF1YWQ5Lm5ldA
 sdns://AQYAAAAAAAAAEzE0OS4xMTIuMTEyLjEwOjg0NDMgZ8hHuMh1jNEgJFVDvnVnRt803x2EwAuMRwNo34Idhj4ZMi5kbnNjcnlwdC1jZXJ0LnF1YWQ5Lm5ldA
 
 
@@ -2081,7 +2533,7 @@ sdns://AQcAAAAAAAAADDE4NS4yMzUuNjAuMSAD7RSb0_0LnriPpLy7SKP8NUhN8WlKa-TsogB88Wvc1
 
 Resolver in Stockholm, Sweden. DNSCrypt server. Non-logging, non-filtering, DNSSEC.
 
-sdns://AQcAAAAAAAAAEjQ1LjE1My4xODcuOTY6NDM0MyB5eVqmG8yEeu7KgiIFlYUJCqBps33UPRtAQFvecn3JRh8yLmRuc2NyeXB0LWNlcnQuc3RoLWRuc2NyeXB0LXNl
+sdns://AQcAAAAAAAAADTQ1LjE1My4xODcuOTYgeXlaphvMhHruyoIiBZWFCQqgabN91D0bQEBb3nJ9yUYfMi5kbnNjcnlwdC1jZXJ0LnN0aC1kbnNjcnlwdC1zZQ
 
 
 ## sth-doh-se
@@ -2107,13 +2559,6 @@ https://www.switch.ch
 Provides protection against malware, but does not block ads.
 
 sdns://AgMAAAAAAAAAACA7FAZ73R-Sz_NJdsl8yiP0L0H3yntGnmJAVtqSpC3Nmg1kbnMuc3dpdGNoLmNoCi9kbnMtcXVlcnk
-
-
-## t53
-
-Deutsche Telekom experimental DoH server.
-
-sdns://AgUAAAAAAAAAAKDMEGDTnIMptitvvH0NbfkwmGm5gefmOS1c2PpAj02A5iBETr1nu4P4gHs5Iek4rJF4uIK9UKrbESMfBEz18I33zgpkbnMudDUzLmRlCi9kbnMtcXVlcnk
 
 
 ## tuna-doh-ipv4
@@ -2205,14 +2650,6 @@ https://www.dnscrypt.uk
 sdns://AQcAAAAAAAAAKFsyMDAxOjE5ZjA6NzQwMjoxNTc0OjU0MDA6MmZmOmZlNjY6MmNmZl0g7Uk9jOrXkGZPBjxHt5WaI2ktfJA2PJ5DzLWRe-W0HuUdMi5kbnNjcnlwdC1jZXJ0LnYuZG5zY3J5cHQudWs
 
 
-## wevpn-adblock-singapore
-
-Private DNSCrypt service by WeVPN in Singapore - https://wevpn.com/dns
-With ad blocking.
-
-sdns://AQMAAAAAAAAAEzE0My4yNDQuMzMuOTA6MTUzNTMgufWZBK6y8zr6mDW3z47IASY0jQoaoRFSBaB8i1GHng8fMi5kbnNjcnlwdC1jZXJ0LnNlY3VyZS5kbnMudGVzdA
-
-
 ## wevpn-adblock-uswest
 
 Private DNSCrypt service by WeVPN in Los Angeles, USA - https://wevpn.com/dns
@@ -2293,4 +2730,18 @@ sdns://AQcAAAAAAAAADTEzNy4yMjAuNTkuNjIgTNMjCh27ODMeT_zUDR4yV_L9iWnqXTyyMuyLeAQW0
 DNSSEC/unfiltered/non-logged. Hosted on Vultr in Chicago, IL. Running the official Docker image by @zackptg5
 
 sdns://AQcAAAAAAAAAKFsyMDAxOjE5ZjA6NWMwMToxNDdlOjU0MDA6M2ZmOmZlMmE6M2IxZl0gTNMjCh27ODMeT_zUDR4yV_L9iWnqXTyyMuyLeAQW0eceMi5kbnNjcnlwdC1jZXJ0LnphY2twdGc1LXVzLWls
+
+
+## zackptg5-us-pit-ipv4
+
+DNSSEC/unfiltered/non-logged. Hosted on TeraSwitch in Pittsburgh, PA. Running the official Docker image by @zackptg5
+
+sdns://AQcAAAAAAAAAETc0LjExOC4xNDEuNDc6NDQyILLrUp55NwetKjM1XaPs19NIKDIbD1w0K-lCK33_gKcgHzIuZG5zY3J5cHQtY2VydC56YWNrcHRnNS11cy1waXQ
+
+
+## zackptg5-us-pit-ipv6
+
+DNSSEC/unfiltered/non-logged. Hosted on TeraSwitch in Pittsburgh, PA. Running the official Docker image by @zackptg5
+
+sdns://AQcAAAAAAAAAJ1syNjA3OmZkYzA6MjowOmY4MTY6M2VmZjpmZTMyOmM3YjRdOjQ0MiCy61KeeTcHrSozNV2j7NfTSCgyGw9cNCvpQit9_4CnIB8yLmRuc2NyeXB0LWNlcnQuemFja3B0ZzUtdXMtcGl0
 

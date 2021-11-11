@@ -10,6 +10,16 @@ PATH=$PATH:$HOME/.local/bin
 
 export KUBECONFIG=$HOME/.kube/config
 
+if [ -n "$VIRTUAL_ENV" ]; then 
+    . "$VIRTUAL_ENV/bin/activate"
+fi
+
+if [ -f "$HOME/functions.sh" ]; then 
+    . "$HOME/functions.sh"
+fi 
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 # NVM nodejs switcher
 export NVM_DIR="$HOME/.nvm" # nvm 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

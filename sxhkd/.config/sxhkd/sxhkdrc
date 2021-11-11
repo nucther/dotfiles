@@ -135,10 +135,10 @@ XF86MonBrightnessUp
 	xbacklight -inc 5
 
 # Print Screen with Flameshot 
-Print
+super + p
     flameshot screen -c
 
-super + Print 
+super + shift + p 
     flameshot gui
 
 # LockScreen with betterlockscreen
