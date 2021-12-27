@@ -1,5 +1,6 @@
 { pkgs? import <nixpkgs> {} }:
 pkgs.mkShell {
+    nixlang="jekyll";
     name="jekyll-dev";
     buildInputs=[
         pkgs.jekyll

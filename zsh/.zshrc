@@ -18,7 +18,18 @@ if [ -f "$HOME/functions.sh" ]; then
     . "$HOME/functions.sh"
 fi 
 
+#if [ -n "$nixlang" ]; then 
+#    nix-shell $HOME/.nixos/$nixlang --run "zsh" 
+#fi
+
+#Kubernetes addons Krew 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# PS
+
+defaultps="%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)"
+PS=$defaultps
+setPS
 
 # NVM nodejs switcher
 export NVM_DIR="$HOME/.nvm" # nvm 

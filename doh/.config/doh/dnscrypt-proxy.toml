@@ -1,4 +1,4 @@
-server_names = ['cloudflare','google']
+server_names = ['cloudflare']
 listen_addresses = ['127.0.0.1:53']
 max_clients = 10000 
 
@@ -10,7 +10,7 @@ force_tcp = false
 timeout = 5000
 keepalive = 30
 
-bootstrap_resolvers = ['1.1.1.1:53','8.8.8.8:53']
+bootstrap_resolvers = ['1.1.1.1:53']
 ignore_system_dns = true
 
 cache = true

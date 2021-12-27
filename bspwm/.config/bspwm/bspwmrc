@@ -2,6 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 picom &
+setMonitor
 $HOME/.screenlayout/monitor.sh
 $HOME/.config/helper.sh all
 $HOME/.config/polybar/launch.sh

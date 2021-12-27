@@ -46,7 +46,7 @@ inherit = bar/main
 monitor = eDP1
 monitor-strict = true
 modules-left = bspwm
-modules-center = title
+modules-center = ippublic
 modules-right = wifi disk cpu ram temperature pulseaudio battery date powermenu
 
 [bar/monitor2]
@@ -55,4 +55,4 @@ monitor = DP1
 monitor-strict = true
 modules-left = bspwm
 modules-center = title
-modules-right = ippublic disk date powermenu
+modules-right = disk date powermenu

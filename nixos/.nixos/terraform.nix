@@ -1,5 +1,6 @@
 { pkgs? import <nixpkgs> {} }:
 pkgs.mkShell {
+    nixlang="terraform";
     name="terraform-dev";
     buildInputs=[
         pkgs.terraform
