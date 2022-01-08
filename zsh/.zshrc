@@ -22,14 +22,19 @@ fi
 #    nix-shell $HOME/.nixos/$nixlang --run "zsh" 
 #fi
 
+#Kubernetes alias
+alias kgn="kubectl get nodes"
+alias kgc="kubectl config view"
+
 #Kubernetes addons Krew 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # PS
 
-defaultps="%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)"
-PS=$defaultps
+defaultps="%{$fg[cyan]%}%c%{$reset_color%}" 
+PS="\$(setPS)"
 setPS
+#PS1="\$(setPS)"
 
 # NVM nodejs switcher
 export NVM_DIR="$HOME/.nvm" # nvm 

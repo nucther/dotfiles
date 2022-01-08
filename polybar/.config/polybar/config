@@ -55,4 +55,4 @@ monitor = DP1
 monitor-strict = true
 modules-left = bspwm
 modules-center = title
-modules-right = disk date powermenu
+modules-right = binance-pnl binance-account date powermenu

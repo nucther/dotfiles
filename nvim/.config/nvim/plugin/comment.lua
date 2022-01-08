@@ -4,4 +4,6 @@ require("todo-comments").setup {
 -- refer to the configuration section below
 }
 
-
+require('nvim_comment').setup ({ 
+    comment_empty = false
+})

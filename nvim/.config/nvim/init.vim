@@ -43,6 +43,9 @@ Plug 'junegunn/fzf.vim'
 " RipGrep
 
 
+" Comment 
+Plug 'terrortylor/nvim-comment'
+
 call plug#end()
 
 

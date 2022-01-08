@@ -28,16 +28,19 @@ function install_plex(){
 }
 
 function setPS(){
-    PS1="$fg[green] $defaultps"
+    newps="$fg[green] $defaultps"
 
     if [ -n "$VIRTUAL_ENV" ]; then 
         vEnv=$(basename $VIRTUAL_ENV)
-        PS1="$fg[blue] [$vEnv] $reset_color $fg[cyan] $reset_color $defaultps"
+        newps="$fg[blue] [$vEnv] $reset_color $fg[cyan] $reset_color $defaultps"
     fi
 
     if [ -n "$nixlang" ]; then 
-        PS1="$fg[yellow] [$nixlang] $reset_color $fg[green] $reset_color $defaultps"
+        newps="$fg[yellow] [$nixlang] $reset_color $fg[green] $reset_color $defaultps"
     fi
+
+    #echo "$newps "
+    PS1="$newps \$(git_prompt_info)"
 }
 
 function vpnAnna(){
