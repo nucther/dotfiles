@@ -44,11 +44,11 @@ function setPS(){
 }
 
 function vpnAnna(){
-    sudo ip r add default via 10.242.0.3
+    sudo ip r add default via 10.242.0.253
 }
 
 function vpnAnnaStop(){
-    sudo ip r del default via 10.242.0.3
+    sudo ip r del default via 10.242.0.253
 }
 
 ## Monitor
