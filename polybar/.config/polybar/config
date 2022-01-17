@@ -55,4 +55,4 @@ monitor = DP1
 monitor-strict = true
 modules-left = bspwm
 modules-center = title
-modules-right = date powermenu
+modules-right =  date powermenu

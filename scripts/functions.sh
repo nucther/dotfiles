@@ -51,6 +51,12 @@ function vpnAnnaStop(){
     sudo ip r del default via 10.242.0.253
 }
 
+## NixOs Functions 
+function killdocker() {
+    did=$(sudo pgrep dockerd)
+    sudo kill -9 $did
+    exit
+}
 ## Monitor
 function setMonitor(){
     xrandr --newmode "1600x900" 118.25  1600 1696 1856 2112  900 903 908 934
