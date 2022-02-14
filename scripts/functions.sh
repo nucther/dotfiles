@@ -54,22 +54,6 @@ function setPS(){
 }
 
 #VPN
-function vpn-connect-sinta(){
-    sudo ip r add default via 10.242.0.253
-}
-
-function vpn-disconenct-sinta(){
-    sudo ip r del default via 10.242.0.253
-}
-
-function zerotier-join-consap(){
-    sudo zerotier-cli join e4da7455b2a57d4e
-}
-
-function zertier-leave-consap(){
-    sudo zerotier-cli leave e4da7455b2a57d4e
-}
-
 
 
 ## NixOs Functions 
