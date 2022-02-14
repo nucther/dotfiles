@@ -29,6 +29,15 @@ alias kgc="kubectl config view"
 #Kubernetes addons Krew 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# Zerotier
+alias zcli="sudo zerotier-cli"
+alias zln="sudo zerotier-cli listnetworks"
+alias zp="sudo zerotier-cli peers"
+alias zpl="sudo zerotier-cli peers | grep LEAF"
+alias zpo="sudo zerotier-cli peers | grep ORBIT"
+alias zpp="sudo zerotier-cli peers | grep PLANET"
+alias zlp="sudo zerotier-cli listpeers"
+alias zi="sudo zerotier-cli info"
 # PS
 
 defaultps="%{$fg[cyan]%}%c%{$reset_color%}" 

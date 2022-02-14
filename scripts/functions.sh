@@ -12,7 +12,7 @@ function venv-clear() {
     setPS
 }
 
-function switchlang() {
+function language() {
     wt=$(ls $HOME/.nixos | fzf)
 
     if [ -n "$wt" ]; then 
@@ -22,6 +22,16 @@ function switchlang() {
 }
 
 
+#Zerotier 
+function zc(){
+    network=$(cat $HOME/.zerotier-network | fzf | awk '{print $1}')
+    sudo zerotier-cli join $network
+}
+
+function zd(){
+    network=$(sudo zerotier-cli listnetworks | grep -n 1 | awk '{print $3" "$4}'| fzf | awk '{print $1}')
+    sudo zerotier-cli leave $network
+}
 ### Installation 
 function install_plex(){
     docker run -d --name plex --network=host -e TZ="Asia/Jakarta" -e PLEX_CLAIM="" -v /home/plex/config:/config -v /home/plex/temp:/transcode -v /home/movies/complete:/data plexinc/pms-docker
@@ -43,13 +53,24 @@ function setPS(){
     PS1="$newps \$(git_prompt_info)"
 }
 
-function vpnAnna(){
+#VPN
+function vpn-connect-sinta(){
     sudo ip r add default via 10.242.0.253
 }
 
-function vpnAnnaStop(){
+function vpn-disconenct-sinta(){
     sudo ip r del default via 10.242.0.253
 }
+
+function zerotier-join-consap(){
+    sudo zerotier-cli join e4da7455b2a57d4e
+}
+
+function zertier-leave-consap(){
+    sudo zerotier-cli leave e4da7455b2a57d4e
+}
+
+
 
 ## NixOs Functions 
 function killdocker() {

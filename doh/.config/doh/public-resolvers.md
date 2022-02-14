@@ -37,6 +37,22 @@ Public non-censoring, non-logging, DNSSEC-capable, DNSCrypt-enabled DNS resolver
 sdns://AQcAAAAAAAAAFlsyMDAxOmJjODoxODI0OjczODo6MV0gAyfzz5J-mV9G-yOB4Hwcdk7yX12EQs5Iva7kV3oGtlEgMi5kbnNjcnlwdC1jZXJ0LmFjc2Fjc2FyLWFtcy5jb20
 
 
+## adfree.usableprivacy.net
+
+Public updns DoH service with advertising, tracker and malware filters.
+Hosted in Europe by @usableprivacy, details see: https://docs.usableprivacy.com
+
+sdns://AgMAAAAAAAAADTc4LjQ3LjE2My4xNDGgzBBg05yDKbYrb7x9DW35MJhpuYHn5jktXNj6QI9NgOYgRE69Z7uD-IB7OSHpOKyReLiCvVCq2xEjHwRM9fCN984YYWRmcmVlLnVzYWJsZXByaXZhY3kubmV0Ci9kbnMtcXVlcnk
+
+
+## adfree.usableprivacy.net-ipv6
+
+Public updns DoH service with advertising, tracker and malware filters.
+Hosted in Europe by @usableprivacy, details see: https://docs.usableprivacy.com
+
+sdns://AgMAAAAAAAAAFlsyYTAxOjRmODoxYzBjOjgzMmQ6Ol2gzBBg05yDKbYrb7x9DW35MJhpuYHn5jktXNj6QI9NgOYgRE69Z7uD-IB7OSHpOKyReLiCvVCq2xEjHwRM9fCN984YYWRmcmVlLnVzYWJsZXByaXZhY3kubmV0Ci9kbnMtcXVlcnk
+
+
 ## adguard-dns
 
 Remove ads and protect your computer from malware
@@ -66,7 +82,7 @@ sdns://AQMAAAAAAAAAETk0LjE0MC4xNC4xNTo1NDQzILgxXdexS27jIKRw3C7Wsao5jMnlhvhdRUXWu
 
 Adguard DNS with safesearch and adult content blocking (over DoH)
 
-sdns://AgMAAAAAAAAADzE3Ni4xMDMuMTMwLjEzMiCsFdIhxY-VWoedpSrEKWAhaBEVj-8L-p_FJl6wMpPufhZkbnMtZmFtaWx5LmFkZ3VhcmQuY29tCi9kbnMtcXVlcnk
+sdns://AgMAAAAAAAAADzE3Ni4xMDMuMTMwLjEzMiCaOjT3J965vKUQA9nOnDn48n3ZxSQpAcK6saROY1oCGRZkbnMtZmFtaWx5LmFkZ3VhcmQuY29tCi9kbnMtcXVlcnk
 
 
 ## adguard-dns-family-ipv6
@@ -268,16 +284,23 @@ AT&T test DoH server.
 sdns://AgQAAAAAAAAAAKBLTrSwdCmLgotcADCVoQtFI_uVHAyINIsJxT5bq6QIoyD2Hldod9qWUClMzLX5bHX8txvaG7xGRjZ8Tr7aidcxjxBkb2h0cmlhbC5hdHQubmV0Ci9kbnMtcXVlcnk
 
 
+## bcn-ads-doh
+
+Resolver in Spain. DoH protocol. Non-logging, remove ads and malware, DNSSEC.
+
+sdns://AgMAAAAAAAAADjE4NS4yNTMuMTU0LjY2ABhkbnNlcy1ub2Fkcy5hbGVrYmVyZy5uZXQKL2Rucy1xdWVyeQ
+
+
 ## bcn-dnscrypt
 
-Resolver in Barcelona, Spain. DNSCrypt protocol. Non-logging, non-filtering, DNSSEC.
+Resolver in Spain. DNSCrypt protocol. Non-logging, non-filtering, DNSSEC.
 
 sdns://AQcAAAAAAAAADjE4NS4yNTMuMTU0LjY2IOAW_iKdfcd9ay9ewR8txQSwT-LP2bcoxGHv4wxTyGtNHDIuZG5zY3J5cHQtY2VydC5iY24tZG5zY3J5cHQ
 
 
 ## bcn-doh
 
-Resolver in Barcelona, Spain. DoH protocol. Non-logging, non-filtering, DNSSEC.
+Resolver in Spain. DoH protocol. Non-logging, non-filtering, DNSSEC.
 
 sdns://AgcAAAAAAAAADjE4NS4yNTMuMTU0LjY2oMwQYNOcgym2K2-8fQ1t-TCYabmB5-Y5LVzY-kCPTYDmIEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOEmRuc2VzLmFsZWtiZXJnLm5ldAovZG5zLXF1ZXJ5
 
@@ -306,7 +329,7 @@ DNS-over-HTTPS server. Non Logging, filters ads, trackers and malware. DNSSEC re
 
 Hosted in Stockholm, Sweden. (https://dns.brahma.world)
 
-sdns://AgMAAAAAAAAADDEzLjUzLjE4Ni41MqDMEGDTnIMptitvvH0NbfkwmGm5gefmOS1c2PpAj02A5iBETr1nu4P4gHs5Iek4rJF4uIK9UKrbESMfBEz18I33zhBkbnMuYnJhaG1hLndvcmxkCi9kbnMtcXVlcnk
+sdns://AgMAAAAAAAAADjE2LjE3MC4xNTAuMjIxoMwQYNOcgym2K2-8fQ1t-TCYabmB5-Y5LVzY-kCPTYDmIEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOEGRucy5icmFobWEud29ybGQKL2Rucy1xdWVyeQ
 
 
 ## brahma-world-ipv6
@@ -402,6 +425,17 @@ Warning: modifies your queries to include a copy of your network
 address when forwarding them to a selection of companies and organizations.
 
 sdns://AgAAAAAAAAAAEFsyNjIwOjExOTpmYzo6Ml0gaFOPx4GOgdJCKpBgY2-lKCpD9g3OG7pgwtfzq6tmAJcPZG9oLm9wZW5kbnMuY29tCi9kbnMtcXVlcnk
+
+
+## cisco-sandbox
+
+Cisco OpenDNS Sandbox (anycast) - RFC-compliant DNS service without filtering
+
+dnssec/log/no-filter/ecs 146.112.41.4
+
+Warning: This server is incompatible with anonymization.
+
+sdns://AQUAAAAAAAAADDE0Ni4xMTIuNDEuNCC3NRFAIG8iXT4r2CLX_WkeocM8yNZmjQy-BL-rykP7eRsyLmRuc2NyeXB0LWNlcnQub3BlbmRucy5jb20
 
 
 ## cleanbrowsing-adult
@@ -1061,7 +1095,7 @@ sdns://AQcAAAAAAAAAFDEwMy4xNTguMjIzLjE2Mjo4NDQzIB9z-95JSBqhYTv8UIQqUs65Ym2DYNXzB
 
 DNSCrypt | IPv4 only | Non-logging | Non-filtering | DNSSEC | Saint Petersburg, Russia.
 
-sdns://AQcAAAAAAAAADDk0LjI0Mi41OS4zNSBODx7VDHmrdwypnwyTGYbrznR8UddwTB13_uABxZynrBcyLmRuc2NyeXB0LWNlcnQuZGN0LXJ1MQ
+sdns://AQcAAAAAAAAADTk0LjI0Mi41OC4xMzYgH3P73klIGqFhO_xQhCpSzrlibYNg1fMF_lw36Qfw-30XMi5kbnNjcnlwdC1jZXJ0LmRjdC1ydTE
 
 
 ## dct-ru2
@@ -1095,6 +1129,13 @@ DNSSEC/Non-logged/Uncensored in Sydney (AWS).
 Encrypted DNS Server image by jedisct1, maintaned by DeffeR.
 
 sdns://AQcAAAAAAAAADTUyLjY1LjIzNS4xMjkg5Q00RDDBkwx3fUaa0_etjz4iH3lLBOqsg95bYDmV07MdMi5kbnNjcnlwdC1jZXJ0LmRlZmZlci1kbnMuYXU
+
+
+## dns.b33.network-dnscrypt
+
+DNSCrypt | IPv4 only | Non-logging | Non-filtering | DNSSEC | Blocks ads, malware, trackers, viruses, ransomware, telemetry and more | hosted on OVH | Location: Paris, France | Maintained by 0xb33 - (https://github.com/0xb33)
+
+sdns://AQcAAAAAAAAAEjE2Mi4xOS4xMjkuMjA6NTQ0MyBLAxD2I-nLlzrjDQhX_eNLqCb-_DIIEiH7MBG2gbliLRsyLmRuc2NyeXB0LWNlcnQuYjMzLm5ldHdvcms
 
 
 ## dns.digitale-gesellschaft.ch
@@ -1135,6 +1176,20 @@ Hosted in Zurich, Switzerland.
 Non-logging, non-filtering, supports DNSSEC.
 
 sdns://AgcAAAAAAAAAD1syYTA1OmZjODQ6OjQzXaDMEGDTnIMptitvvH0NbfkwmGm5gefmOS1c2PpAj02A5iBETr1nu4P4gHs5Iek4rJF4uIK9UKrbESMfBEz18I33zhxkbnMuZGlnaXRhbGUtZ2VzZWxsc2NoYWZ0LmNoCi9kbnMtcXVlcnk
+
+
+## dns.digitalsize.net
+
+A public, non-tracking, non-filtering DNS resolver with DNSSEC enabled and hosted in Germany (https://dns.digitalsize.net)
+
+sdns://AgcAAAAAAAAADjE2Mi41NS4xNTkuMjAyoMwQYNOcgym2K2-8fQ1t-TCYabmB5-Y5LVzY-kCPTYDmIEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOE2Rucy5kaWdpdGFsc2l6ZS5uZXQKL2Rucy1xdWVyeQ
+
+
+## dns.digitalsize.net-ipv6
+
+A public, non-tracking, non-filtering DNS resolver with DNSSEC enabled and hosted in Germany (https://dns.digitalsize.net)
+
+sdns://AgcAAAAAAAAAFlsyYTAxOjRmODoxYzFkOmYxNDo6MV2gzBBg05yDKbYrb7x9DW35MJhpuYHn5jktXNj6QI9NgOYgRE69Z7uD-IB7OSHpOKyReLiCvVCq2xEjHwRM9fCN984TZG5zLmRpZ2l0YWxzaXplLm5ldAovZG5zLXF1ZXJ5
 
 
 ## dns.ryan-palmer
@@ -1413,7 +1468,7 @@ Warning: This server is incompatible with anonymization.
 
 Provided by: https://dnsforfamily.com
 
-sdns://AQIAAAAAAAAADzEzNS4xODEuMTkzLjIyMiBHFKrWl_Swzwd8Mcwa8ZhdLGFgC94SpKo_g57e_49DthBkbnNmb3JmYW1pbHkuY29t
+sdns://AQIAAAAAAAAADzEzNS4xODEuMTkzLjIyMiDrxcZ_hFtGE6tfATvQZYjxgl5pTY_e2cRH_ms8bEWofBBkbnNmb3JmYW1pbHkuY29t
 
 
 ## dnsforfamily-v6
@@ -2102,16 +2157,6 @@ Non-logging, non-filtering, supports DNSSEC.
 sdns://AQcAAAAAAAAADjEzNi4yNDQuOTcuMTE0IPyq3HBOXuNgu6FO4pU71Si6CTV6kPD85NA6AThr_6tiGDIuZG5zY3J5cHQtY2VydC5tZWdhbmVyZA
 
 
-## meganerd-doh-ipv4
-
-DoH server by MegaNerd.nl (IPv4) - https://meganerd.nl/encrypted-dns-server
-Hosted in Amsterdam (AMS1), The Netherlands.
-
-Non-logging, non-filtering, supports DNSSEC.
-
-sdns://AgcAAAAAAAAADjEzNi4yNDQuOTcuMTE0oMwQYNOcgym2K2-8fQ1t-TCYabmB5-Y5LVzY-kCPTYDmIEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOGWNoZXdiYWNjYS5tZWdhbmVyZC5ubDo0NDMEL2RvaA
-
-
 ## meganerd-doh-ipv6
 
 DoH server by MegaNerd.nl (IPv6) - https://meganerd.nl/encrypted-dns-server
@@ -2634,6 +2679,13 @@ sdns://AQcAAAAAAAAADDIwLjIxMi41Mi43NiDjxysoCLj_kqq1dtoYCpB9_eZ3vMihC0hAJx7wyc5aR
 non-censoring, non-logging, DNSSEC-capable based on official docker image hosted in Singapore
 
 sdns://AQcAAAAAAAAAH1syYTAxOjExMTpmMTAwOjcwMDA6OjZmZGQ6NTNjNl0g48crKAi4_5KqtXbaGAqQff3md7zIoQtIQCce8MnOWkQYMi5kbnNjcnlwdC1jZXJ0LnNncC1kbjUz
+
+
+## sth-ads-doh-se
+
+Resolver in Stockholm, Sweden. DoH server. Non-logging, remove ads and malware, DNSSEC.
+
+sdns://AgMAAAAAAAAADTQ1LjE1My4xODcuOTYAGGRuc3NlLW5vYWRzLmFsZWtiZXJnLm5ldAovZG5zLXF1ZXJ5
 
 
 ## sth-dnscrypt-se
