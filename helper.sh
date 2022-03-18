@@ -28,7 +28,14 @@ setMonitor(){
 }
 
 install(){
-	stow bspwm sxhkd nvim kitty polybar dunst tmux zsh
+    stow bspwm sxhkd nvim kitty polybar dunst tmux zsh
+
+    # Work with Node 
+    npm install -g typescript typescript-language-server
+
+    # Work with python 
+    pip install neovim
+
 }
 
 uninstall(){

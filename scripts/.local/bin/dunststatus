@@ -1,0 +1,28 @@
+#!/bin/bash 
+
+listk=$(pgrep dunststatus)
+
+curr=$(echo $listk | awk '{print $(NF)}')
+
+for x in $listk; do 
+    if [ "$x" == "$curr" ]; then 
+        echo "OK"
+    else
+        kill -9 $x
+    fi
+done
+
+while true; do
+    dunststatus=$(dunstctl is-paused)
+    count=$(dunstctl count waiting)
+    if [ "$count" == "0" ]; then 
+        count=""
+    fi
+
+    if [ $dunststatus == "true" ]; then 
+        echo "%{F#ffa700}$count "
+    else
+        echo "$count "
+    fi
+    sleep 1
+done

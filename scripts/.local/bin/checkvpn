@@ -1,0 +1,7 @@
+#!/bin/sh
+
+connectedVPN=$(sudo zerotier-cli -j listnetworks | jq -r '[.[].name] | join(" | ")')
+
+if [ ! -z "$connectedVPN" ]; then
+    echo "旅 $connectedVPN"
+fi

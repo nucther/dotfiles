@@ -29,7 +29,7 @@ function zc(){
 }
 
 function zd(){
-    network=$(sudo zerotier-cli listnetworks | grep -n 1 | awk '{print $3" "$4}'| fzf | awk '{print $1}')
+    network=$(sudo zerotier-cli -j listnetworks | jq -r '.[] | [.nwid,.name] | @tsv' | fzf | awk -F '\t' '{print $1}')
     sudo zerotier-cli leave $network
 }
 ### Installation 
@@ -54,7 +54,6 @@ function setPS(){
 }
 
 #VPN
-
 
 ## NixOs Functions 
 function killdocker() {

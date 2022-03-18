@@ -20,6 +20,9 @@ cache_max_ttl = 86400
 cache_neg_min_ttl = 60 
 cache_neg_max_ttl = 100 
 
+## Cloaking Rules 
+cloaking_rules = 'virtual-dns.txt'
+
 [sources]
 
   [sources.'public-resolvers']
