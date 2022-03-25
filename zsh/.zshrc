@@ -25,6 +25,7 @@ fi
 #Kubernetes alias
 alias kgn="kubectl get nodes"
 alias kgc="kubectl config view"
+alias kcc="kubectl config current-context"
 
 #Kubernetes addons Krew 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

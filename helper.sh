@@ -28,10 +28,10 @@ setMonitor(){
 }
 
 install(){
-    stow bspwm sxhkd nvim kitty polybar dunst tmux zsh
+    stow betterlockscreen bspwm doh dunst nixos nvim polybar scripts sxhkd tmux zsh 
 
     # Work with Node 
-    npm install -g typescript typescript-language-server
+    npm install -g typescript typescript-language-server neovim
 
     # Work with python 
     pip install neovim
@@ -39,7 +39,7 @@ install(){
 }
 
 uninstall(){
-	stow -D bspwm sxhkd nvim kitty polybar dunst tmux zsh
+    stow -D betterlockscreen bspwm doh dunst nixos nvim polybar scripts sxhkd tmux zsh 
 }
 
 ## Environment 

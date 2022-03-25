@@ -21,6 +21,11 @@ function language() {
     setPS
 }
 
+#Kubernetes 
+function kswitch(){
+    context=$(kubectl config view -o jsonpath="{.contexts[*]}"| jq -r ".name" | fzf)
+    kubectl config use-context $context
+}
 
 #Zerotier 
 function zc(){
