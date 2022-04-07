@@ -6,6 +6,7 @@ pkgs.mkShell {
     buildInputs=[
         pkgs.kubeval
         pkgs.kube-score
+        pkgs.kubernetes-helm
     ];
 
     shellHook= ''

@@ -82,3 +82,6 @@ nnoremap <C-b> :Buffers<CR>
 
 "Save File
 nnoremap <C-s> :w<CR>
+
+"Git 
+nnoremap <leader>gs :lua require'git'.gfp()<CR>
