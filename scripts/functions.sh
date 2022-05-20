@@ -71,3 +71,13 @@ function setMonitor(){
     xrandr --newmode "1600x900" 118.25  1600 1696 1856 2112  900 903 908 934
     xrandr --addmode DP1 "1600x900"
 }
+
+# Other function 
+function killallapps(){
+    lists=($(pgrep $1))
+    
+    for id in ${lists[@]}
+    do 
+        kill -9 $id
+    done
+}

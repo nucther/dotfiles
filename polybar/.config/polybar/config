@@ -47,7 +47,7 @@ monitor = eDP1
 monitor-strict = true
 modules-left = bspwm
 modules-center = 
-modules-right = wifi cpu ram temperature pulseaudio notification battery date powermenu
+modules-right = wifi ippublic cpu ram temperature pulseaudio notification battery date powermenu
 
 [bar/monitor2]
 inherit = bar/main
