@@ -12,7 +12,7 @@ function venv-clear() {
     setPS
 }
 
-function language() {
+function lswitch() {
     wt=$(ls $HOME/.nixos | fzf)
 
     if [ -n "$wt" ]; then 

@@ -45,6 +45,9 @@ Plug 'ibhagwan/fzf-lua'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'stevearc/dressing.nvim'
 
+-- Terminal 
+Plug 'akinsho/toggleterm.nvim'
+
 vim.call('plug#end')
 
 
@@ -108,3 +111,8 @@ vim.api.nvim_set_keymap('v','K',':m \'<-2<CR>gv=gv', { noremap = true })
 --
 --FZF lua
 vim.api.nvim_set_keymap('n','<C-b>',':lua require\'fzf-lua\'.buffers()<CR>', {noremap = true})
+
+-- Terminal
+-- Debuger
+vim.api.nvim_set_keymap('n','<C-d>d', ':ToggleTerm<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n','<C-d>c', ':lua require\'terminal\'.openTermCurrentDir()<CR>', {noremap = true})

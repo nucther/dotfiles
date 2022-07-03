@@ -55,4 +55,4 @@ monitor = DP1
 monitor-strict = true
 modules-left = bspwm
 modules-center = title
-modules-right =  vpn disk date powermenu
+modules-right =  vpn crypto disk date powermenu

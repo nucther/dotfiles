@@ -3,3 +3,8 @@ require('dressing').setup({
         prompt_align = "center"
     }
 })
+
+require('toggleterm').setup({
+    open_mapping = [[<c-\>]],
+    shade_terminals = false
+})
