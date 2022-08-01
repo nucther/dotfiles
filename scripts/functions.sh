@@ -73,11 +73,15 @@ function setMonitor(){
 }
 
 # Other function 
-function killallapps(){
-    lists=($(pgrep $1))
-    
-    for id in ${lists[@]}
-    do 
-        kill -9 $id
-    done
+
+function reconnectOfficeWifi(){
+    nmcli c d office && nmcli c u office
+}
+
+function connectSinta(){
+    sudo ip route add default via 10.242.0.5
+}
+
+function disconnectSinta(){
+    sudo ip route del default via 10.242.0.5
 }
