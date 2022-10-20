@@ -14,11 +14,13 @@ function venv-clear() {
 
 function lswitch() {
     wt=$(ls $HOME/.nixos | fzf)
-
-    if [ -n "$wt" ]; then 
+    title=$(echo $wt | sed 's/.nix//')
+    if [ -n "$wt" ]; then
+        tmux rename-window "$title"
         nix-shell $HOME/.nixos/$wt --run "zsh"
-    fi
+    fi    
     setPS
+    tmux rename-window "default"
 }
 
 #Kubernetes 

@@ -45,7 +45,7 @@ eursor-scroll = ns-resize
 inherit = bar/main
 monitor = eDP1
 monitor-strict = true
-modules-left = bspwm
+modules-left = bspwm 
 modules-center = 
 modules-right = crypto wifi cpu ram temperature pulseaudio notification battery date powermenu
 
@@ -56,3 +56,11 @@ monitor-strict = true
 modules-left = bspwm
 modules-center = title
 modules-right =  vpn ippublic disk date powermenu
+
+;[bar/monitor3]
+;inherit = bar/main
+;monitor = HDMI1
+;monitor-strict = true
+;modules-left = bspwm
+;modules-center = 
+;modules-right = 

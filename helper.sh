@@ -31,7 +31,7 @@ install(){
     stow betterlockscreen bspwm doh dunst nixos nvim polybar scripts sxhkd tmux zsh 
 
     # Work with Node 
-    npm install -g typescript typescript-language-server neovim
+    npm install -g typescript typescript-language-server neovim @ansible/ansible-language-server
 
     # Work with python 
     pip install neovim

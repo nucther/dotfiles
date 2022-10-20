@@ -9,5 +9,6 @@ killall -q polybar
 echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
 polybar monitor1 2>&1 | tee -a /tmp/polybar1.log & disown
 polybar monitor2 2>&1 | tee -a /tmp/polybar2.log & disown
+#polybar monitor3 2>&1 | tee -a /tmp/polybar3.log & disown
 
 echo "Bars launched..."

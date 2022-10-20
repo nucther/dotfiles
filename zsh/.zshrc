@@ -39,6 +39,20 @@ alias zpo="sudo zerotier-cli peers | grep ORBIT"
 alias zpp="sudo zerotier-cli peers | grep PLANET"
 alias zlp="sudo zerotier-cli listpeers"
 alias zi="sudo zerotier-cli info"
+
+# Whois 
+alias arin="whois  -h whois.arin.net"
+alias arinrr="whois  -h rr.arin.net"
+alias apnic="whois  -h whois.apnic.net"
+alias afrinic="whois -h whois.afrinic.net"
+alias ripe="whois  -h whois.ripe.net"
+alias lacnic="whois  -h whois.lacnic.net"
+alias altdb="whois  -h whois.altdb.net"
+alias radb="whois  -h whois.radb.net"
+alias level3="whois  -h rr.level3.net"
+alias bell="whois  -h whois.in.bell.ca"
+alias ntt="whois  -h rr.ntt.net"
+
 # PS
 
 defaultps="%{$fg[cyan]%}%c%{$reset_color%}" 

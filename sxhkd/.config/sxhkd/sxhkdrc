@@ -148,3 +148,4 @@ alt + shift + x
 # Dunst
 alt + shift + c
     dunstctl close-all
+
