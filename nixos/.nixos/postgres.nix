@@ -7,6 +7,6 @@ pkgs.mkShell {
     ];
 
     shellHook= ''
-        echo "Start Helm Dev Environment"
+        echo "Start PostgreSQL Environment"
         '';
 }
