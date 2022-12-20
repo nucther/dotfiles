@@ -8,11 +8,21 @@ $HOME/.config/helper.sh all
 $HOME/.config/polybar/launch.sh
 nitrogen --restore
 #nitrogen --set-scaled $HOME/Pictures/wallpaper.jpg
-slack&
+#slack&
 
-bspc monitor DP1 -d III IV V VI
-bspc monitor eDP1 -d I II
-bspc monitor HDMI1 -d VII VIII IX X
+totalMonitor=$(xrandr| grep " connected" | wc -l )
+
+if [ "$totalMonitor" == 3 ] 
+then 
+    bspc monitor eDP1 -r 
+    bspc monitor DP1 -d I II III IV V VI
+    bspc monitor HDMI1 -d VII VIII IX X
+
+else
+    bspc monitor DP1 -r 
+    bspc monitor HDMI1 -r
+    bspc monitor eDP1 -d I II III IV V VI
+fi
 
 bspc config border_width         0
 bspc config window_gap           0
@@ -33,11 +43,11 @@ bspc config pointer_action3 resize_corner
 
 #bspc rule -a Google-chrome desktop='^5' 
 #dspc rule -a Spotify desktop='^6'
-bspc rule -a Slack desktop='^3' follow=off
+bspc rule -a Slack desktop='^1' follow=off
 #dspc rule -a Thunderbird desktop='^3' follow=on state=tiled
 #dspc rule -a mplayer2 state=floating
 #dspc rule -a Kupfer.py focus=on
 #dspc rule -a Screenkey manage=off
-bspc rule -a TelegramDesktop desktop='^4' follow=off
+#bspc rule -a TelegramDesktop desktop='^4' follow=off
 #dspc rule -a discord desktop='^4'
-#dspc rule -a Anydesk desktop='^6'
+dspc rule -a Anydesk desktop='^9'

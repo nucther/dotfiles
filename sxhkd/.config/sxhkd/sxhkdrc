@@ -149,3 +149,7 @@ alt + shift + x
 alt + shift + c
     dunstctl close-all
 
+# Turn Off Monitor 
+alt + shift + l 
+    xset dpms force off &&
+

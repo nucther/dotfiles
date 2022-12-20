@@ -52,7 +52,7 @@ alias radb="whois  -h whois.radb.net"
 alias level3="whois  -h rr.level3.net"
 alias bell="whois  -h whois.in.bell.ca"
 alias ntt="whois  -h rr.ntt.net"
-
+alias idnic="whois -h irr.idnic.net"
 # PS
 
 defaultps="%{$fg[cyan]%}%c%{$reset_color%}" 

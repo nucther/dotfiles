@@ -24,7 +24,7 @@ require'nvim-treesitter.configs'.setup {
 
 -- Ansible 
 --
-require'lspconfig'.ansiblels.setup{
-    filetypes = { "yaml" }
-}
+--require'lspconfig'.ansiblels.setup{
+--    filetypes = { "yaml" }
+--}
 
