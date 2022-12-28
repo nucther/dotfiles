@@ -160,7 +160,7 @@ Warning: GFW filtering rules are applied by that resolver.
 
 Homepage: https://alidns.com/
 
-sdns://AgAAAAAAAAAACTIyMy41LjUuNSAUZf-XFWhwvjDwNPWQzx8E3VDwpSDoT4pSfpwaLofrgA5kbnMuYWxpZG5zLmNvbQovZG5zLXF1ZXJ5
+sdns://AgAAAAAAAAAACTIyMy41LjUuNSCY49XlNq8pWM0vfxT3BO9KJ20l4zzWXy5l9eTycnwTMA5kbnMuYWxpZG5zLmNvbQovZG5zLXF1ZXJ5
 
 
 ## altername
@@ -216,7 +216,7 @@ sdns://AgcAAAAAAAAAFVsyYTBjOmI5YzA6Zjo0NTFkOjoxXaDMEGDTnIMptitvvH0NbfkwmGm5gefmO
 
 AT&T test DoH server.
 
-sdns://AgQAAAAAAAAAAKBLTrSwdCmLgotcADCVoQtFI_uVHAyINIsJxT5bq6QIoyD2Hldod9qWUClMzLX5bHX8txvaG7xGRjZ8Tr7aidcxjxBkb2h0cmlhbC5hdHQubmV0Ci9kbnMtcXVlcnk
+sdns://AgUAAAAAAAAAACC8hFRehaL-5iAWO74cDW6sa3toE6vGROtou_hQdtyuYxBkb2h0cmlhbC5hdHQubmV0Ci9kbnMtcXVlcnk
 
 
 ## bortzmeyer
@@ -981,22 +981,6 @@ Non-logging, non-filtering, DNSSEC DoH Server. Hosted in the UK.
 sdns://AgcAAAAAAAAADjY4LjE4My4yNTMuMjAwoMwQYNOcgym2K2-8fQ1t-TCYabmB5-Y5LVzY-kCPTYDmIEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOFGRuczEucnlhbi1wYWxtZXIuY29tCi9kbnMtcXVlcnk
 
 
-## dns.sb
-
-DNSSEC-enabled DoH server by https://xtom.com/
-https://dns.sb/doh/
-
-sdns://AgcAAAAAAAAADzE4NS4yMjIuMjIyLjIyMiCaOjT3J965vKUQA9nOnDn48n3ZxSQpAcK6saROY1oCGQZkb2guc2IKL2Rucy1xdWVyeQ
-
-
-## dns.sb-ipv6
-
-DNSSEC-enabled DoH server by https://xtom.com/ - IPv6
-https://dns.sb/doh/
-
-sdns://AgcAAAAAAAAACFsyYTA5OjpdIJo6NPcn3rm8pRAD2c6cOfjyfdnFJCkBwrqxpE5jWgIZBmRvaC5zYgovZG5zLXF1ZXJ5
-
-
 ## dns.therifleman.name
 
 DNS-over-HTTPS DNS forwarder from Mumbai, India. Blocks web and Android trackers and ads.
@@ -1331,20 +1315,6 @@ sdns://AgcAAAAAAAAAGlsyNjA2OjQ3MDA6MzAzNzo6NjgxNTo2NGVdABJkb2gtaXB2Ni5jcnlwdG8uc
 sdns://AgcAAAAAAAAAG1syNjA2OjQ3MDA6MzAzNjo6YWM0Mzo4NjlkXQASZG9oLWlwdjYuY3J5cHRvLnN4Ci9kbnMtcXVlcnk
 
 
-## doh-fi-blahdns
-
-Blocks ad and Tracking, no Logging, DNSSEC, Hosted in Finland. By https://blahdns.com/
-
-sdns://AgMAAAAAAAAADjk1LjIxNi4yMTIuMTc3ABJkb2gtZmkuYmxhaGRucy5jb20KL2Rucy1xdWVyeQ
-
-
-## doh-fi-blahdns-v6
-
-Blocks ad and Tracking, no Logging, DNSSEC, Hosted in Finland. By https://blahdns.com/
-
-sdns://AgMAAAAAAAAAF1syYTAxOjRmOTpjMDEwOjQzY2U6OjFdABJkb2gtZmkuYmxhaGRucy5jb20KL2Rucy1xdWVyeQ
-
-
 ## doh-ibksturm
 
 DoH & DoT Server, No Logging, No Filters, DNSSEC
@@ -1609,7 +1579,7 @@ Hosted in Amsterdam (AMS1), The Netherlands.
 
 Non-logging, non-filtering, supports DNSSEC.
 
-sdns://AQcAAAAAAAAADjEzNi4yNDQuOTcuMTE0ICif6V9M6EF_9Xo_MHwkDN4ZJjERopSJN8hBuUWg9YeMJTIuZG5zY3J5cHQtY2VydC5jaGV3YmFjY2EubWVnYW5lcmQubmw
+sdns://AQcAAAAAAAAAEjEzNi4yNDQuOTcuMTE0OjQ0MyAon-lfTOhBf_V6PzB8JAzeGSYxEaKUiTfIQblFoPWHjCUyLmRuc2NyeXB0LWNlcnQuY2hld2JhY2NhLm1lZ2FuZXJkLm5s
 
 
 ## meganerd-doh-ipv4
@@ -1620,6 +1590,26 @@ Hosted in Amsterdam (AMS1), The Netherlands.
 Non-logging, non-filtering, supports DNSSEC.
 
 sdns://AgcAAAAAAAAADjEzNi4yNDQuOTcuMTE0IPzeORHpBJHobi2cNX3_9XQfsFz8cUVhWC_BDJQm1PxCFWNoZXdiYWNjYS5tZWdhbmVyZC5ubAovZG5zLXF1ZXJ5
+
+
+## meganerd-doh-ipv6
+
+DoH server by MegaNerd.nl (IPv6) - https://meganerd.nl/encrypted-dns-server
+Hosted in Amsterdam (AMS1), The Netherlands.
+
+Non-logging, non-filtering, supports DNSSEC.
+
+sdns://AgcAAAAAAAAAKFsyMDAxOjE5ZjA6NTAwMTpjYmI6NTQwMDowM2ZmOmZlMDc6ZjcwZF0g_N45EekEkehuLZw1ff_1dB-wXPxxRWFYL8EMlCbU_EIVY2hld2JhY2NhLm1lZ2FuZXJkLm5sCi9kbnMtcXVlcnk
+
+
+## meganerd-ipv6
+
+DNSCrypt server by MegaNerd.nl (IPv6) - https://meganerd.nl/encrypted-dns-server
+Hosted in Amsterdam (AMS1), The Netherlands.
+
+Non-logging, non-filtering, supports DNSSEC.
+
+sdns://AQcAAAAAAAAAK1syMDAxOjE5ZjA6NTAwMTpjYmI6NTQwMDozZmY6ZmUwNzpmNzBkXTo0NDMgKJ_pX0zoQX_1ej8wfCQM3hkmMRGilIk3yEG5RaD1h4wlMi5kbnNjcnlwdC1jZXJ0LmNoZXdiYWNjYS5tZWdhbmVyZC5ubA
 
 
 ## mullvad-adblock-doh
@@ -2181,22 +2171,6 @@ No logs | IPv6 | Filtered
 
 sdns://AQMAAAAAAAAAJVsyNDA0Ojk0MDA6MTowOjIxNjozZWZmOmZlZjA6MTgwYV06NTQgnRNtOLv4IzxEfkbLFOaHa-ncLImdQiP-pS1jaFY5jlUdMi5kbnNjcnlwdC1jZXJ0LnVzZXJzcGFjZS1ibmU
 sdns://AQMAAAAAAAAAJVsyNDA0Ojk0MDA6MzowOjIxNjozZWZmOmZlZTA6N2Y2OV06NTQgT6-Ywg_9oHjkzJkuS4EIP7-_aYKaU5t7y2YXv6GoW4EdMi5kbnNjcnlwdC1jZXJ0LnVzZXJzcGFjZS1tZWw
-
-
-## v.dnscrypt.uk-doh-ipv4
-
-DoH, no logs, uncensored, DNSSEC. Hosted in London UK on Digital Ocean
-https://www.dnscrypt.uk
-
-sdns://AgcAAAAAAAAADTEzNi4yNDQuNjUuMjAAEXYuZG5zY3J5cHQudWs6NDQzCi9kbnMtcXVlcnk
-
-
-## v.dnscrypt.uk-doh-ipv6
-
-DoH, no logs, uncensored, DNSSEC. Hosted in London UK on Digital Ocean
-https://www.dnscrypt.uk
-
-sdns://AgcAAAAAAAAAJ1syYTA1OmY0ODA6MTAwMDo5Njc6NTQwMDozZmY6ZmU3ZTo1NWQzXQARdi5kbnNjcnlwdC51azo0NDMKL2Rucy1xdWVyeQ
 
 
 ## v.dnscrypt.uk-ipv4
