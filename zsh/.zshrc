@@ -30,6 +30,9 @@ alias kcc="kubectl config current-context"
 #Kubernetes addons Krew 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# Flatpak
+alias slack="nohup flatpak run com.slack.Slack& disown"
+
 # Zerotier
 alias zcli="sudo zerotier-cli"
 alias zln="sudo zerotier-cli listnetworks"
@@ -53,6 +56,7 @@ alias level3="whois  -h rr.level3.net"
 alias bell="whois  -h whois.in.bell.ca"
 alias ntt="whois  -h rr.ntt.net"
 alias idnic="whois -h irr.idnic.net"
+alias bgptools="whois -h bgp.tools"
 # PS
 
 defaultps="%{$fg[cyan]%}%c%{$reset_color%}" 

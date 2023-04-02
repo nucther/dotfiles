@@ -1,4 +1,1 @@
-172.16.14.2 anna.nurohman.com
-
-anna.nurohman.com   172.16.14.2
-anna.nurohman.com   172.16.15.1
+anna.nurohman.com   172.16.14.1

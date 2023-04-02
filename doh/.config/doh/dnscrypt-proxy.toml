@@ -10,7 +10,7 @@ force_tcp = false
 timeout = 5000
 keepalive = 30
 
-bootstrap_resolvers = ['1.1.1.1:53']
+bootstrap_resolvers = ['[2a06:1287:1603:1::1]:53', '1.1.1.1:53']
 ignore_system_dns = true
 
 cache = true
