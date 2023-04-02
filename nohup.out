@@ -1,0 +1,81 @@
+Initializing local storage instance
+(electron) Sending uncompressed crash reports is deprecated and will be removed in a future version of Electron. Set { compress: true } to opt-in to the new behavior. Crash reports will be uploaded gzipped, which most crash reporting servers support.
+Gtk-Message: 09:37:57.775: Failed to load module "xapp-gtk3-module"
+Gtk-Message: 09:37:57.775: Failed to load module "canberra-gtk-module"
+[2:0130/093757.826484:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[2:0130/093757.826596:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+Gkr-Message: 09:37:57.899: secret service operation failed: org.freedesktop.DBus.Error.ServiceUnknown
+LaunchProcess: failed to execvp:
+xdg-settings
+[2:0130/093758.031258:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[2:0130/093758.031319:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[2:0130/093758.031352:ERROR:bus.cc(399)] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[2:0130/093758.528199:ERROR:browser_main_loop.cc(269)] Gtk: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+[2:0130/093758.529588:ERROR:browser_main_loop.cc(269)] Gtk: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+[50:0130/093758.635897:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+[2:0130/093800.828692:ERROR:browser_main_loop.cc(269)] Gtk: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+[2:0130/093800.908838:ERROR:browser_main_loop.cc(269)] Gtk: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+[2:0130/093800.909500:ERROR:browser_main_loop.cc(269)] Gtk: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+[OpenH264] this = 0x0x2b00091d5800, Warning:ParamValidationExt(), eSpsPpsIdStrategy setting (2) with iUsageType (1) not supported! eSpsPpsIdStrategy adjusted to CONSTANT_ID
+[OpenH264] this = 0x0x2b00091d5800, Warning:ParamValidation(), AdaptiveQuant(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x2b00091d5800, Warning:ParamValidation(), BackgroundDetection(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x2b00091d5800, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[OpenH264] this = 0x0x2b00091d5800, Warning:[Rc] iDid = 0,iContinualSkipFrames(6) is large
+[OpenH264] this = 0x0x2b00091d5800, Warning:[Rc] iDid = 0,iContinualSkipFrames(9) is large
+[OpenH264] this = 0x0x2b00091d5800, Warning:[Rc] iDid = 0,iContinualSkipFrames(12) is large
+[OpenH264] this = 0x0x2b00091d5800, Warning:[Rc] iDid = 0,iContinualSkipFrames(15) is large
+[OpenH264] this = 0x0x2b00091d5800, Warning:Actual input framerate 0.000000 is different from framerate in setting 14.000000, suggest to use other rate control modes
+[78:0130/103451.401538:ERROR:stun_port.cc(98)] Binding request timed out from 172.16.88.x:53520 (rp)
+[78:0130/103455.370248:ERROR:stun_port.cc(98)] Binding request timed out from 172.16.88.x:33145 (rp)
+[OpenH264] this = 0x0x2b0009c83d20, Warning:ParamValidationExt(), eSpsPpsIdStrategy setting (2) with iUsageType (1) not supported! eSpsPpsIdStrategy adjusted to CONSTANT_ID
+[OpenH264] this = 0x0x2b0009c83d20, Warning:ParamValidation(), AdaptiveQuant(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x2b0009c83d20, Warning:ParamValidation(), BackgroundDetection(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x2b0009c83d20, Warning:Actual input framerate 0.000000 is different from framerate in setting 13.000000, suggest to use other rate control modes
+[OpenH264] this = 0x0x2b0009c83d20, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[OpenH264] this = 0x0x2b0009c83d20, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[78:0130/103858.088968:ERROR:stun_port.cc(98)] Binding request timed out from 172.16.88.x:40830 (rp)
+[78:0130/103902.854639:ERROR:stun_port.cc(98)] Binding request timed out from 172.16.88.x:41148 (rp)
+[OpenH264] this = 0x0x2b0009c83d20, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[OpenH264] this = 0x0x2b0009c83d20, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[50:0130/114656.254630:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 1 times!
+[50:0130/114656.269013:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 2 times!
+[50:0130/114715.897614:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 3 times!
+[78:0130/115045.479642:ERROR:stun_port.cc(98)] Binding request timed out from 172.16.88.x:52791 (rp)
+[OpenH264] this = 0x0x2b0007cb0750, Warning:ParamValidationExt(), eSpsPpsIdStrategy setting (2) with iUsageType (1) not supported! eSpsPpsIdStrategy adjusted to CONSTANT_ID
+[OpenH264] this = 0x0x2b0007cb0750, Warning:ParamValidation(), AdaptiveQuant(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x2b0007cb0750, Warning:ParamValidation(), BackgroundDetection(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x2b0007cb0750, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[OpenH264] this = 0x0x2b0007cb0750, Warning:[Rc] iDid = 0,iContinualSkipFrames(6) is large
+[OpenH264] this = 0x0x2b0007cb0750, Warning:[Rc] iDid = 0,iContinualSkipFrames(9) is large
+[OpenH264] this = 0x0x2b0007cb0750, Warning:Actual input framerate 0.000000 is different from framerate in setting 15.000000, suggest to use other rate control modes
+[78:0130/121927.246291:ERROR:stun_port.cc(98)] Binding request timed out from 172.16.88.x:43020 (rp)
+[78:0130/125358.604827:ERROR:stun_port.cc(98)] Binding request timed out from 172.16.88.x:53237 (rp)
+[OpenH264] this = 0x0x2b00080f9020, Warning:ParamValidationExt(), eSpsPpsIdStrategy setting (2) with iUsageType (1) not supported! eSpsPpsIdStrategy adjusted to CONSTANT_ID
+[OpenH264] this = 0x0x2b00080f9020, Warning:ParamValidation(), AdaptiveQuant(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x2b00080f9020, Warning:ParamValidation(), BackgroundDetection(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(6) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(9) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(12) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(15) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(18) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(21) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(24) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(27) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(30) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:Actual input framerate 0.000000 is different from framerate in setting 15.000000, suggest to use other rate control modes
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(33) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(36) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(39) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(42) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(45) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(48) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(51) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(54) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(57) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(60) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[78:0130/131113.901483:ERROR:stun_port.cc(98)] Binding request timed out from 172.16.88.x:60162 (rp)
+[OpenH264] this = 0x0x2b00080f9020, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[78:0130/140137.557711:ERROR:stun_port.cc(98)] Binding request timed out from 172.16.88.x:43887 (rp)
