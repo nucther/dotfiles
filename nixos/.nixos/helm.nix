@@ -4,6 +4,7 @@ pkgs.mkShell {
     name="helm-dev";
     buildInputs=[
         pkgs.kubernetes-helm
+        pkgs.helmfile
     ];
 
     shellHook= ''

@@ -8,6 +8,7 @@ pkgs.mkShell {
     ];
 
     shellHook= ''
+        export LANG=C.UTF-8
         echo "Start Ansible Dev Environment"
         '';
 }

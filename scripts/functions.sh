@@ -20,7 +20,7 @@ function lswitch() {
         nix-shell $HOME/.nixos/$wt --run "zsh"
     fi    
     setPS
-    tmux rename-window "default"
+    tmux rename-window "zsh"
 }
 
 #Kubernetes 

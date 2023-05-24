@@ -4,6 +4,8 @@ pkgs.mkShell {
     name="terraform-dev";
     buildInputs=[
         pkgs.terraform
+        pkgs.terraform-docs
+        pkgs.tfsec
     ];
 
     shellHook= ''

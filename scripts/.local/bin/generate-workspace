@@ -1,5 +1,5 @@
 #!/bin/bash
 
 tmux new -d -s "Personal"
-tmux new -d -s "RepublicPower" -c "$HOME/Projects/RepublicPower"
+tmux new -d -s "Projects" -c "$HOME/Projects"
 tmux a -t "Personal"

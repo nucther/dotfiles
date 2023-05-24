@@ -3,7 +3,7 @@ pkgs.mkShell {
     nixlang="PostgreSQL";
     name="postgres-dev";
     buildInputs=[
-        pkgs.postgresql
+        pkgs.postgresql_15
     ];
 
     shellHook= ''
