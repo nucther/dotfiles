@@ -40,9 +40,6 @@ function zd(){
     sudo zerotier-cli leave $network
 }
 ### Installation 
-function install_plex(){
-    docker run -d --name plex --network=host -e TZ="Asia/Jakarta" -e PLEX_CLAIM="" -v /home/plex/config:/config -v /home/plex/temp:/transcode -v /home/movies/complete:/data plexinc/pms-docker
-}
 
 function setPS(){
     newps="$fg[green] $defaultps"
@@ -68,11 +65,6 @@ function killdocker() {
     sudo kill -9 $did
     exit
 }
-## Monitor
-function setMonitor(){
-    xrandr --newmode "1600x900" 118.25  1600 1696 1856 2112  900 903 908 934
-    xrandr --addmode DP1 "1600x900"
-}
 
 # Other function 
 
@@ -80,10 +72,3 @@ function reconnectOfficeWifi(){
     nmcli c d office && nmcli c u office
 }
 
-function connectSinta(){
-    sudo ip route add default via 10.242.0.5
-}
-
-function disconnectSinta(){
-    sudo ip route del default via 10.242.0.5
-}
