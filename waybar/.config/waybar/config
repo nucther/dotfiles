@@ -12,10 +12,12 @@
     ],
 
     "modules-center": [
-        "clock",
     ],
 
     "modules-right": [
+        "custom/pomodoro",
+        "custom/notification",
+        "pulseaudio",
         "cpu",
         "temperature",
         "memory",
@@ -23,6 +25,9 @@
         "disk",
         "network",
         "tray",
+        "custom/power",
+        "clock",
+        "custom/javadate"
     ],
 
     "wlr/workspaces": {
@@ -46,12 +51,12 @@
 
     "cpu": {
         "interval": 5,
-        "format": "  {usage}% ({load})", // Icon: microchip
+        "format": "  {usage}% ({load})", 
         "states": {
             "warning": 70,
             "critical": 90
         },
-        "on-click": "kitty --start-as=fullscreen --title htop sh -c 'htop'"
+        "on-click": "kitty --title btop sh -c 'btop'"
     },
 
     "memory": {
@@ -79,7 +84,7 @@
 
     "network": {
         "interval": 5,
-        "format-wifi": "   {essid} ({signalStrength}%)", // Icon: wifi
+        "format-wifi": "   {essid} ({bandwidthDownBytes}|{bandwidthUpBytes})", // Icon: wifi
         "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
         "format-disconnected": "⚠  Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}"
@@ -91,7 +96,7 @@
         "states": {
             "warning": 30,
             "critical": 15
-        },
+        }
     },
 
     "temperature": {
@@ -100,5 +105,46 @@
 
     "user": {
         "format": "  {user} "
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "amixer set Master toggle & disown",
+        "on-click-right": "pavucontrol"
+    },
+
+    "custom/javadate": {
+        "exec": "~/.config/waybar/scripts/javadate.sh",
+        "interval": 60
+    },
+
+    "custom/notification": {
+        "exec": "~/.config/waybar/scripts/dunst.sh",
+        "on-click": "dunstctl set-paused toggle",
+        "restart-interval": 1
+    },
+    
+    "custom/power": {
+        "format": "",
+        "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+        "tooltip": false
+    },
+
+    "custom/pomodoro": {
+        "format": " {}",
+        "exec": "~/.config/waybar/scripts/pomodoro.sh",
+        "on-click": "~/.config/waybar/scripts/pomodoro.sh disable",
+        "return-type": "json",
+        "restart-interval": 1
     }
 }

@@ -37,17 +37,9 @@ tooltip label{
     color: #cdd6f4;
 }
 
-#custom-launch_wofi,
-#custom-launch_firefox,
-#custom-launch_thunderbird,
-#custom-launch_thunar,
-#custom-launch_kitty,
-#custom-lock_screen,
-#custom-light_dark,
-#custom-power_btn,
-#custom-power_profile,
-#custom-weather,
-#custom-myhyprv,
+#custom-notification,
+#custom-power,
+#custom-pomorodo,
 #window,
 #cpu,
 #disk,
@@ -76,7 +68,6 @@ tooltip label{
 
 #workspaces {
     padding-right: 0px;
-    padding-left: 5px;
 }
 
 #window {
@@ -85,19 +76,10 @@ tooltip label{
     margin-right: 20px;
 }
 
-#custom-launch_firefox, 
-#custom-launch_thunderbird,
-#custom-launch_thunar,
-#custom-launch_wofi,
-#custom-launch_kitty,
-#custom-weather {
-    margin-left: 0px;
-    border-right: 0px;
-    font-size: 24px;
-    margin-right: 20px;
+#custom-pomodoro.working {
+    color: green;
 }
 
-#custom-launch_firefox, 
-#custom-launch_kitty {
-    font-size: 20px;
+#custom-pomodoro.break {
+    color: red;
 }
