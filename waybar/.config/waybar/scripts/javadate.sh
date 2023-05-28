@@ -1,7 +1,9 @@
 #!/bin/bash 
 
-javaMarketDateName=(Pon Wage Kliwon Legi Pahing)
+javaMarketDateName=(Pahing Pon Wage Kliwon Legi) 
 
 
 dayOfWeek=$(date +"%u")
-echo "( $(date +"%a") ${javaMarketDateName[($dayOfWeek - 1)]} )"
+
+
+echo "( $(date +"%a") ${javaMarketDateName[($dayOfWeek %5)]} )"
