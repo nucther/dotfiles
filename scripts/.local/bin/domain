@@ -1,15 +1,16 @@
 #!/bin/bash
 
 #Specify all the domains you want to check
-DOMAINS="nurohman.com jalansunyi.com lupate.men"
+DOMAINS="nurohman.com jalansunyi.com lupate.men 203913.my.id"
 
 current_epoch=`date '+%s'`
 for dm in $DOMAINS
 do
-  expiry_date=`whois $dm | grep -i "Exp"| head -1 | awk '{print $NF}'`
+  expiry_date=`whois $dm | grep -i "Exp"| head -1 | awk -F ': ' '{ for (i=2;i<=NF;i++) printf("%s",$i)}'`
   echo -n " $dm - Expires on $expiry_date "
   expiry_epoch=`date --date="$expiry_date" '+%s'`
   epoch_diff=`expr $expiry_epoch - $current_epoch`
   days=`expr $epoch_diff / 86400`
-  echo " $days days remaining. "
+  years=$((days / 365 ))
+  echo "$years Years $((days - (years * 365))) days remaining. "
 done

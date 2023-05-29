@@ -14,4 +14,4 @@ res=$((dayOfJavaneseMarket%5))
 #echo "Java: $dayOfJavaneseMarket"
 #echo $(($dayOfJavaneseMarket % 5 ))
 #echo $(date --date="$dateTarget" +"%d %b %Y")
-echo "( $(date --date="$dateTarget" +"%a") ${javaMarketDateName[$res]} )"
+echo "( $(date --date="$dateTarget" +"%a") ${javaMarketDateName[$res - 1]} )"
