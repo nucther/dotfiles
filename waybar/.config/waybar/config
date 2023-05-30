@@ -23,6 +23,7 @@
         "memory",
         "battery",
         "disk",
+        "disk#home",
         "network",
         "tray",
         "custom/power",
@@ -65,8 +66,13 @@
     },
 
     "disk": {
-        "format": "󰋊 {free}",
+        "format": "󰋊  {free}",
         "path": "/"
+    },
+
+    "disk#home": {
+        "format": "󱂵  {free}",
+        "path": "/home"
     },
 
     "tray": {
@@ -91,7 +97,7 @@
     },
 
     "battery": {
-        "format": "{icon}  {capacity}%",
+        "format": "{icon}   {capacity}%",
         "format-icons": ["", "", "", "", ""],
         "states": {
             "warning": 30,
