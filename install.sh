@@ -80,6 +80,8 @@ software=(
     imv
     authy
     lazygit
+    udiskie
+    whois
 )
 
 fonts=(

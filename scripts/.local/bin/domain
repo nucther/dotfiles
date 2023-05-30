@@ -1,10 +1,11 @@
 #!/bin/bash
 
 #Specify all the domains you want to check
-DOMAINS="nurohman.com jalansunyi.com lupate.men 203913.my.id"
+IFS=$'\n' read -d '' -r -a DOMAINS < ~/.domainlist
+
 
 current_epoch=`date '+%s'`
-for dm in $DOMAINS
+for dm in ${DOMAINS[@]}
 do
   expiry_date=`whois $dm | grep -i "Exp"| head -1 | awk -F ': ' '{ for (i=2;i<=NF;i++) printf("%s",$i)}'`
   exp_formated=$(date --date="$expiry_date" +"%d %B %Y %H:%M:%S")
