@@ -8,5 +8,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 stow hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock  
 
-printf "#Start Hyprland\nif [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then\nHyprland\nfi" | tee -a ~/.bash_profile
+printf "#Start Hyprland\nif [ -z "\$DISPLAY" ] && [ \$(tty) = /dev/tty1 ]; then\nHyprland\nfi" | tee -a ~/.bash_profile
 

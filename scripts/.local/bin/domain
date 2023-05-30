@@ -7,10 +7,16 @@ current_epoch=`date '+%s'`
 for dm in $DOMAINS
 do
   expiry_date=`whois $dm | grep -i "Exp"| head -1 | awk -F ': ' '{ for (i=2;i<=NF;i++) printf("%s",$i)}'`
-  echo -n " $dm - Expires on $expiry_date "
+  exp_formated=$(date --date="$expiry_date" +"%d %B %Y %H:%M:%S")
+  printf "\n\n %s - Expires on %s" "$dm" "$exp_formated"
   expiry_epoch=`date --date="$expiry_date" '+%s'`
   epoch_diff=`expr $expiry_epoch - $current_epoch`
   days=`expr $epoch_diff / 86400`
   years=$((days / 365 ))
-  echo "$years Years $((days - (years * 365))) days remaining. "
+  if [ "$years" -gt 0 ]; then 
+      printf '\n\t%s Years' "$years"
+  fi
+  printf "\n\t$((days - (years * 365))) days. "
 done
+
+printf "\n\n"
