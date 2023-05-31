@@ -1,14 +1,16 @@
 { pkgs? import <nixpkgs> {} }:
 pkgs.mkShell {
-    nixlang="terraform";
-    name="terraform-dev";
+    nixlang="hashicorp";
+    name="hashicorp-dev";
     buildInputs=[
         pkgs.terraform
         pkgs.terraform-docs
         pkgs.tfsec
+        pkgs.vault
+        pkgs.boundary
     ];
 
     shellHook= ''
-        echo "Start Terraform Dev Environment"
+        echo "Start Hashicorp Dev Apps"
         '';
 }

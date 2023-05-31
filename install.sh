@@ -82,6 +82,10 @@ software=(
     lazygit
     udiskie
     whois
+    podman
+    kind
+    dnsutils
+    mtr
 )
 
 fonts=(
@@ -128,18 +132,29 @@ if [ -f "~/.nvm/nvm.sh"  ]; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 else
     echo -e "$OK NVM already installed"
+    source ~/.nvm/nvm.sh
 
-#    nodeLatest=$(nvm ls-remote | tail -n 1 | tr -d ' ')
-#    currNode=$(nvm ls | head -1 | awk '{print $2}')
-#    nvm install $nodeLatest &>> $LOOG &
-#    nvm alias default $nodeLatest
+    nodeLatest=$(nvm ls-remote | tail -n 1 | awk '{ print $2 }')
+    currNode=$(nvm ls | grep default | head -1 | awk '{ print $3 }')
+
+#    echo $nodeLatest
+#    echo $currNode
+#    if [ "$nodeLatest" = "$currNode" ]; then 
+#        echo -e "$OK Already latest nodejs"
+#    else  
+#        nvm install $nodeLatest &>> $LOOG &
+#        progress $!
+#        nodeNow=$(nvm ls | grep default | head -1 | awk '{ print $3 }') 
+#
+#        if [ "$nodeNow" = "$nodeLatest" ]; then 
+#            echo -e "$OK nodejs version $nodeLatest installed"
+#        else 
+#            echo -e "$ER failed to install nodejs please check $LOOG"
+#        fi
+#    fi
 fi
 
 
-stow hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock  
+echo -e "$OK update directory"
+stow hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock 
 
-if [ -z "$(grep hyperland ~/.bash_profile)" ]; then 
-    printf "\n\n\n#hyperland\nif [ -z "\$DISPLAY" ] && [ \$(tty) = /dev/tty1 ]; then\nHyprland\nfi" | tee -a ~/.bash_profile
-fi
-
-sudo systemctl enable sddm.service

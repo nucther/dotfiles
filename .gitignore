@@ -1,5 +1,5 @@
 */**/*.bak
 */**/*.back
 ~
-scripts/.local/share
-scripts/.local/state
+scripts/.local
+!scripts/.local/bin
