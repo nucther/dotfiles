@@ -86,6 +86,8 @@ software=(
     kind
     dnsutils
     mtr
+    mupdf-gl
+    mupdf-tools
 )
 
 fonts=(

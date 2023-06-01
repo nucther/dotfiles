@@ -22,6 +22,8 @@ fi
 #    nix-shell $HOME/.nixos/$nixlang --run "zsh" 
 #fi
 
+alias calculatefile="du -sch .[!.]* * |sort -h"
+
 #Kubernetes alias
 alias kgn="kubectl get nodes"
 alias kgc="kubectl config view"

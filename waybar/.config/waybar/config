@@ -25,6 +25,7 @@
         "disk",
         "disk#home",
         "network",
+        "custom/update",
         "tray",
         "custom/power",
         "clock",
@@ -152,5 +153,12 @@
         "on-click": "~/.config/waybar/scripts/pomodoro.sh disable",
         "return-type": "json",
         "restart-interval": 1
+    },
+    
+    "custom/update": {
+        "format": "󰣇 {}",
+        "exec": "yay -Qu | wc -l",
+        "on-click": "kitty --title Update sh -c 'yay -Syu'",
+        "interval": 900
     }
 }
