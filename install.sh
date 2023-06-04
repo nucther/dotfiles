@@ -88,6 +88,16 @@ software=(
     mtr
     mupdf-gl
     mupdf-tools
+    tree
+    scrcpy
+    ripgrep
+    wget
+    k9s
+    vultr-cli
+    doctl
+    alsa-utils
+    swayidle
+    gocloc-git
 )
 
 fonts=(
@@ -97,6 +107,9 @@ fonts=(
     noto-fonts-sc-vf
 )
 
+nixdekstop=(
+    remmina
+)
 
 for pre in ${prepare[@]}; do
     install $pre 
@@ -113,6 +126,10 @@ done
 for font in ${fonts[@]}; do 
     install $font 
 done 
+
+for nix in ${nixdekstop[@]}; do 
+    echo $nix 
+done
 
 # Install Oh ZSH 
 if [ -d "~/.oh-my-zsh" ]; then 
@@ -139,6 +156,9 @@ else
     nodeLatest=$(nvm ls-remote | tail -n 1 | awk '{ print $2 }')
     currNode=$(nvm ls | grep default | head -1 | awk '{ print $3 }')
 
+
+    nvm use node
+    
 #    echo $nodeLatest
 #    echo $currNode
 #    if [ "$nodeLatest" = "$currNode" ]; then 
@@ -158,5 +178,15 @@ fi
 
 
 echo -e "$OK update directory"
-stow hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock 
+stow -R hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock 
 
+## NVIM Usage 
+if [ -z "$(pip list | grep neovim)" ]; then 
+    echo -e "$AC Install Neovim for Python"
+    pip install neovim
+fi
+
+if [ -z $(which neovim-node-host) ]; then 
+    echo -e "$AC Install Neovim for Node"
+    npm i -g neovim
+fi

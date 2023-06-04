@@ -65,9 +65,34 @@ defaultps="%{$fg[cyan]%}%c%{$reset_color%}"
 PS="\$(setPS)"
 setPS
 #PS1="\$(setPS)"
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-# NVM nodejs switcher
-export NVM_DIR="$HOME/.nvm" # nvm 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-if [ -e /home/nurohman/.nix-profile/etc/profile.d/nix.sh ]; then . /home/nurohman/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+lazynvm() {
+    unset -f nvm node npm npx
+    export NVM_DIR=$HOME/.nvm 
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+    nvm use node 
+}
+
+
+nvm() {
+    lazynvm
+    nvm $@
+}
+
+node() {
+    lazynvm
+    node $@
+}
+
+npm(){
+    lazynvm
+    npm $@
+}
+
+npx(){
+    lazynvm
+    npx $@
+}
+

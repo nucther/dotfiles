@@ -3,3 +3,6 @@
 ~
 scripts/.local
 !scripts/.local/bin
+node_modules
+package.json
+package-lock.json

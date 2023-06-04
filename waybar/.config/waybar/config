@@ -159,6 +159,6 @@
         "format": "󰣇 {}",
         "exec": "yay -Qu | wc -l",
         "on-click": "kitty --title Update sh -c 'yay -Syu'",
-        "interval": 900
+        "interval": 300
     }
 }

@@ -1,6 +1,6 @@
 { pkgs? import <nixpkgs> {} }:
 pkgs.mkShell {
-    nixlang="rust";
+    nixlang="Remmina";
     name="remmina";
     buildInputs=[
         pkgs.remmina
