@@ -57,7 +57,8 @@ hyprland=(
     swaylock-effects
     waybar-hyprland
     wl-clipboard
-    sddm-git
+    greetd
+    greetd-tuigreet
 )
 
 software=(
@@ -98,6 +99,7 @@ software=(
     alsa-utils
     swayidle
     gocloc-git
+    p7zip-gui
 )
 
 fonts=(
@@ -152,15 +154,15 @@ if [ -f "~/.nvm/nvm.sh"  ]; then
 else
     echo -e "$OK NVM already installed"
     source ~/.nvm/nvm.sh
+    nvm use node
 
     nodeLatest=$(nvm ls-remote | tail -n 1 | awk '{ print $2 }')
     currNode=$(nvm ls | grep default | head -1 | awk '{ print $3 }')
 
 
-    nvm use node
     
-#    echo $nodeLatest
-#    echo $currNode
+    echo "Latest: $nodeLatest"
+    echo "Current: $currNode"
 #    if [ "$nodeLatest" = "$currNode" ]; then 
 #        echo -e "$OK Already latest nodejs"
 #    else  
