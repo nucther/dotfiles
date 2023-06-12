@@ -1,3 +1,5 @@
+![Waybar](screnshot/waybar.jpg)
+
 ## Usage 
 
 ```

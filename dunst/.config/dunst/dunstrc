@@ -2,9 +2,10 @@
 
 monitor = 1
 frame_width = 0 
-icon_path = $HOME/.config/dunst/icon/:/usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
-force_xwayland = true 
+icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+browser = /usr/bin/google-chrome-stable
+
 
 [pomodoro_normal]
-appname = "pomodoro"
-new_icon = "$HOME/.config/dunst/icon/default/pomodoro.png"
+summary = "Pomodoro"
+new_icon = "${HOME}/.config/dunst/icon/default/pomodoro.png"

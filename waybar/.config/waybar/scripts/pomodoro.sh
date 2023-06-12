@@ -2,15 +2,17 @@
 
 file="${PWD}/.pomodoro"
 notif_audio="${HOME}/.config/waybar/scripts/notification.wav"
+icon="${HOME}/.config/waybar/scripts/pomodoro.png"
+ 
 
 if [ "$1" == "disable" ]; then 
     if [ ! -f "$file" ] ; then
         touch "$file"
-        notify-send "Pomodoro" "Started for the first session."
+        notify-send -i "$icon" "Pomodoro" "Started for the first session."
         mpv $notif_audio &
     else  
         rm "$file"
-        notify-send -u critical "Pomodoro" "Disabled pomodoro system."
+        notify-send -i "$icon" -u critical "Pomodoro" "Disabled pomodoro system."
         mpv $notif_audio &
     fi
 
@@ -48,20 +50,20 @@ if [ -f "$file" ]; then
             if [ "$class" == "break" ]; then 
                 class="working"
                 next_break=$(($(date +%s) + ($pomodoro_interval * 60 )))
-                notify-send "Pomodoro" "Started session number $(($total_break + 1))"
+                notify-send -i $icon "Pomodoro" "Started session number $(($total_break + 1))"
             else 
                 class="break"
                 total_break=$(($total_break + 1))
                 next_break=$(($(date +%s) + ($pomodoro_break * 60 )))
                 if [ $total_break -lg 5 ]; then 
-                    notify-send -u critical "Pomodoro" "Break before session $(($total_break + 1))"
+                    notify-send -i $icon -u critical "Pomodoro" "Break before session $(($total_break + 1))"
                 fi
             fi
             mpv $notif_audio &
 
             if [ "$total_break" == "5" ]; then 
                 total_break=0
-                notify-send -u critial "Pomodoro" "Long Break session"
+                notify-send -i $icon -u critial "Pomodoro" "Long Break session"
                 next_break=$(($(date +%s) + ($pomodoro_long_break * 60 )))
             fi
 
