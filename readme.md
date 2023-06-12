@@ -1,5 +1,5 @@
-![Waybar](screnshot/waybar.jpg)
-![Waybar](screnshot/waybar-pomodoro.jpg)
+![Waybar](screenshot/waybar.jpg)
+![Waybar](screenshot/waybar-pomodoro.jpg)
 
 ## Usage 
 
