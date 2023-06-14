@@ -156,9 +156,10 @@
     },
     
     "custom/update": {
-        "format": "󰣇 {}",
-        "exec": "yay -Qu | wc -l",
-        "on-click": "kitty --title Update sh -c 'yay -Syu'",
-        "interval": 300
+        "format": "󰣇  {}",
+        "exec": "~/.config/waybar/scripts/update.sh checkUpdate",
+        "on-click": "kitty --title Update sh -c '~/.config/waybar/scripts/update.sh update'",
+        "interval": 300,
+        "return-type": "json"
     }
 }

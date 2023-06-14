@@ -30,7 +30,7 @@ alias kgc="kubectl config view"
 alias kcc="kubectl config current-context"
 
 #Kubernetes addons Krew 
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+#export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Flatpak
 alias slack="nohup flatpak run com.slack.Slack& disown"
@@ -67,32 +67,35 @@ setPS
 #PS1="\$(setPS)"
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-
-lazynvm() {
-    unset -f nvm node npm npx
-    export NVM_DIR=$HOME/.nvm 
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-    nvm use node 
-}
+export NVM_DIR=$HOME/.nvm 
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 
-nvm() {
-    lazynvm
-    nvm $@
-}
-
-node() {
-    lazynvm
-    node $@
-}
-
-npm(){
-    lazynvm
-    npm $@
-}
-
-npx(){
-    lazynvm
-    npx $@
-}
-
+#lazynvm() {
+#    unset -f nvm node npm npx
+#    export NVM_DIR=$HOME/.nvm 
+#    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+#    nvm use node 
+#}
+#
+#
+#nvm() {
+#    lazynvm
+#    nvm $@
+#}
+#
+#node() {
+#    lazynvm
+#    node $@
+#}
+#
+#npm(){
+#    lazynvm
+#    npm $@
+#}
+#
+#npx(){
+#    lazynvm
+#    npx $@
+#}
+#

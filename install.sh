@@ -12,11 +12,12 @@ AC="[\e[1;33mACTION\e[0m]"
 LOOG="/tmp/install.log"
 
 progress() {
+    echo -en "$AC Progress: "
     while ps | grep $1 &> /dev/null ; do 
         echo -n "."
         sleep 2
     done
-    echo -en "done!\n"
+    echo -en " => done!\n"
     sleep 2 
 }
 
@@ -129,9 +130,9 @@ for font in ${fonts[@]}; do
     install $font 
 done 
 
-for nix in ${nixdekstop[@]}; do 
-    echo $nix 
-done
+#for nix in ${nixdekstop[@]}; do 
+#    echo $nix 
+#done
 
 # Install Oh ZSH 
 if [ -d "~/.oh-my-zsh" ]; then 
@@ -153,29 +154,35 @@ if [ -f "~/.nvm/nvm.sh"  ]; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 else
     echo -e "$OK NVM already installed"
-    source ~/.nvm/nvm.sh
-    nvm use node
+    . $HOME/.nvm/nvm.sh
+    nvm use node 
 
-    nodeLatest=$(nvm ls-remote | tail -n 1 | awk '{ print $2 }')
-    currNode=$(nvm ls | grep default | head -1 | awk '{ print $3 }')
-
+    lnode=$(nvm ls-remote | tail -n 1 | awk '{ print $1 }' | sed -r "s/[\)|\s]//g" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g")
+    cnode=$(nvm ls | grep default | head -1 | awk '{ print $5 }'| sed -r "s/[\)|\s]//g" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g")
+    [ -z "$cnode" ] && cnode=$(nvm ls | grep default | head 0 | awk '{ print $3 }'| sed -r "s/[\)|\s]//g" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g")
 
     
-    echo "Latest: $nodeLatest"
-    echo "Current: $currNode"
-#    if [ "$nodeLatest" = "$currNode" ]; then 
-#        echo -e "$OK Already latest nodejs"
-#    else  
-#        nvm install $nodeLatest &>> $LOOG &
-#        progress $!
-#        nodeNow=$(nvm ls | grep default | head -1 | awk '{ print $3 }') 
-#
-#        if [ "$nodeNow" = "$nodeLatest" ]; then 
-#            echo -e "$OK nodejs version $nodeLatest installed"
-#        else 
-#            echo -e "$ER failed to install nodejs please check $LOOG"
-#        fi
-#    fi
+    if [ "$lnode" == "$cnode" ]; then
+        echo -e "$OK Already latest nodejs"
+
+
+    else  
+        echo -e "$NT Install latest nodejs version $lnode"
+        nvm install $lnode &>> $LOOG &
+        progress $!
+
+        echo -e "$NT Replace nodejs $cnode to $lnode"
+        nvm use node 
+        nvm alias default node 
+
+        nodeNow=$(nvm ls | grep default | head -1 | awk '{ print $5 }' | sed -r "s/[\)|\s]//g" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g") 
+
+        if [ "$nodeNow" = "$lnode" ]; then 
+            echo -e "$OK nodejs version $lnode installed"
+        else 
+            echo -e "$ER failed to install nodejs please check $LOOG"
+        fi
+    fi
 fi
 
 
