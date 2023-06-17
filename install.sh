@@ -101,6 +101,7 @@ software=(
     swayidle
     gocloc-git
     p7zip-gui
+    lxd
 )
 
 fonts=(
@@ -157,7 +158,9 @@ else
     . $HOME/.nvm/nvm.sh
     nvm use node 
 
-    lnode=$(nvm ls-remote | tail -n 1 | awk '{ print $1 }' | sed -r "s/[\)|\s]//g" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g")
+    lnode=$(nvm ls-remote | tail -n 1 | awk '{ print $2 }' | sed -r "s/[\)|\s]//g" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g")
+    [ -z "$lnode" ] && lnode=$(nvm ls-remote | tail -n 1 | awk '{ print $1 }' | sed -r "s/[\)|\s]//g" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g")
+
     cnode=$(nvm ls | grep default | head -1 | awk '{ print $5 }'| sed -r "s/[\)|\s]//g" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g")
     [ -z "$cnode" ] && cnode=$(nvm ls | grep default | head 0 | awk '{ print $3 }'| sed -r "s/[\)|\s]//g" | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g")
 
