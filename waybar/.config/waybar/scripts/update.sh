@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 
-. $HOME/.nvm/nvm.sh
+#. $HOME/.nvm/nvm.sh
 total=0
 
 checkUpdate() {
