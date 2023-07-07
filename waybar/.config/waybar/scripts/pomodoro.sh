@@ -41,7 +41,7 @@ if [ -f "$file" ]; then
         second=$(($remain - ($minutes * 60)))
 
 
-        printf '{"text":"%02d:%02d","class":"%s"}\n' "$minutes" "$second" "$class"
+        printf '{"text":"%02d:%02d","class":"%s", "tooltip": "%s"}\n' "$minutes" "$second" "$class" "Current session: $(($total_break + 1 ))"
         
         echo $(printf "%02d : %02d" "$minutes" "$second") > $pid
 
@@ -54,17 +54,17 @@ if [ -f "$file" ]; then
                 kill -9 $(hyprctl clients -j | jq '.[] | select(.title=="pomodoro") | select(.class=="kitty") | .pid')
                 class="working"
                 next_break=$(($(date +%s) + ($pomodoro_interval * 60 )))
-                notify-send -i $icon "Pomodoro" "Started session number $(($total_break + 1))"
+                notify-send -i $icon "Pomodoro" "Started session number $(($total_break + 1))" &
             else 
                 class="break"
                 total_break=$(($total_break + 1))
                 next_break=$(($(date +%s) + ($pomodoro_break * 60 )))
                 if [ $total_break -lg 5 ]; then 
-                    notify-send -i $icon -u critical "Pomodoro" "Break before session $(($total_break + 1))"
+                    notify-send -i $icon -u critical "Pomodoro" "Break before session $(($total_break + 1))" &
                 fi
 
                 if [ -z $(hyprctl clients -j | jq '.[] | select(.title=="pomodoro") | select(.class=="kitty") | .pid') ]; then 
-                    kitty -T "pomodoro" --start-as=fullscreen sh -c "$HOME/.config/waybar/scripts/countdown.sh"
+                    kitty -T "pomodoro" --start-as=fullscreen sh -c "$HOME/.config/waybar/scripts/countdown.sh" &
                 fi
             fi
             mpv $notif_audio &

@@ -83,3 +83,7 @@ tooltip label{
 #custom-pomodoro.break {
     color: red;
 }
+
+#custom-update.warning{
+    color: red;
+}

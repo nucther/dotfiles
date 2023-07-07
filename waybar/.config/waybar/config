@@ -126,13 +126,15 @@
             "car": "",
             "default": ["", ""]
         },
+        "max-volume": 150,
         "on-click": "amixer set Master toggle & disown",
         "on-click-right": "pavucontrol"
     },
 
     "custom/javadate": {
         "exec": "~/.config/waybar/scripts/javadate.sh",
-        "interval": 60
+        "interval": 60,
+        "return-type": "json"
     },
 
     "custom/notification": {
