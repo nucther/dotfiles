@@ -16,4 +16,4 @@ now=$(getJavaDay $dateTarget)
 nextFriday=$(date -d "friday +1 weeks")
 nf=$(getJavaDay $nextFriday)
 
-printf  '{"text": "%s", "tooltip": "%s"} ' "($(date --date="$dateTarget" +"%a") ${javaMarketDateName[$res - 1]})  " "Next Friday: ${javaMarketDateName[$nf - 1]}"
+printf  '{"text": "%s", "tooltip": "%s"} ' "($(date --date="$dateTarget" +"%a") ${javaMarketDateName[$now - 1]})  " "Next Friday: ${javaMarketDateName[$nf - 1]}"

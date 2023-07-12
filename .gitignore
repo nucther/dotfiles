@@ -6,3 +6,4 @@ scripts/.local
 node_modules
 package.json
 package-lock.json
+*.pid

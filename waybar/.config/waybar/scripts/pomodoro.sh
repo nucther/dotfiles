@@ -1,37 +1,46 @@
 #!/bin/sh 
-
 file="${PWD}/.pomodoro"
 pid="${PWD}/.pomodoro.pid"
 notif_audio="${HOME}/.config/waybar/scripts/notification.wav"
 icon="${HOME}/.config/waybar/scripts/pomodoro.png"
- 
+class="working"
+total_break=0
 
 if [ "$1" == "disable" ]; then 
+    rm "$pid"
     if [ ! -f "$file" ] ; then
         touch "$file"
-        notify-send -i "$icon" "Pomodoro" "Started for the first session."
+        notify-send -i "$icon" "Pomodoro" "Started for the first session." &
         mpv $notif_audio &
     else  
         rm "$file"
-        notify-send -i "$icon" -u critical "Pomodoro" "Disabled pomodoro system."
+        notify-send -i "$icon" -u critical "Pomodoro" "Disabled pomodoro system." &
         mpv $notif_audio &
     fi
 
     exit 0;
 fi
 
+
+
 if [ -f "$file" ]; then 
+
+    if [ -f "$pid" ]; then 
+        if read -r message < "$pid"; then 
+            printf '{"text": "%s", "class": "%s", "tooltip": "%s"}' "$message" "$class" "Current session: $(($total_break + 1 ))"
+        fi
+
+        exit 0;
+    fi
 
     pomodoro_interval=25
 
     pomodoro_break=5
     pomodoro_long_break=15
 
-    total_break=0
 
     start_time=$(date +%s)
     next_break=$((start_time + ($pomodoro_interval * 60 )))
-    class="working"
 
 
     while [ $(date +%s) -lt $next_break ]; do 

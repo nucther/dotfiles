@@ -5,6 +5,7 @@
 total=0
 
 checkUpdate() {
+
     tooltips=""
     total=$(yay -yQu | wc -l)
 
