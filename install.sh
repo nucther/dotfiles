@@ -63,6 +63,7 @@ hyprland=(
 )
 
 software=(
+    neofetch
     kitty
     dunst
     zsh

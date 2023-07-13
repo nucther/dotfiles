@@ -13,7 +13,11 @@ getJavaDay() {
 dateTarget=$(date +"%d %b %Y")
 dayOfWeek=$(date --date="$dateTarget" +"%u")
 now=$(getJavaDay $dateTarget)
+
 nextFriday=$(date -d "friday +1 weeks")
 nf=$(getJavaDay $nextFriday)
 
-printf  '{"text": "%s", "tooltip": "%s"} ' "($(date --date="$dateTarget" +"%a") ${javaMarketDateName[$now - 1]})  " "Next Friday: ${javaMarketDateName[$nf - 1]}"
+nextMonday=$(date -d "monday +1 weeks")
+nm=$(getJavaDay $nextMonday)
+
+printf  '{"text": "%s", "tooltip": "%s"} ' "($(date --date="$dateTarget" +"%a") ${javaMarketDateName[$now - 1]})  " "Next\nMonday\t: ${javaMarketDateName[$nm - 1]}\nFriday\t\t: ${javaMarketDateName[$nf - 1]}"
