@@ -10,7 +10,7 @@ getJavaDay() {
     echo $res
 }
 
-dateTarget=$(date +"%d %b %Y")
+dateTarget=$(date)
 dayOfWeek=$(date --date="$dateTarget" +"%u")
 now=$(getJavaDay $dateTarget)
 

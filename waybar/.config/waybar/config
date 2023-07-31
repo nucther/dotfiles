@@ -91,10 +91,11 @@
 
     "network": {
         "interval": 5,
-        "format-wifi": "   {essid} ({bandwidthDownBytes}|{bandwidthUpBytes})", // Icon: wifi
+        "format-wifi": "   ({bandwidthDownBytes}|{bandwidthUpBytes})", // Icon: wifi
         "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
         "format-disconnected": "⚠  Disconnected",
-        "tooltip-format": "{ifname}: {ipaddr}"
+        "tooltip-format": "Iface\t: {ifname}\nIPv4\t: {ipaddr}",
+        "tooltip-format-wifi": "Iface\t: {ifname}\nSSID\t: {essid}\nSignal\t: {signaldBm} dBm\nIPv4\t: {ipaddr}"
     },
 
     "battery": {
@@ -127,7 +128,7 @@
             "default": ["", ""]
         },
         "max-volume": 150,
-        "on-click": "amixer set Master toggle & disown",
+        "on-click": "pactl list sinks short | grep RUNNING | xargs sh -c 'pactl set-sink-mute $0 toggle'",
         "on-click-right": "pavucontrol"
     },
 
