@@ -6,12 +6,14 @@ pkgs.mkShell {
         pkgs.terraform
         pkgs.terraform-docs
         pkgs.tfsec
-        pkgs.vault
+        pkgs.vault-bin
         pkgs.boundary
         pkgs.ansible
         pkgs.ansible-lint
         pkgs.kubernetes-helm
         pkgs.helmfile
+        pkgs.sshpass
+        pkgs.python310Packages.jmespath
     ];
 
     shellHook= ''

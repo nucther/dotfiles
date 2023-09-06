@@ -56,7 +56,7 @@ hyprland=(
     slurp
     wlogout
     swaylock-effects
-    waybar-hyprland
+    waybar-hyprland-git
     wl-clipboard
     greetd
     greetd-tuigreet
@@ -85,24 +85,25 @@ software=(
     lazygit
     udiskie
     whois
-    podman
-    kind
+    podman # Containered
+    kind # K8s cluster test
     dnsutils
     mtr
     mupdf-gl
     mupdf-tools
     tree
-    scrcpy
+    scrcpy # Android mirror 
     ripgrep
     wget
-    k9s
-    vultr-cli
-    doctl
+    k9s # K8s client
+    vultr-cli # Vultr cli 
+    doctl # Digital Ocean cli 
     alsa-utils
     swayidle
     gocloc-git
     p7zip-gui
-    lxd
+    lxd # Virtualization
+    lunacy # Design 
 )
 
 fonts=(
@@ -133,7 +134,9 @@ for font in ${fonts[@]}; do
 done 
 
 #for nix in ${nixdekstop[@]}; do 
-#    echo $nix 
+#    spath=$(find /nix/store/ | grep $nix | grep "bin/$nix")
+#
+#    echo $spath
 #done
 
 # Install Oh ZSH 
