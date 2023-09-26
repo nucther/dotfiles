@@ -1,6 +1,7 @@
 {
     "layer": "top",
     "position": "top",
+    "output": "HDMI-A-1",
     "mod": "dock",
     "exclusive": true, 
     "passthrough": false,
@@ -28,7 +29,8 @@
         "tray",
         "custom/power",
         "clock",
-        "custom/javadate"
+        "custom/javadate",
+        "idle_inhibitor"
     ],
 
 
@@ -154,5 +156,12 @@
         "on-click": "kitty --title Update sh -c '~/.config/waybar/scripts/update.sh update'",
         "interval": 300,
         "return-type": "json"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}  ",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
     }
 }
