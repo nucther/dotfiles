@@ -100,7 +100,9 @@
     },
 
     "temperature": {
-        "format": "  {temperatureC}°C"
+        "format": "  {temperatureC}°C",
+        "critical-threshold": 60
+
     },
 
     "user": {
@@ -162,6 +164,7 @@
         "format-icons": {
             "activated": "",
             "deactivated": ""
-        }
+        },
+        "timeout": 120
     }
 }
