@@ -87,3 +87,9 @@ tooltip label{
 #custom-update.warning{
     color: red;
 }
+#battery.charging {
+    color: yellow;
+}
+#battery.warning{
+    color: red;
+}

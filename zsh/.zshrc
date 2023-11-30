@@ -59,6 +59,9 @@ alias bell="whois  -h whois.in.bell.ca"
 alias ntt="whois  -h rr.ntt.net"
 alias idnic="whois -h irr.idnic.net"
 alias bgptools="whois -h bgp.tools"
+
+# podman 
+alias pandoc='podman run --rm -i -v "$(pwd):/data" pandoc/latex'
 # PS
 
 defaultps="%{$fg[cyan]%}%c%{$reset_color%}" 
@@ -99,3 +102,4 @@ export NVM_DIR=$HOME/.nvm
 #    npx $@
 #}
 #
+

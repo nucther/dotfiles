@@ -1,10 +1,10 @@
-{ pkgs? import <nixpkgs> {} }:
+{ pkgs? import <nixpkgs> {
+        config.allowUnfree = true;
+} }:
 pkgs.mkShell {
     nixlang="ops";
     name="ops";
     buildInputs=[
-        pkgs.terraform
-        pkgs.terraform-docs
         pkgs.tfsec
         pkgs.vault-bin
         pkgs.boundary
@@ -14,6 +14,7 @@ pkgs.mkShell {
         pkgs.helmfile
         pkgs.sshpass
         pkgs.python310Packages.jmespath
+        pkgs.terraform
     ];
 
     shellHook= ''

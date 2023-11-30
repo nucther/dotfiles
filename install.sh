@@ -48,14 +48,15 @@ prepare=(
 )
 
 hyprland=(
-    hyprland 
+    hyprland
+    hyprpaper # wallpaper 
     xdg-desktop-portal-hyprland
     pipewire 
     wireplumber
     grim 
     slurp
     wlogout
-    swaylock-effects
+    swaylock-effects-git
     waybar-hyprland-git
     wl-clipboard
     greetd
@@ -76,7 +77,7 @@ software=(
     nvim-packer-git
     unzip 
     pavucontrol
-    btop 
+    bottom #alternate to HTOP 
     pulseaudio
     nemo
     mpv
@@ -103,7 +104,9 @@ software=(
     gocloc-git
     p7zip-gui
     lxd # Virtualization
-    lunacy # Design 
+    lunacy # Design alternate figma 
+    wireguard-tools
+
 )
 
 fonts=(
@@ -199,7 +202,7 @@ stow -R hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock
 ## NVIM Usage 
 if [ -z "$(pip list | grep neovim)" ]; then 
     echo -e "$AC Install Neovim for Python"
-    pip install neovim
+    yay -S python-neovim
 fi
 
 if [ -z $(which neovim-node-host) ]; then 

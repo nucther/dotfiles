@@ -1,12 +1,12 @@
 {
     "layer": "top",
     "position": "top",
-    "output": "HDMI-A-1",
     "mod": "dock",
     "exclusive": true, 
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 18,
+    "output": [ "eDP-1", "DP-7"],
     "modules-left": [
         "hyprland/workspaces"
     ],
@@ -36,10 +36,6 @@
 
     "hyprland/workspaces": {
         "format": "{name}",
-        "persistent_workspaces": {
-            "HDMI-A-1": [1,2,3,4,5],
-            "DP-1": [6,7,8]
-        }
     },
 
 
@@ -82,6 +78,7 @@
     },
 
     "network": {
+        "interface": "wlp1s0",
         "interval": 5,
         "format-wifi": "   ({bandwidthDownBytes}|{bandwidthUpBytes})", // Icon: wifi
         "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
@@ -93,6 +90,7 @@
     "battery": {
         "format": "{icon}   {capacity}%",
         "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "Using: {power:0.2f} Watt\n{timeTo}",
         "states": {
             "warning": 30,
             "critical": 15
@@ -101,7 +99,8 @@
 
     "temperature": {
         "format": "  {temperatureC}°C",
-        "critical-threshold": 60
+        "critical-threshold": 60,
+        "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input"
 
     },
 
@@ -139,7 +138,7 @@
     },
     
     "custom/power": {
-        "format": "",
+        "format": "  ",
         "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
         "tooltip": false
     },
