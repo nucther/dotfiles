@@ -17,3 +17,6 @@ vim.keymap.set("n","<C-n>",":bn<CR>")
 vim.keymap.set("n","<C-b>",":bp<CR>")
 vim.keymap.set("n","<leader>d",":bd<CR>")
 vim.keymap.set("n","<leader>=",":horizontal wincmd =")
+
+-- Undo Tree --
+vim.keymap.set('n', '<C-z>', vim.cmd.UndotreeToggle)

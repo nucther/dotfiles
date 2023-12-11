@@ -72,3 +72,19 @@ function reconnectOfficeWifi(){
     nmcli c d office && nmcli c u office
 }
 
+
+# Incus 
+
+function connect_to(){
+    list_vm=$(incus ls -f json | jq -r '.[].name' | fzf)
+    echo -e "==========\n\e[31mYou are now\nConnecting to VM \e[32m$list_vm\e[0m\n==========\e\n\n"
+    incus exec $list_vm bash
+}
+
+function create_ct(){
+    incus launch "images:$1" $2
+}
+
+function create_vm(){
+    incus launch "images:$1" $2 --vm
+}

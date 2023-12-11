@@ -77,8 +77,8 @@ software=(
     nvim-packer-git
     unzip 
     pavucontrol
+    pipewire-pulse #replacce pulse audio
     bottom #alternate to HTOP 
-    pulseaudio
     nemo
     mpv
     imv
@@ -103,7 +103,7 @@ software=(
     swayidle
     gocloc-git
     p7zip-gui
-    lxd # Virtualization
+    incus # Virtualization
     lunacy # Design alternate figma 
     wireguard-tools
 

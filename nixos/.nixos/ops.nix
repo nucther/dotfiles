@@ -13,7 +13,9 @@ pkgs.mkShell {
         pkgs.kubernetes-helm
         pkgs.helmfile
         pkgs.sshpass
-        pkgs.python310Packages.jmespath
+        pkgs.python311Packages.jmespath
+        pkgs.python311Packages.netaddr
+        pkgs.python311Packages.kubernetes
         pkgs.terraform
     ];
 
