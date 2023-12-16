@@ -1,0 +1,7 @@
+#!/bin/bash 
+target=$1
+ratenow=$(curl -s https://api.wise.com/v1/rates -H "Authorization: Basic OGNhN2FlMjUtOTNjNS00MmFlLThhYjQtMzlkZTFlOTQzZDEwOjliN2UzNmZkLWRjYjgtNDEwZS1hYzc3LTQ5NGRmYmEyZGJjZA==" | jq --arg scr "${target}" '.[] | select(.target == "IDR" and .source == $scr) | .rate')
+res=$(echo "$2 $ratenow" | awk '{print $1 * $2}')
+printf "\n\n Currency rate by Wise.com\n\n"
+printf "Rate %s\t= %'.2f IDR\n----------------------------------\n%'.2f %s\t=\033[1;31m %'.2f IDR \n\n" $1 $ratenow $2 $1 $res 
+printf "\033[0m \nNotes: $3\n\n"
