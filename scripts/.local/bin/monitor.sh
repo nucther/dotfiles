@@ -54,10 +54,6 @@ lockScreen(){
 }
 
 resetMonitor(){
-    killall waybar
-    killall hyprpaper
-    waybar &
-    hyprpaper &
     monitors=$(hyprctl monitors -j | jq -r '.[] | @text "\(.name)|\(.serial)|\(.width)x\(.height)"')
 
     for m in $monitors;
@@ -67,16 +63,23 @@ resetMonitor(){
         resolution=$(echo $m | awk -F '|' '{print $3}')
 
         if [ "$name" == "eDP-1" ]; then 
-            echo "$name,$resolution,1920x0,1"
+#            echo "$name,$resolution,1920x0,1"
+            hyprctl keywords monitor "$name,$resolution,0x0,1"
         else
             pos=$(cat ~/.monitor | grep $serial | awk '{ print $2 }')
             transform=$(cat ~/.monitor | grep $serial | awk '{ print $3 }')
             if [ -z "$transform" ]; then 
                 transform="0"
             fi
+            echo "$name,$resolution,$pos,1,transform,$transform"
             hyprctl keywords monitor "$name,$resolution,$pos,1,transform,$transform"
         fi
     done
+    killall waybar
+    killall hyprpaper
+    waybar &
+    hyprpaper &
+    notify-send "Screen Reseted"
 }
 
 switchToMonitor(){
@@ -98,7 +101,7 @@ switchMonitorType(){
     echo $hdmi
     echo $hdmiStatus
 
-    if [ "$hdmiStatus" == "0" ]; then 
+    if [ -z "$hdmiStatus"] || [ "$hdmiStatus" == 0 ]; then 
         hyprctl keyword monitor "$hdmi"
         notify-send "Screen Mirroring Off"
     else

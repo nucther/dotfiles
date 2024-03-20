@@ -82,7 +82,6 @@ software=(
     nemo
     mpv
     imv
-    authy
     lazygit
     udiskie
     whois
@@ -197,7 +196,7 @@ fi
 
 
 echo -e "$OK update directory"
-stow -R hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock 
+stow -R hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock eww 
 
 ## NVIM Usage 
 if [ -z "$(pip list | grep neovim)" ]; then 

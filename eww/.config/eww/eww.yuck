@@ -1,0 +1,50 @@
+(include "./common.yuck")
+
+(defwidget leftModule [monitorID]
+    (box :orientation "h"
+        :space-evenly false
+        :halign "start"
+        
+        (workspaces :monitor {monitorID})
+    )
+)
+(defwidget centerModule []
+    (box :orientation "h"
+        :space-evenly false
+        :halign "center"
+
+        "center Module"
+    )
+)
+(defwidget rightModule []
+    (box :orientation "h"
+        :space-evenly false
+        :halign "end"
+
+        (clock)
+    )
+)
+
+
+(defwindow toolbar [monitor]
+    :monitor {monitor}
+    :geometry (geometry :x "0"
+                        :y "0"
+                        :width "100%"
+                        :height "30px"
+                        :anchor "top center"
+                        )
+    :stacking "fg"
+    :reserve (struts :distance "35px" :side "top")
+    :windowtype "dock"
+    :wm-ignore false
+    :exclusive "true"
+    :hexpand false
+    :vexpand false
+    
+    (box :orientation "h"
+        (leftModule :monitorID {monitor})
+        (centerModule)
+        (rightModule)
+    )
+)

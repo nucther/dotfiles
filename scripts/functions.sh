@@ -77,6 +77,7 @@ function reconnectOfficeWifi(){
 
 function connect_to(){
     list_vm=$(incus ls -f json | jq -r '.[].name' | fzf)
+    cstatus=$(incus ls -f json | jq -r '.[] | select(.name=="'"$list_vm"'") | .status')
     echo -e "==========\n\e[31mYou are now\nConnecting to VM \e[32m$list_vm\e[0m\n==========\e\n\n"
     incus exec $list_vm bash
 }

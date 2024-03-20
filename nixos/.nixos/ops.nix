@@ -16,6 +16,7 @@ pkgs.mkShell {
         pkgs.python311Packages.jmespath
         pkgs.python311Packages.netaddr
         pkgs.python311Packages.kubernetes
+        pkgs.python311Packages.pytz
         pkgs.terraform
     ];
 

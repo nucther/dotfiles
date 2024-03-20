@@ -1,0 +1,37 @@
+; Clock module
+(defpoll dateandtime
+        :interval "10s"
+        :initial "time"
+    `date +'%d %b %I:%M %p'`
+    )
+(defpoll days
+        :interval "10s"
+        :initial "days"
+    `~/.config/eww/scripts/javadate.sh javanow`
+    )
+
+(defwidget clock []
+    (box :space-evenly false
+            :class "clock"
+        (label :text {days})
+        (label :text {dateandtime} )
+    ))
+
+
+; Ram Module 
+(defpoll totalRam
+        :interval "1m"
+    `{EWW_RAM}.total_mem`
+)
+
+(defwidget ram []
+    (box :space-evenly false
+        (label :text {totalRam})
+    )
+)
+
+; Workspaces
+
+(defwidget workspaces [monitor]
+    "workspace ${monitor}"
+)
