@@ -1,6 +1,148 @@
 .toolbar {
-    background: rgba(0,0,0,0.6);
+    font-size: 10pt;
+    background: rgba(0,0,0,0);
     color: #999;
-    padding: 0 20px;
+    padding: 0 20px 0 0;
+
+    .danger{
+        color: red;
+    }
+
+    .clock {
+        background: #000;
+        margin: 3px 0px;
+        padding: 0 10px;
+        border-radius: 5px;
+
+    }
+    .wifi {
+        background: #000;
+        margin: 3px 0px;
+        padding: 0 10px;
+        border-radius: 5px;
+
+    }
+
+    .audio{
+        background: #000;
+        margin: 3px 0px;
+        padding: 0 3px;
+        border-radius: 5px;
+
+        .audiobox {
+            button {
+                border: none;
+                background: none;
+                box-shadow: none;
+                margin: 5px 2px;
+                padding: 0 5px;
+                font-size: 9pt;
+                font-weight: bold;
+
+                &:hover{
+                    background: rgba(39, 245, 80, 0.8); 
+                }
+
+                &.muted{
+                    color: red;
+                }
+            }
+        }
+    }
+
+    .systeminfo {
+        background: #000;
+        margin: 3px 5px;
+        padding: 0 10px;
+        border-radius: 5px;
+
+        box{
+            margin-right: 5px;
+
+            &.cpu {
+                margin: 0;
+            }
+        }
+
+        .batt-danger{
+            color: red;
+        }
+    }
+
+    .workspaces {
+        background: #000;
+        margin: 3px 5px;
+        padding: 0 4px;
+        border-radius: 5px;
+
+        button{
+            background: #000;
+            border: 1px solid #999;
+            box-shadow: none;
+            padding:0;
+            margin:5px 2px;
+            border: none;
+            font-size: 9pt;
+            color: #fff;
+            font-weight: bold;
+
+            &.active{
+                background: rgba(39, 245, 80, 0.8);
+                border: 1px solid rgba(39, 245, 80, 0.8);
+            }
+            &:hover{
+                border: 1px solid rgba(39, 245, 80, 0.8);
+            }
+        }
+    }
+
+    .powermenu {
+        background: #000;
+        margin: 3px 5px;
+        padding: 0 5px;
+        border-radius: 5px;
+
+        button{
+            border: none;
+            background: none;
+            box-shadow: none;
+            margin: 5px 2px;
+            padding: 0 5px;
+            font-size: 9pt;
+
+            &.shutdown{
+                color: red;
+            }
+
+            &.reboot{
+                color: yellow;
+            }
+            &.logout{
+                color: white;
+            }
+
+            &:hover{
+                background: rgba(39,245,80,0.8);
+            }
+       }
+    }
 }
 
+.audiowindow{
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    font-size: 15px;
+   
+    .volume {
+        margin: 10px 0;
+
+        progressbar{
+            trough { 
+                min-height: 15px;
+                background: #000;
+                border: none;
+            }
+        }
+    }
+}

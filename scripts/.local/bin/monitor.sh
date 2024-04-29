@@ -54,17 +54,20 @@ lockScreen(){
 }
 
 resetMonitor(){
-    monitors=$(hyprctl monitors -j | jq -r '.[] | @text "\(.name)|\(.serial)|\(.width)x\(.height)"')
+    monitors=$(hyprctl monitors -j | jq -r '.[] | @text "\(.name)|\(.serial)|\(.width)x\(.height)|\(.id)"')
+    eww close-all &
 
     for m in $monitors;
     do
         name=$(echo $m | awk -F '|' '{print $1}')
         serial=$(echo $m | awk -F '|' '{print $2}')
         resolution=$(echo $m | awk -F '|' '{print $3}')
+        mid=$(echo $m | awk -F '|' '{print $4}')
 
         if [ "$name" == "eDP-1" ]; then 
 #            echo "$name,$resolution,1920x0,1"
             hyprctl keywords monitor "$name,$resolution,0x0,1"
+            eww open toolbar --arg monitor=0 --id 0
         else
             pos=$(cat ~/.monitor | grep $serial | awk '{ print $2 }')
             transform=$(cat ~/.monitor | grep $serial | awk '{ print $3 }')
@@ -73,6 +76,10 @@ resetMonitor(){
             fi
             echo "$name,$resolution,$pos,1,transform,$transform"
             hyprctl keywords monitor "$name,$resolution,$pos,1,transform,$transform"
+            isToolbar=$(cat ~/.monitor | grep $serial | grep toolbar | awk '{ print $4 }')
+            if [ ! -z "$isToolbar" ]; then 
+                eww open toolbar --arg monitor=$mid --id $mid
+            fi
         fi
     done
     killall waybar

@@ -1,6 +1,6 @@
 ; Clock module
 (defpoll dateandtime
-        :interval "10s"
+        :interval "1s"
         :initial "time"
     `date +'%d %b %I:%M %p'`
     )
@@ -12,26 +12,177 @@
 
 (defwidget clock []
     (box :space-evenly false
-            :class "clock"
+         :class "clock"
         (label :text {days})
         (label :text {dateandtime} )
     ))
 
 
 ; Ram Module 
-(defpoll totalRam
-        :interval "1m"
-    `{EWW_RAM}.total_mem`
-)
 
 (defwidget ram []
     (box :space-evenly false
-        (label :text {totalRam})
+         :halign "end"
+         :valign "center"
+         :orientation "h"
+        "󰍛 "
+        {round((EWW_RAM.used_mem / 1000000000), 1)}
+        "G"
+    )
+)
+
+; CPU Module 
+
+(defwidget cpu []
+    (box :space-evenly false
+         :halign "end"
+         :valign "center"
+         :orientation "h"
+        (eventbox
+            :onclick 'kitty --title btop sh -c \'btop\' &'
+
+            (box :space-evenly false 
+                 :class 'cpu'
+                "󰻠 "
+                "${round(EWW_CPU.avg,1)} %"
+            )
+        )
+    )
+)
+
+; Battery Module
+
+(defwidget batt []
+    
+    (box :space-evenly false
+         :orientation "h"
+         :class {EWW_BATTERY.BAT0.capacity < 30 ? 'batt-danger' : 'batt-normal'}
+
+         "${(EWW_BATTERY.BAT0.status == 'Charging'? "󰂄":"")}" 
+         "${(EWW_BATTERY.BAT0.status != 'Charging' && EWW_BATTERY.BAT0.capacity == 100 ? "󰁹":"")}" 
+         "${(EWW_BATTERY.BAT0.status != 'Charging' && EWW_BATTERY.BAT0.capacity >= 90 && (EWW_BATTERY.BAT0.capacity) < 100 ? "󰂂":"")}" 
+         "${(EWW_BATTERY.BAT0.status != 'Charging' && EWW_BATTERY.BAT0.capacity >= 80 && (EWW_BATTERY.BAT0.capacity) < 90 ? "󰂁":"")}" 
+         "${(EWW_BATTERY.BAT0.status != 'Charging' && EWW_BATTERY.BAT0.capacity >= 70 && (EWW_BATTERY.BAT0.capacity) < 80 ? "󰂀":"")}" 
+         "${(EWW_BATTERY.BAT0.status != 'Charging' && EWW_BATTERY.BAT0.capacity >= 60 && (EWW_BATTERY.BAT0.capacity) < 70 ? "󰁿":"")}" 
+         "${(EWW_BATTERY.BAT0.status != 'Charging' && EWW_BATTERY.BAT0.capacity >= 50 && (EWW_BATTERY.BAT0.capacity) < 60 ? "󰁾":"")}" 
+         "${(EWW_BATTERY.BAT0.status != 'Charging' && EWW_BATTERY.BAT0.capacity >= 40 && (EWW_BATTERY.BAT0.capacity) < 50 ? "󰁽":"")}" 
+         "${(EWW_BATTERY.BAT0.status != 'Charging' && EWW_BATTERY.BAT0.capacity >= 30 && (EWW_BATTERY.BAT0.capacity) < 40 ? "󰁼":"")}" 
+         "${(EWW_BATTERY.BAT0.status != 'Charging' && EWW_BATTERY.BAT0.capacity >= 20 && (EWW_BATTERY.BAT0.capacity) < 30 ? "󰁻":"")}" 
+         "${(EWW_BATTERY.BAT0.status != 'Charging' && EWW_BATTERY.BAT0.capacity >= 10 && (EWW_BATTERY.BAT0.capacity) < 20 ? "󰁺":"")}" 
+         "${EWW_BATTERY.BAT0.capacity} %"
+    )
+    
+)
+
+; Temp Module
+
+(defwidget temp []
+    (box :space-evenly false 
+        :class {round(EWW_TEMPS.K10TEMP_TCTL,0) > 60 ? 'danger' : ''}
+        "${round(EWW_TEMPS.K10TEMP_TCTL,0)}󰔄"
     )
 )
 
 ; Workspaces
+(deflisten workspace :initial "workspace"
+    `~/.config/eww/scripts/workspaces.sh 1` )
 
-(defwidget workspaces [monitor]
-    "workspace ${monitor}"
+
+(defwidget workspaces []
+    (literal :content workspace)
+)
+
+; Power module
+
+(defvar powermenu false)
+
+(defwidget powermenu []
+
+    (eventbox
+        :onhover "${EWW_CMD} update powermenu=true"
+        :onhoverlost "${EWW_CMD} update powermenu=false"
+
+        (box :space-evenly false
+            :class 'powermenu'
+
+            (revealer :transition "slideleft"
+                    :reveal powermenu
+
+                (box :space-evenly false
+                     :orientation "h"
+                    
+                    (button
+                        :class "logout"
+                        :onclick "hyprctl dispatch exit" "󰍃")
+                    (button :class "reboot"
+                        :onclick "reboot" "")
+                    (button :class 'shutdown' 
+                        :onclick "shutdown -r now" "󰐥")
+                )
+
+            )
+
+            (button :class 'shutdown' 
+                    :onclick "swaylock & disown &" "")
+        )
+    )
+)
+
+; Soundcard module 
+
+(defvar sinkmute false)
+(defvar sourcemute false)
+(defvar sinkvol 0)
+(defvar sourcevol 0)
+(deflisten audiostatus 
+    `~/.config/eww/scripts/system.sh am`
+    )
+(defwidget audio [monitor]
+    (eventbox
+            :onhover 'eww open audiowindow --arg monitor=${monitor}'
+            :onhoverlost 'eww close audiowindow'
+        (box :space-evenly false
+            :class 'audiobox'
+            (literal :content audiostatus)
+            (eventbox :onscroll '~/.config/eww/scripts/system.sh volume{}'
+                (button 
+                    :onclick 'pactl set-sink-mute @DEFAULT_SINK@ toggle'
+                    :onrightclick 'pavucontrol -t 3 &'
+                    :class {sinkmute? 'muted' : ''}
+                    "${sinkmute? '󰖁': '󰕾'}"
+                )
+            )
+
+            (eventbox :onscroll '~/.config/eww/scripts/system.sh mic{}'
+                (button 
+                    :onclick 'pactl set-source-mute @DEFAULT_SOURCE@ toggle'
+                    :onrightclick 'pavucontrol -t 4 &'
+                    :class {sourcemute? 'muted' : ''}
+                    "${sourcemute? '' : '󰍬'}"
+                )
+            )
+        )
+    )
+)
+
+; Wireless module
+
+(defpoll ssid :interval '30s' :initial 'none'
+    `~/.config/eww/scripts/system.sh ssid`
+   )
+(defwidget wifi []
+    (box :space-evenly false
+        :class 'wifi'
+        " "
+        "${ssid}"
+    )
+)
+
+; Systry
+
+(defwidget systemtray []
+    (box :space-evenly false
+        :class 'systray'
+        (systray)
+    )
 )

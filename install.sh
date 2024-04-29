@@ -55,9 +55,6 @@ hyprland=(
     wireplumber
     grim 
     slurp
-    wlogout
-    swaylock-effects-git
-    waybar-hyprland-git
     wl-clipboard
     greetd
     greetd-tuigreet
@@ -104,8 +101,8 @@ software=(
     p7zip-gui
     incus # Virtualization
     lunacy # Design alternate figma 
-    wireguard-tools
-
+    blueberry # Bluetooth manager
+    bluez # Bluetooth driver
 )
 
 fonts=(

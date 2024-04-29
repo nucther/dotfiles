@@ -15,7 +15,7 @@ javanow(){
     dn=$(date)
     jn=$(getJavaDay $dn)
 
-    echo "$(date +'%a') ${javaMarketDateName[$jn - 1]} ,"
+    echo "$(date +'%a') ${javaMarketDateName[$jn - 1]} , "
 }
 
 case $1 in

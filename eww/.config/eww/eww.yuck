@@ -1,11 +1,13 @@
 (include "./common.yuck")
+(include "./popup.yuck")
 
 (defwidget leftModule [monitorID]
     (box :orientation "h"
         :space-evenly false
         :halign "start"
         
-        (workspaces :monitor {monitorID})
+        (workspaces)
+        (wifi)
     )
 )
 (defwidget centerModule []
@@ -13,15 +15,29 @@
         :space-evenly false
         :halign "center"
 
-        "center Module"
+        (systemtray)
     )
 )
-(defwidget rightModule []
+(defwidget rightModule [monitorID]
     (box :orientation "h"
         :space-evenly false
         :halign "end"
 
+        (box :class "audio"
+
+            (audio :monitor {monitorID})
+        )
+
+        (box :class "systeminfo"
+             :space-evenly false
+            
+            (cpu)
+            (temp)
+            (ram)
+            (batt)
+        )
         (clock)
+        (powermenu)
     )
 )
 
@@ -45,6 +61,6 @@
     (box :orientation "h"
         (leftModule :monitorID {monitor})
         (centerModule)
-        (rightModule)
+        (rightModule :monitorID {monitor})
     )
 )

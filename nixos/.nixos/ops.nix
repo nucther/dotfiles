@@ -23,5 +23,6 @@ pkgs.mkShell {
     shellHook= ''
         export LANG=C.UTF-8
         echo "Start working as DevOps"
+        source ~/.terraform
         '';
 }
