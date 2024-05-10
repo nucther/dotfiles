@@ -50,6 +50,8 @@ prepare=(
 hyprland=(
     hyprland
     hyprpaper # wallpaper 
+    hyprlock # Lock
+    hypridle # Idle
     xdg-desktop-portal-hyprland
     pipewire 
     wireplumber
@@ -101,7 +103,7 @@ software=(
     p7zip-gui
     incus # Virtualization
     lunacy # Design alternate figma 
-    blueberry # Bluetooth manager
+    overskride # Bluetooth manager
     bluez # Bluetooth driver
 )
 

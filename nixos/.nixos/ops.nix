@@ -18,6 +18,7 @@ pkgs.mkShell {
         pkgs.python311Packages.kubernetes
         pkgs.python311Packages.pytz
         pkgs.terraform
+        pkgs.terraform-docs
     ];
 
     shellHook= ''

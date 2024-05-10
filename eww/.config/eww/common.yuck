@@ -84,7 +84,7 @@
 )
 
 ; Workspaces
-(deflisten workspace :initial "workspace"
+(deflisten workspace :initial "init workspace"
     `~/.config/eww/scripts/workspaces.sh 1` )
 
 
