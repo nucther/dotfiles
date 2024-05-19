@@ -103,8 +103,9 @@ software=(
     p7zip-gui
     incus # Virtualization
     lunacy # Design alternate figma 
-    overskride # Bluetooth manager
     bluez # Bluetooth driver
+    overskride # Bluetooth manager
+    eza #Replacement for ls
 )
 
 fonts=(

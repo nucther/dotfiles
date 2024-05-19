@@ -1,49 +1,88 @@
+# Zinit install 
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
-export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="robbyrussell"
-plugins=(git kubectl tmux history-substring-search)
-
-source $ZSH/oh-my-zsh.sh
-
-PATH=$PATH:$HOME/.local/bin
-
-export KUBECONFIG=$HOME/.kube/config
-
-if [ -n "$VIRTUAL_ENV" ]; then 
-    . "$VIRTUAL_ENV/bin/activate"
+# Pune Theme
+if [ ! -d "$HOME/.zsh/pure" ]; then 
+    mkdir -p "$HOME/.zsh"
+    git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 fi
+fpath+=($HOME/.zsh/pure)
+
+autoload -U promptinit; promptinit
 
 if [ -f "$HOME/functions.sh" ]; then 
     . "$HOME/functions.sh"
 fi 
 
-#if [ -n "$nixlang" ]; then 
-#    nix-shell $HOME/.nixos/$nixlang --run "zsh" 
-#fi
+PATH=$PATH:$HOME/.local/bin
 
-alias calculatefile="du -sch .[!.]* * |sort -h"
+PURE_CMD_MAX_EXEC_TIME=10
+zstyle :prompt:pure:path color green
+zstyle ':prompt:pure:prompt:>' color cyan
+zstyle :prompt:pure:git:stash show yes
+zstyle :prompt:pure:execution_time show yes
 
-#Kubernetes alias
-alias kgn="kubectl get nodes"
-alias kgc="kubectl config view"
-alias kcc="kubectl config current-context"
+prompt pure
 
-#Kubernetes addons Krew 
-#export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# Flatpak
-alias slack="nohup flatpak run com.slack.Slack& disown"
+# PLugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
 
-# Zerotier
-alias zcli="sudo zerotier-cli"
-alias zln="sudo zerotier-cli listnetworks"
-alias zp="sudo zerotier-cli peers"
-alias zpl="sudo zerotier-cli peers | grep LEAF"
-alias zpo="sudo zerotier-cli peers | grep ORBIT"
-alias zpp="sudo zerotier-cli peers | grep PLANET"
-alias zlp="sudo zerotier-cli listpeers"
-alias zi="sudo zerotier-cli info"
+zinit snippet OMZP::archlinux
+
+
+## Some config 
+
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+
+
+## Binding 
+bindkey "^a"   beginning-of-line                    # ctrl-a
+bindkey "^F"   backward-char                        # ctrl-b
+bindkey "^E"   end-of-line                          # ctrl-e
+#bindkey "^D"   delete-char                          # ctrl-d
+#bindkey "^K"   kill-line                            # ctrl-k
+#bindkey "^L"   down-line-or-search                  # ctrl-n
+#bindkey "^P"   up-line-or-search                    # ctrl-p
+bindkey "^l" clear-screen # ctrl-l
+bindkey '^b' history-search-backward
+bindkey '^n' history-search-forward
+
+### FZF
+
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:#d0d0d0,fg+:#d0d0d0,bg:#121212,bg+:#262626
+  --color=hl:#5f87af,hl+:#5fd7ff,info:#afaf87,marker:#87ff00
+  --color=prompt:#d7005f,spinner:#af5fff,pointer:#af5fff,header:#87afaf
+  --color=border:#262626,label:#aeaeae,query:#d9d9d9
+  --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
+  --marker=">" --pointer="=>" --separator="─" --scrollbar="+"'
+
+# Alias Networking 
+alias reconnectwifi='nmcli c d office && nmcli c u office'
+alias ls='eza --icons=always'
 
 # Whois 
 alias arin="whois  -h whois.arin.net"
@@ -59,20 +98,13 @@ alias bell="whois  -h whois.in.bell.ca"
 alias ntt="whois  -h rr.ntt.net"
 alias idnic="whois -h irr.idnic.net"
 alias bgptools="whois -h bgp.tools"
+alias ls="eza --icons=always --color=always"
 
-# podman 
-alias pandoc='podman run --rm -i -v "$(pwd):/data" pandoc/latex'
-# PS
-
-defaultps="%{$fg[cyan]%}%c%{$reset_color%}" 
-PS="\$(setPS)"
-setPS
-#PS1="\$(setPS)"
+#### Auto Added by software/apps
+eval "$(fzf --zsh)"
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/mcli mcli

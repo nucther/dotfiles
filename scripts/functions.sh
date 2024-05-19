@@ -1,5 +1,5 @@
 function venv() {
-    evs=$(ls $HOME/venv | fzf)
+    evs=$(/usr/bin/ls $HOME/venv | fzf)
 
     source "$HOME/venv/$evs/bin/activate"
     tmux setenv VIRTUAL_ENV "$HOME/venv/$evs"
@@ -13,7 +13,7 @@ function venv-clear() {
 }
 
 function lswitch() {
-    wt=$(ls $HOME/.nixos | fzf)
+    wt=$(/usr/bin/ls $HOME/.nixos | fzf)
     title=$(echo $wt | sed 's/.nix//')
     if [ -n "$wt" ]; then
         tmux rename-window "$title"
