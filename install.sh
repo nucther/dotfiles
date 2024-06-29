@@ -106,13 +106,17 @@ software=(
     bluez # Bluetooth driver
     overskride # Bluetooth manager
     eza #Replacement for ls
+	duf #du alternatif
+	satty-bin # Screenshot editor
 )
 
 fonts=(
     ttf-hack-nerd 
+	ttf-maple
     noto-fonts 
     noto-fonts-variable-ar 
     noto-fonts-sc-vf
+	noto-fonts-emoji
 )
 
 nixdekstop=(
@@ -196,7 +200,7 @@ fi
 
 
 echo -e "$OK update directory"
-stow -R hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock eww 
+stow -R hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock eww oh-my-posh
 
 ## NVIM Usage 
 if [ -z "$(pip list | grep neovim)" ]; then 

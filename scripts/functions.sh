@@ -83,7 +83,12 @@ function connect_to(){
 }
 
 function create_ct(){
-    incus launch "images:$1" $2
+	if [ -z "$3" ]; then 
+		profile="default"
+	else 
+		profile="$3"
+	fi
+    incus launch "images:$1" --profile $profile $2 
 }
 
 function create_vm(){

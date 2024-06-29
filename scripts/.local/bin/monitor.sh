@@ -66,7 +66,7 @@ resetMonitor(){
 
         if [ "$name" == "eDP-1" ]; then 
 #            echo "$name,$resolution,1920x0,1"
-            hyprctl keywords monitor "$name,$resolution,0x0,1"
+            hyprctl keywords monitor "$name,$resolution,0x0,1.0,bitdepth,10"
             eww open toolbar --arg monitor=0 --id 0
         else
             pos=$(cat ~/.monitor | grep $serial | awk '{ print $2 }')
@@ -75,7 +75,7 @@ resetMonitor(){
                 transform="0"
             fi
             echo "$name,$resolution,$pos,1,transform,$transform"
-            hyprctl keywords monitor "$name,$resolution,$pos,1,transform,$transform"
+            hyprctl keywords monitor "$name,$resolution,$pos,1.0,bitdepth,10,transform,$transform"
             isToolbar=$(cat ~/.monitor | grep $serial | grep toolbar | awk '{ print $4 }')
             if [ ! -z "$isToolbar" ]; then 
                 eww open toolbar --arg monitor=$mid --id $mid

@@ -5,27 +5,36 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Pune Theme
-if [ ! -d "$HOME/.zsh/pure" ]; then 
-    mkdir -p "$HOME/.zsh"
-    git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
-fi
-fpath+=($HOME/.zsh/pure)
+#if [ ! -d "$HOME/.zsh/pure" ]; then 
+#    mkdir -p "$HOME/.zsh"
+#    git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+#fi
+#fpath+=($HOME/.zsh/pure)
 
-autoload -U promptinit; promptinit
+# Oh My Posh
+if [ -z "$HOME/.local/bin/oh-my-posh" ]; then 
+	curl -Lo "$HOME/.local/bin/oh-my-posh" https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v21.10.0/posh-linux-amd64
+	chmod +x "$HOME/.local/bin/oh-my-posh"
+fi
+PATH=$PATH:$HOME/.local/bin
+
+eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/theme.yaml)"
+#eval "$(oh-my-posh init zsh)"
+
+#autoload -U promptinit; promptinit
 
 if [ -f "$HOME/functions.sh" ]; then 
     . "$HOME/functions.sh"
 fi 
 
-PATH=$PATH:$HOME/.local/bin
 
-PURE_CMD_MAX_EXEC_TIME=10
-zstyle :prompt:pure:path color green
-zstyle ':prompt:pure:prompt:>' color cyan
-zstyle :prompt:pure:git:stash show yes
-zstyle :prompt:pure:execution_time show yes
-
-prompt pure
+#PURE_CMD_MAX_EXEC_TIME=10
+#zstyle :prompt:pure:path color green
+#zstyle ':prompt:pure:prompt:>' color cyan
+#zstyle :prompt:pure:git:stash show yes
+#zstyle :prompt:pure:execution_time show yes
+#
+#prompt pure
 
 
 # PLugins
@@ -33,7 +42,9 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
+zinit snippet OMZL::git.zsh
 zinit snippet OMZP::archlinux
+zinit snippet OMZP::kubectl
 
 
 ## Some config 
@@ -49,6 +60,7 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+setopt no_nomatch
 
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -79,6 +91,10 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color=border:#262626,label:#aeaeae,query:#d9d9d9
   --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
   --marker=">" --pointer="=>" --separator="─" --scrollbar="+"'
+
+# PATH 
+
+VDB_HOME=$HOME/vdb
 
 # Alias Networking 
 alias reconnectwifi='nmcli c d office && nmcli c u office'
