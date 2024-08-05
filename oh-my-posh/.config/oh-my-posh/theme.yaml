@@ -66,6 +66,8 @@ blocks:
           style: austin
       - type: helm
         style: plain
+        properties:
+          display_mode: "files"
 
 
   - alignment: left

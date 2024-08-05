@@ -60,10 +60,11 @@ hyprland=(
     wl-clipboard
     greetd
     greetd-tuigreet
+	qt5-wayland
 )
 
 software=(
-    neofetch
+    fastfetch
     kitty
     dunst
     zsh
@@ -90,7 +91,6 @@ software=(
     mtr
     mupdf-gl
     mupdf-tools
-    tree
     scrcpy # Android mirror 
     ripgrep
     wget
@@ -98,16 +98,23 @@ software=(
     vultr-cli # Vultr cli 
     doctl # Digital Ocean cli 
     alsa-utils
-    swayidle
     gocloc-git
     p7zip-gui
     incus # Virtualization
+	virt-manager # only for spice client
+	skopeo # Incus required for container
+	umoci # Incus required for container
     lunacy # Design alternate figma 
     bluez # Bluetooth driver
     overskride # Bluetooth manager
     eza #Replacement for ls
-	duf #du alternatif
+	ncdu #du alternatif
 	satty-bin # Screenshot editor
+	appimagelauncher # Launcher for AppImage file
+	unbound # DNS server
+	jellyfin-mpv-shim # Jellyfin Player MPV
+	socat # Eww websocket
+	btop # Taskmanager
 )
 
 fonts=(
@@ -121,6 +128,15 @@ fonts=(
 
 nixdekstop=(
     remmina
+)
+
+devops=(
+	helm
+	vault
+	terraform
+	ansible
+	python-pytz
+
 )
 
 for pre in ${prepare[@]}; do
@@ -139,6 +155,10 @@ for font in ${fonts[@]}; do
     install $font 
 done 
 
+for devopsi in ${devops}; do 
+	install $devopsi
+done
+
 #for nix in ${nixdekstop[@]}; do 
 #    spath=$(find /nix/store/ | grep $nix | grep "bin/$nix")
 #
@@ -146,12 +166,13 @@ done
 #done
 
 # Install Oh ZSH 
-if [ -d "~/.oh-my-zsh" ]; then 
-    echo -e "Install OH-MY-ZSH"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-else
-    echo -e "$OK OH-MY-ZSH already installed"
-fi
+#if [ -d "~/.oh-my-zsh" ]; then 
+#    echo -e "Install OH-MY-ZSH"
+#    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#else
+#    echo -e "$OK OH-MY-ZSH already installed"
+#fi
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 if [ -z "$(which nix)" ]; then 
     echo -e "Install NIX"

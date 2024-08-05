@@ -3,8 +3,11 @@
 ~
 #scripts/.local
 !scripts/.local/bin
+scripts/.local/bin/oh-my-posh
 node_modules
 package.json
 package-lock.json
 *.pid
 vpn
+scripts/.local/bin/oh-my-posh
+scripts/.local/bin/oh-my-posh

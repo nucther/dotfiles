@@ -12,8 +12,8 @@ source "${ZINIT_HOME}/zinit.zsh"
 #fpath+=($HOME/.zsh/pure)
 
 # Oh My Posh
-if [ -z "$HOME/.local/bin/oh-my-posh" ]; then 
-	curl -Lo "$HOME/.local/bin/oh-my-posh" https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v21.10.0/posh-linux-amd64
+if [ ! -f "$HOME/.local/bin/oh-my-posh" ]; then 
+	curl -Lo "$HOME/.local/bin/oh-my-posh" https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v21.21.2/posh-linux-amd64
 	chmod +x "$HOME/.local/bin/oh-my-posh"
 fi
 PATH=$PATH:$HOME/.local/bin
@@ -124,3 +124,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/mcli mcli
+
+
+if [ -e /home/nurohman/.nix-profile/etc/profile.d/nix.sh ]; then . /home/nurohman/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

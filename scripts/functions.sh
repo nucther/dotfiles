@@ -76,10 +76,12 @@ function reconnectOfficeWifi(){
 # Incus 
 
 function connect_to(){
-    list_vm=$(incus ls -f json | jq -r '.[].name' | fzf)
-    cstatus=$(incus ls -f json | jq -r '.[] | select(.name=="'"$list_vm"'") | .status')
+	list_vm=$(incus ls --all-projects -f json | jq -r '.[] | select(.status =="Running") | "\(.name):\(.project)"' | fzf)
+    cstatus=$(incus ls --all-projects -f json | jq -r '.[] | select(.name=="'"$list_vm"'") | .status')
     echo -e "==========\n\e[31mYou are now\nConnecting to VM \e[32m$list_vm\e[0m\n==========\e\n\n"
-    incus exec $list_vm bash
+	project=$(echo $list_vm | awk -F ':' '{print $2}')
+	vm=$(echo $list_vm | awk -F ':' '{print $1}')
+    incus exec --project $project $vm bash
 }
 
 function create_ct(){
