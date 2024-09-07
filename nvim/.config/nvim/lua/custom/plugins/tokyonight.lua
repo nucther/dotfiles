@@ -8,6 +8,7 @@ return {
 			style = "storm",
 			light_style = "day",
 			transparent = true,
+			plugins = { markdown = true },
 		}
 
 		vim.cmd[[colorscheme tokyonight]]

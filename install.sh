@@ -74,7 +74,9 @@ software=(
     fuzzel
     openssh
     fzf
+	bat # Cat alternate
     nvim-packer-git
+	luarocks # Lua dependency
     unzip 
     pavucontrol
     pipewire-pulse #replacce pulse audio
@@ -110,11 +112,11 @@ software=(
     eza #Replacement for ls
 	ncdu #du alternatif
 	satty-bin # Screenshot editor
-	appimagelauncher # Launcher for AppImage file
 	unbound # DNS server
 	jellyfin-mpv-shim # Jellyfin Player MPV
 	socat # Eww websocket
 	btop # Taskmanager
+	newsboat # RSS Client
 )
 
 fonts=(
@@ -221,15 +223,20 @@ fi
 
 
 echo -e "$OK update directory"
-stow -R hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock eww oh-my-posh
+stow -R hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock eww oh-my-posh pipewire newsboat
 
 ## NVIM Usage 
 if [ -z "$(pip list | grep neovim)" ]; then 
     echo -e "$AC Install Neovim for Python"
-    yay -S python-neovim
+    yay -S python-neovim  --noconfirm
 fi
 
 if [ -z $(which neovim-node-host) ]; then 
     echo -e "$AC Install Neovim for Node"
     npm i -g neovim
+fi
+
+if [ -z "$(yay -Q | grep ansible)" ]; then 
+	echo "install python module required by ansible netbox inventory"
+	yay -S python-pytz python-pynetbox --noconfirm
 fi

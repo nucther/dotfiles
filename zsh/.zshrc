@@ -116,6 +116,15 @@ alias idnic="whois -h irr.idnic.net"
 alias bgptools="whois -h bgp.tools"
 alias ls="eza --icons=always --color=always"
 
+# Note
+alias obt="note.sh new"
+alias oby="note.sh new y"
+alias obtt="note.sh new t"
+alias obm="note.sh move"
+alias obo="note.sh open"
+alias obl="note.sh list"
+alias obtd="note.sh openTodo"
+
 #### Auto Added by software/apps
 eval "$(fzf --zsh)"
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

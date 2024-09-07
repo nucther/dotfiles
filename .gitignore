@@ -11,3 +11,5 @@ package-lock.json
 vpn
 scripts/.local/bin/oh-my-posh
 scripts/.local/bin/oh-my-posh
+history*
+*.db
