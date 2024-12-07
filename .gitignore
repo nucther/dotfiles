@@ -2,6 +2,7 @@
 */**/*.back
 ~
 #scripts/.local
+scripts/.local/bin/velero
 !scripts/.local/bin
 scripts/.local/bin/oh-my-posh
 node_modules
@@ -13,3 +14,4 @@ scripts/.local/bin/oh-my-posh
 scripts/.local/bin/oh-my-posh
 history*
 *.db
+__pycache__

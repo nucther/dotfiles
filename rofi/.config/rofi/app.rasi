@@ -1,0 +1,72 @@
+configuration {
+	modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               "APPs";
+    display-run:                "SHELL";
+    display-filebrowser:        "";
+    display-window:             "";
+	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+	window-format:              "{w} · {c} · {t}";
+}
+
+@import "theme.rasi"
+* {
+  background-color: @background;
+  text-color: @foreground-list;
+}
+#window {
+  padding: 35px;
+}
+inputbar,
+prompt,
+textbox-prompt-colon,
+entry {
+  background-color: @background-light;
+}
+#inputbar {
+  children: [ prompt, textbox-prompt-colon, entry ];
+  margin: 4px 4px;
+}
+#prompt {
+  padding: 16px 20px;
+  background-color: @accent;
+  text-color: @background;
+}
+#textbox-prompt-colon {
+  expand: false;
+  padding: 16px;
+}
+#entry {
+  text-color: @accent;
+  padding: 18px 16px 16px 0;
+}
+
+listview {
+  columns: 2;
+  lines: 5;
+}
+
+#element {
+  padding: 10px;
+  margin: 4px 2px;
+  border: 0 0 0 8px;
+}
+element.normal.normal,
+element.alternate.normal {
+  background-color: @background-light;
+  border-color: @background-light;
+}
+element.selected.normal {
+  background-color: @background-focus;
+  text-color: @accent;
+  border-color: @accent;
+}
+#element-icon{
+	padding: 0 5px 0 0;
+	background-color: transparent;
+}
+#element-text{
+	background-color: transparent;
+}
+
+

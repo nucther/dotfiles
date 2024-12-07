@@ -94,7 +94,7 @@ function open(){
 }
 
 function list(){
-	eza -T "$notePathDest"
+	eza -T "$notePathDest/$1"
 }
 
 function tm(){

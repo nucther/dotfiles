@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/nurohman/.zsh/completions:"* ]]; then export FPATH="/home/nurohman/.zsh/completions:$FPATH"; fi
 # Zinit install 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -136,3 +138,4 @@ complete -o nospace -C /usr/bin/mcli mcli
 
 
 if [ -e /home/nurohman/.nix-profile/etc/profile.d/nix.sh ]; then . /home/nurohman/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+. "/home/nurohman/.deno/env"

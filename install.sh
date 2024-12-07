@@ -53,35 +53,43 @@ hyprland=(
     hyprlock # Lock
     hypridle # Idle
     xdg-desktop-portal-hyprland
-    pipewire 
-    wireplumber
     grim 
     slurp
     wl-clipboard
-    greetd
-    greetd-tuigreet
 	qt5-wayland
+	gtk-layer-shell
+)
+
+qtile=(
+	qtile
+	python-iwlib
+	python-psutil
 )
 
 software=(
+    greetd
+    greetd-tuigreet
     fastfetch
     kitty
-    dunst
     zsh
     jq
-    tmux
-    stow
-    fuzzel
-    openssh
     fzf
+	fd # Find alternate
+	poppler # PDF Library
+	yazi # File manager
+    tmux
+    dunst # Notification 
+    stow
+    rofi # Menu
+    openssh
 	bat # Cat alternate
     nvim-packer-git
 	luarocks # Lua dependency
     unzip 
+    pipewire 
     pavucontrol
     pipewire-pulse #replacce pulse audio
     bottom #alternate to HTOP 
-    nemo
     mpv
     imv
     lazygit
@@ -145,9 +153,9 @@ for pre in ${prepare[@]}; do
     install $pre 
 done 
 
-for hyp in  ${hyprland[@]}; do 
-    install $hyp 
-done 
+# for hyp in  ${hyprland[@]}; do 
+#     install $hyp 
+# done 
 
 for swr in ${software[@]}; do 
     install $swr 
@@ -223,7 +231,7 @@ fi
 
 
 echo -e "$OK update directory"
-stow -R hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock eww oh-my-posh pipewire newsboat
+stow -R hypr dunst kitty nixos nvim scripts tmux zsh waybar swaylock eww oh-my-posh pipewire newsboat qtile rofi
 
 ## NVIM Usage 
 if [ -z "$(pip list | grep neovim)" ]; then 
