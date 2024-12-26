@@ -42,7 +42,6 @@ install() {
 sudo echo "Installation running"
 
 prepare=(
-    gcc12  
     python-pip
     usbutils
 )
@@ -61,9 +60,17 @@ hyprland=(
 )
 
 qtile=(
-	qtile
-	python-iwlib
-	python-psutil
+    qtile
+    python-iwlib
+    python-psutil
+)
+
+nvim=(
+    neovim
+    nvim-packer-git
+    fzf #Search alternatif
+    ripgrep #Search alternate
+    luarocks #Lua dependency
 )
 
 software=(
@@ -74,18 +81,16 @@ software=(
     zsh
     jq
     fzf
-	fd # Find alternate
-	poppler # PDF Library
-	yazi # File manager
+    fd # Find alternate
+    poppler # PDF Library
+    yazi # File manager
+    7zip # 7zip
     tmux
     dunst # Notification 
     stow
     rofi # Menu
     openssh
-	bat # Cat alternate
-    nvim-packer-git
-	luarocks # Lua dependency
-    unzip 
+    bat # Cat alternate
     pipewire 
     pavucontrol
     pipewire-pulse #replacce pulse audio
@@ -111,29 +116,29 @@ software=(
     gocloc-git
     p7zip-gui
     incus # Virtualization
-	virt-manager # only for spice client
-	skopeo # Incus required for container
-	umoci # Incus required for container
+    virt-manager # only for spice client
+    skopeo # Incus required for container
+    umoci # Incus required for container
     lunacy # Design alternate figma 
     bluez # Bluetooth driver
     overskride # Bluetooth manager
     eza #Replacement for ls
-	ncdu #du alternatif
-	satty-bin # Screenshot editor
-	unbound # DNS server
-	jellyfin-mpv-shim # Jellyfin Player MPV
-	socat # Eww websocket
-	btop # Taskmanager
-	newsboat # RSS Client
+    ncdu #du alternatif
+    satty-bin # Screenshot editor
+    unbound # DNS server
+    jellyfin-mpv-shim # Jellyfin Player MPV
+    socat # Eww websocket
+    btop # Taskmanager
+    newsboat # RSS Client
 )
 
 fonts=(
     ttf-hack-nerd 
-	ttf-maple
+    ttf-maple
     noto-fonts 
     noto-fonts-variable-ar 
     noto-fonts-sc-vf
-	noto-fonts-emoji
+    noto-fonts-emoji
 )
 
 nixdekstop=(
@@ -141,12 +146,11 @@ nixdekstop=(
 )
 
 devops=(
-	helm
-	vault
-	terraform
-	ansible
-	python-pytz
-
+    helm
+    vault
+    terraform
+    ansible
+    python-pytz
 )
 
 for pre in ${prepare[@]}; do
@@ -176,13 +180,15 @@ done
 #done
 
 # Install Oh ZSH 
-#if [ -d "~/.oh-my-zsh" ]; then 
-#    echo -e "Install OH-MY-ZSH"
-#    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-#else
-#    echo -e "$OK OH-MY-ZSH already installed"
-#fi
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+if [ -d "~/.oh-my-zsh" ]; then 
+    echo -e "Install OH-MY-ZSH"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+    echo -e "$OK OH-MY-ZSH already installed"
+fi
+if [ -d "~/.tmux/plugins/tpm" ]; then 
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
 
 if [ -z "$(which nix)" ]; then 
     echo -e "Install NIX"

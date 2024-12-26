@@ -1,17 +1,21 @@
 */**/*.bak
 */**/*.back
 ~
-#scripts/.local
-scripts/.local/bin/velero
+
+# scripts
 !scripts/.local/bin
 scripts/.local/bin/oh-my-posh
+scripts/.local/bin/velero
+scripts/.local/bin/rosa
+scripts/.local/bin/vpn
+scripts/.local/bin/vault
+
+# Others
 node_modules
 package.json
 package-lock.json
 *.pid
 vpn
-scripts/.local/bin/oh-my-posh
-scripts/.local/bin/oh-my-posh
 history*
 *.db
 __pycache__

@@ -13,7 +13,5 @@ set("n","<leader>d","<cmd>bd<CR>", {desc="Close tab"})
 set("n","<C-w>","<cmd>wq<CR>", {desc="save and close"})
 -- Set config 
 cmd('set rnu')
-cmd('set ts=4')
-cmd('set sw=4')
-cmd('set softtabstop=4')
+cmd('set ts=8 sts=4 sw=4 noet')
 cmd('set smartindent')
