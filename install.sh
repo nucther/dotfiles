@@ -1,6 +1,9 @@
 #!/bin/bash 
 #
-export CC=gcc-12 CXX=g++-12
+
+echo $1
+exit
+rm /tmp/install.log
 
 # set some colors
 NT="[\e[1;36mNOTE\e[0m]"
@@ -101,7 +104,7 @@ software=(
     udiskie
     whois
     podman # Containered
-    kind # K8s cluster test
+    kind # K8s cluster test require gcc-12
     dnsutils
     mtr
     mupdf-gl
@@ -113,8 +116,7 @@ software=(
     vultr-cli # Vultr cli 
     doctl # Digital Ocean cli 
     alsa-utils
-    gocloc-git
-    p7zip-gui
+    gocloc
     incus # Virtualization
     virt-manager # only for spice client
     skopeo # Incus required for container
@@ -124,7 +126,7 @@ software=(
     overskride # Bluetooth manager
     eza #Replacement for ls
     ncdu #du alternatif
-    satty-bin # Screenshot editor
+    #satty-bin # Screenshot editor wayland
     unbound # DNS server
     jellyfin-mpv-shim # Jellyfin Player MPV
     socat # Eww websocket

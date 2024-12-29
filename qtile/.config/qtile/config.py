@@ -25,6 +25,12 @@ topBar=[
             hide_unused=True,
             ),
         widget.Spacer(),
+        widget.TextBox(
+            fmt='',
+            mouse_callbacks={
+                'Button1': lazy.spawn('overskride')
+                }
+            ),
         widget.Volume(
             get_volume_command='pactl get-sink-volume @DEFAULT_SINK@ | head -n 1| awk -F \'/\' \'{gsub(" ","",$0); print $2}\'',
             volume_down_command='pactl set-sink-volume @DEFAULT_SINK@ -2%',
