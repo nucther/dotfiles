@@ -1,0 +1,29 @@
+#!/bin/bash
+
+appPath="$HOME/Applications"
+appDektopPath="$HOME/.local/share/applications"
+
+listApp=$(/usr/bin/ls $appPath)
+
+for appname in $listApp; do
+    if test -f "$appPath/$appname"; then 
+	fdName=$(7z l "$appPath/$appname" | grep -E '\.desktop$' | awk '$4 >= 100 {print}'| head -1 | awk '{print $6}')
+	fdIcon=$(7z l "$appPath/$appname" | grep usr | grep -E '\.png$' | awk '$4 >= 100 {print}'| head -1 | awk '{print $6}')
+	if test ! -z "$fdName"; then 
+	    echo "$appname => $fdName"
+
+	    fn="-i!$fdName"
+	    fi="-i!$fdIcon"
+	    rpE=$(echo "$appPath/$appname" | sed 's/[\/&]/\\&/g')
+	    rpI=$(echo "$appPath/icons/$(basename "$fdIcon")" | sed 's/[\/&]/\\&/g')
+
+	    echo $replace
+
+	    /usr/bin/7z -aoa e $fn $appPath/$appname -o$appDektopPath
+	    sed -i "s/Exec.*/Exec=$rpE/g" $appDektopPath/$fdName
+	    sed -i "s/Icon.*/Icon=$rpI/g" $appDektopPath/$fdName
+	    /usr/bin/7z -aoa e $fi $appPath/$appname -o$appPath/icons
+	    
+	fi
+    fi
+done

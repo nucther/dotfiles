@@ -42,6 +42,30 @@ def init_keys():
     keys = [
         Key([mod], "return", lazy.spawn(['kitty']), desc="Run Terminal (Kitty)"),
         Key([mod], 'space', lazy.spawn("rofi -show drun -p 'Application: ' -theme '~/.config/rofi/app.rasi'"), desc="Application menu" ),
+        Key([ctrl, alt], "l", lazy.spawn('betterlockscreen -l dim'), desc="Lock Screen"),
+
+        # Window 
+        Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Window Fullscreen"),
+        Key([mod], "t", lazy.window.toggle_floating(), desc="Window Floating"),
+
+        # Window Position
+        Key([mod, alt], "c", lazy.window.center(), desc="Window move to center"),
+        Key([mod], "j", lazy.layout.down()),
+        Key([mod], "k", lazy.layout.up()),
+        Key([mod], "h", lazy.layout.left()),
+        Key([mod], "l", lazy.layout.right()),
+        Key([mod, ctrl], "j", lazy.layout.grow_down()),
+        Key([mod, ctrl], "k", lazy.layout.grow_up()),
+        Key([mod, ctrl], "h", lazy.layout.grow_left()),
+        Key([mod, ctrl], "l", lazy.layout.grow_right()),
+        Key([mod, shift], "h", lazy.layout.shuffle_left()),
+        Key([mod, shift], "l", lazy.layout.shuffle_right()),
+        Key([mod, alt], "n", lazy.layout.normalize()),
+        Key([mod, alt], "f", lazy.layout.flip()),
+
+        # Monitor
+        Key([mod], "period", lazy.next_screen(), desc="Next Monitor"),
+        Key([mod], "comma", lazy.prev_screen(), desc="Previouse Monitor"),
 
         # Print screen
         Key([mod], "p", lazy.spawn("flameshot gui"), desc="Print screen"),

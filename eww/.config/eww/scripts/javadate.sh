@@ -1,7 +1,7 @@
 #!/bin/bash 
 #
 
-javaMarketDateName=(Wage Kliwon Legi Pahing Pon)
+javaMarketDateName=(Pon Wage Kliwon Legi Pahing)
 
 getJavaDay() {
     now=$(date --date="$1" +"%s")

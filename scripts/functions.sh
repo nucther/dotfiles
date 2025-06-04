@@ -29,16 +29,6 @@ function kswitch(){
     kubectl config use-context $context
 }
 
-#Zerotier 
-function zc(){
-    network=$(cat $HOME/.zerotier-network | fzf | awk '{print $1}')
-    sudo zerotier-cli join $network
-}
-
-function zd(){
-    network=$(sudo zerotier-cli -j listnetworks | jq -r '.[] | [.nwid,.name] | @tsv' | fzf | awk -F '\t' '{print $1}')
-    sudo zerotier-cli leave $network
-}
 ### Installation 
 
 function setPS(){
@@ -76,20 +66,26 @@ function reconnectOfficeWifi(){
 # Incus 
 
 function connect_to(){
-	list_vm=$(incus ls --all-projects -f json | jq -r '.[] | select(.status =="Running") | "\(.name):\(.project)"' | fzf)
-    cstatus=$(incus ls --all-projects -f json | jq -r '.[] | select(.name=="'"$list_vm"'") | .status')
-    echo -e "==========\n\e[31mYou are now\nConnecting to VM \e[32m$list_vm\e[0m\n==========\e\n\n"
+    if test -z "$1"; then 
+	node=$(incus remote ls -f json | jq -r 'to_entries[] | select(.value.Protocol == "incus") | .key' | fzf )
+	echo $node
+	list_vm=$(incus ls $node: --all-projects -f json | jq -r '.[] | select(.status =="Running") | "\(.name):\(.project)"' | fzf)
+	cstatus=$(incus ls $node: --all-projects -f json | jq -r '.[] | select(.name=="'"$list_vm"'") | .status')
+	echo -e "==========\n\e[31mYou are now\nConnecting to VM \e[32m$list_vm\e[0m\n==========\e\n\n"
 	project=$(echo $list_vm | awk -F ':' '{print $2}')
 	vm=$(echo $list_vm | awk -F ':' '{print $1}')
-    incus exec --project $project $vm bash
+	incus exec --project $project $node:$vm bash
+    else
+	incus exec $1 bash
+    fi
 }
 
 function create_ct(){
-	if [ -z "$3" ]; then 
-		profile="default"
-	else 
-		profile="$3"
-	fi
+    if [ -z "$3" ]; then 
+	    profile="default"
+    else 
+	    profile="$3"
+    fi
     incus launch "images:$1" --profile $profile $2 
 }
 

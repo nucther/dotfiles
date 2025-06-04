@@ -9,21 +9,13 @@ vim.api.nvim_create_autocmd("TermOpen", {
 		set.scrolloff = 0
 
 		vim.bo.filetype = "terminal"
+		vim.b.miniindentscope_disable = true
+
+		if vim.api.nvim_get_mode().mode ~= "i" then 
+		    local cf = vim.fn.expand("%:p")
+		    local cp = vim.fn.fnamemodify(cf, ":h")
+		end
 	end,
 })
 
-local termID = 0
 vim.keymap.set("t", "<esc><esc>", "<C-\\><c-n>")
-vim.keymap.set("n", "<space>st", function()
-	vim.cmd.vnew()
-	vim.cmd.term()
-	vim.cmd.wincmd("J")
-	vim.api.nvim_win_set_height(0, 15)
-	termID = vim.bo.channel
-end)
-
-vim.keymap.set("n", "<C-\\>", function()
-		vim.api.nvim_buf_set_option(termID, "hidden", false)
-		vim.cmd.wincmd("J")
-		vim.api.nvim_win_set_height(0, 15)
-end)

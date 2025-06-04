@@ -1,0 +1,131 @@
+/*
+ * Horizontal Icon-Like Rofi Power Menu Theme
+ * Designed for a clean, minimalist look with specified colors.
+ * Displays only white Unicode characters (acting as icons) in a horizontal menu.
+ * Uses a Nerd Font and explicitly sets show-icons to false.
+ * Uptime text is now explicitly made visible in the prompt area.
+ *
+ * Background: #1c1c1c
+ * Accent: #ffbf00
+ * Font: FiraCode Nerd Font (or your preferred Nerd Font)
+ */
+
+configuration {
+    modi: "dmenu";       /* Only dmenu mode is needed for this power menu */
+    show-icons: false;   /* IMPORTANT: Rofi will NOT display icons from themes. Unicode chars will be rendered as text. */
+    font: "FiraCode Nerd Font 12"; /* Base font for the menu. Replace with your installed Nerd Font! */
+}
+
+/* Define colors as variables for easy modification */
+* {
+    background-color: #1c1c1c;
+    accent-color: #ffbf00;
+    text-color: #ffffff; /* Default text color (for "icons" too) */
+    selected-text-color: #1c1c1c; /* Text color when an item is selected (on accent background) */
+
+    /* General padding, margin, and border radius for a clean look */
+    border-radius: 10px; /* Slightly more rounded for overall consistency */
+    padding: 0px;
+    margin: 0px;
+}
+
+window {
+    background-color: @background-color;
+    border: 2px; /* Subtle border for the window */
+    border-color: @accent-color; /* Use accent color for the border */
+    border-radius: 15px; /* More rounded corners for the main window */
+    padding: 30px;       /* Increased padding inside the window for more breathing room */
+    /* Adjusted width to accommodate horizontal "icons" */
+    width: 45%;          /* Wider to fit 4 "icons" horizontally, adjust as needed */
+    location: center;    /* Center the window on the screen */
+    anchor: center;
+    x-offset: 0;
+    y-offset: 0;
+}
+
+mainbox {
+    background-color: @background-color;
+    children: [ inputbar, listview ];
+    spacing: 20px; /* Increased spacing between inputbar and listview */
+    padding: 0px;
+}
+
+inputbar {
+    enabled: true; /* IMPORTANT: Enable the inputbar to show the prompt */
+    background-color: @background-color;
+    padding: 0px;
+    margin: 0px;
+    children: [ prompt ]; /* Only display the prompt within the inputbar */
+}
+
+prompt {
+    background-color: @background-color;
+    text-color: @accent-color; /* Make the prompt text stand out */
+    font: "FiraCode Nerd Font Bold 16"; /* Make prompt bold and larger. Uses Nerd Font. */
+    padding: 0px 0px 15px 0px; /* More padding below the prompt to separate from icons */
+}
+
+textbox {
+    enabled: false; /* Hide the actual text input box */
+    background-color: @background-color;
+    text-color: @text-color;
+    font: "FiraCode Nerd Font 12";
+}
+
+listview {
+    background-color: @background-color;
+    columns: 4;   /* Display options in 4 columns for horizontal layout */
+    lines: 1;     /* Display options in a single row */
+    spacing: 15px; /* Spacing between individual elements ("icons") */
+    cycle: false; /* Do not cycle through options if you reach the end */
+    scrollbar: false; /* Hide scrollbar as there are few items */
+    horizontal-align: 0.5; /* Center the listview horizontally */
+}
+
+element {
+    background-color: @background-color;
+    text-color: @text-color; /* "Icons" will be white by default */
+    padding: 15px; /* Increased padding around each "icon" for better spacing */
+    border-radius: @border-radius;
+    orientation: horizontal; /* Still horizontal, but only text will be there */
+    children: [ element-text ]; /* ONLY DISPLAY TEXT (which are your Unicode chars) */
+}
+
+element normal.active {
+    background-color: @accent-color; /* Active (selected) element background */
+    text-color: @selected-text-color; /* Active (selected) element text color (dark for contrast) */
+}
+
+element selected.normal {
+    background-color: @accent-color;
+    text-color: @selected-text-color;
+}
+
+/* element-icon is disabled as show-icons is false */
+element-icon {
+    enabled: false; /* Explicitly disable Rofi's icon rendering */
+    size: 0em;      /* Set size to 0 to ensure it takes no space */
+    margin: 0px;
+    padding: 0px;
+}
+
+element-text {
+    enabled: true; /* Ensure text is rendered */
+    background-color: inherit;
+    text-color: inherit;       /* Inherit text color (white for unselected, dark for selected) */
+    highlight: none;           /* No highlight on matched text */
+    font: "FiraCode Nerd Font 28"; /* Make the Unicode characters very large. Uses Nerd Font. */
+    horizontal-align: 0.5; /* Center the "icon" horizontally */
+    vertical-align: 0.5;   /* Center the "icon" vertically */
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Optional: Scrollbar styling if you decide to enable it */
+scrollbar {
+    handle-color: @accent-color;
+    background-color: @background-color;
+    width: 6px; /* Slightly wider scrollbar */
+    border-radius: 6px;
+}
+

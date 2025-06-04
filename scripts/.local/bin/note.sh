@@ -1,7 +1,7 @@
 #!/bin/bash
 
-notePath=$HOME/Documents/personal/Notes/inbox
-notePathDest=$HOME/Documents/personal/Notes
+notePath=$HOME/Notes/inbox
+notePathDest=$HOME/Notes
 
 function cleanPara(){
 	tags=$(echo $1 | tr '[:upper:]' '[:lower:]' | sed -E 's/(projects?|areas?|resources?|archives?)//' | tr -dc '[:alnum:]')
@@ -16,6 +16,8 @@ function slug(){
 function move(){
 	IFS=$'\n'
 	for file in $(find $notePathDest -name '*.md'); do
+		echo $file
+		
 		yaml=$(sed -n '/^---$/,/^---$/p' $file | sed 's/---//')
 		
 		title=$(echo -e "$yaml" | yq -r '.title')
@@ -99,8 +101,8 @@ function list(){
 
 function tm(){
 	echo -e "---
-title: $1 
-date: "$(date +"%Y-%m-%d")"
+title: \"$1\" 
+date: \"$(date +"%Y-%m-%d")\"
 tags: [ "wip", "meeting" ]
 ---
 "
@@ -108,19 +110,19 @@ tags: [ "wip", "meeting" ]
 
 function tn(){
 	echo -e "---
-title: $1 
-date: "$(date +"%Y-%m-%d")"
+title: \"$1\" 
+date: \"$(date +"%Y-%m-%d")\"
 tags: ["wip"]
 ---
 "
 }
 
 function nid(){
-	yaml=$(sed -n '/---/,/---/p' $1 | sed 's/---//')
-	
-	title=$(echo -e "$yaml" | yq -r '.title' | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
-	date="$(echo -e "$yaml" | yq -r '.date')_"
-	echo "id: $date$title"
+    yaml=$(sed -n '/---/,/---/p' $1 | sed 's/---//')
+
+    title=$(echo -e "$yaml" | yq -r '.title' | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
+    date="$(echo -e "$yaml" | yq -r '.date')_"
+    echo "id: $date$title"
 }
 
 function openTodo(){

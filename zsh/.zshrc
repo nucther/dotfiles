@@ -1,5 +1,3 @@
-# Add deno completions to search path
-if [[ ":$FPATH:" != *":/home/nurohman/.zsh/completions:"* ]]; then export FPATH="/home/nurohman/.zsh/completions:$FPATH"; fi
 # Zinit install 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -15,8 +13,8 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # Oh My Posh
 if [ ! -f "$HOME/.local/bin/oh-my-posh" ]; then 
-	curl -Lo "$HOME/.local/bin/oh-my-posh" https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v21.21.2/posh-linux-amd64
-	chmod +x "$HOME/.local/bin/oh-my-posh"
+    curl -Lo "$HOME/.local/bin/oh-my-posh" https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v21.21.2/posh-linux-amd64
+    chmod +x "$HOME/.local/bin/oh-my-posh"
 fi
 PATH=$PATH:$HOME/.local/bin
 
@@ -100,6 +98,8 @@ VDB_HOME=$HOME/vdb
 
 # Alias Networking 
 alias reconnectwifi='nmcli c d office && nmcli c u office'
+alias myip='curl -sL https://myip.wtf/json'
+#
 alias ls='eza --icons=always'
 
 # Whois 
@@ -125,8 +125,14 @@ alias obtt="note.sh new t"
 alias obm="note.sh move"
 alias obo="note.sh open"
 alias obl="note.sh list"
-alias obtd="note.sh openTodo"
 
+# Tailscale 
+alias tsd="tailscale down"
+alias tsu="tailscale up"
+alias tss="tailscale status"
+alias tsc="tailscale set --exit-node= "
+alias tsda="tailscale set --accept-dns=true"
+alias tsdd="tailscale set --accept-dns=false"
 #### Auto Added by software/apps
 eval "$(fzf --zsh)"
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
@@ -134,8 +140,24 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/mcli mcli
 
 
-if [ -e /home/nurohman/.nix-profile/etc/profile.d/nix.sh ]; then . /home/nurohman/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-. "/home/nurohman/.deno/env"
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [ -z "$HOME/.deno/env" ]; then 
+    . "$HOME.deno/env"
+    # Add deno completions to search path
+    if [[ ":$FPATH:" != *":/home/nurohman/.zsh/completions:"* ]]; then export FPATH="/home/nurohman/.zsh/completions:$FPATH"; fi
+fi
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# bun completions
+[ -s "/home/nurohman/.bun/_bun" ] && source "/home/nurohman/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -1,7 +1,25 @@
 #!/bin/bash
 
-xrandr --output eDP-1 --primary --mode 1920x1200 --pos 3000x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off --output DP-6 --off --output DP-7 --mode 1920x1080 --pos 1080x0 --rotate normal --output DP-8 --mode 1920x1080 --pos 0x0 --rotate left
+totalMonitor=$(xrandr | grep connected | grep -cEv disconnected)
+listMonitor=$(xrandr | grep connected | grep -Ev disconnected | awk '{print $1}')
 
-dunst & disown
+if [ "$totalMonitor" > 2 ]; then 
+    echo "Multi Monitor"
+    for x in $listMonitor; do
+	res=$(xrandr | grep -A 1 $x | grep -Ev connected | awk '{print $1}')
+	xrandr --output $x --mode $res --pos 0x0
+
+	if [ "$x" == "HDMI-1" ]; then 
+	    xrandr --output $x --rotate left --pos 0x0 --primary
+	elif [ "$x" == "HDMI-2" ]; then 
+	    xrandr --output $x --pos 1080x0 --primary
+	fi
+    done
+else
+    echo "Single Monitor"
+    res=$(xrandr | grep -A 1 $listMonitor| grep -Ev connected | awk '{print $1}')
+    echo $res
+fi
+
 flameshot & disown
-
+nitrogen --restore &

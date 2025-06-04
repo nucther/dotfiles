@@ -94,9 +94,10 @@ software=(
     rofi # Menu
     openssh
     bat # Cat alternate
-    pipewire 
     pavucontrol
+    pipewire 
     pipewire-pulse #replacce pulse audio
+    pipewire-media-session # Pulse media 
     bottom #alternate to HTOP 
     mpv
     imv
@@ -131,7 +132,6 @@ software=(
     jellyfin-mpv-shim # Jellyfin Player MPV
     socat # Eww websocket
     btop # Taskmanager
-    newsboat # RSS Client
 )
 
 fonts=(
